@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --page: #04070f;
+  --ink: #eff5ff;
+  --muted: #91a4c8;
+  --blue: #2a68ff;
+  --line: rgba(120, 152, 220, 0.16);
+
+  font-family: 'Outfit', 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--page);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--page);
+}
+
+body,
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+main,
+header,
+section {
+  width: 100%;
+}
+
+.topbar,
+.services,
+.process,
+.stats,
+.cta {
+  width: 100%;
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+::selection {
+  background: rgba(36, 87, 219, 0.18);
+}
+
+@media (max-width: 720px) {
+
+  .topbar,
+  .services,
+  .process,
+  .stats,
+  .cta {
+    width: 100%;
+  }
+}
