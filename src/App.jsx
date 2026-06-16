@@ -189,6 +189,41 @@ const services = [
     heroDescription: 'Design AI-powered workflows, assistants, and intelligence layers that fit practical business use cases.',
     heroButtonLabel: 'Hire AI Developer',
     heroImage: '/src/assets/hero-visual.png',
+    detailedFeatures: [
+      { title: 'LLM & Chatbot Development', desc: 'Building production-grade conversational AI and LLM-powered workflows using OpenAI, Anthropic, and open-source models tailored to your domain.' },
+      { title: 'Custom ML Model Training', desc: 'Training and fine-tuning machine learning models on your proprietary data to solve classification, regression, and ranking problems with high accuracy.' },
+      { title: 'AI Feature Integration', desc: 'Embedding AI capabilities — recommendation engines, smart search, summarization — directly into your existing product without disrupting current workflows.' },
+      { title: 'Retrieval-Augmented Generation (RAG)', desc: 'Designing vector search pipelines and knowledge bases so your AI can retrieve accurate, context-aware answers from your own documents and data.' },
+      { title: 'Prediction & Forecasting Pipelines', desc: 'Building end-to-end ML pipelines that process streaming or batch data and deliver actionable predictions to your dashboards or APIs.' },
+      { title: 'Computer Vision Solutions', desc: 'Developing image classification, object detection, and document processing systems for healthcare, logistics, and manufacturing use cases.' },
+      { title: 'MLOps & Model Lifecycle Management', desc: 'Setting up model versioning, monitoring, and retraining pipelines so your AI systems stay accurate and reliable in production.' }
+    ],
+    caseStudies: [
+      {
+        id: 'ai-sales',
+        tag: 'Analytics AI',
+        title: 'AI-Powered Sales Intelligence Platform',
+        desc: 'Built a LangChain-based assistant that analyzes CRM data, surfaces deal-risk signals, and generates personalized outreach — reducing sales cycle time by 28%.',
+        img: '/cs-performance.png',
+        tech: ['python', 'node']
+      },
+      {
+        id: 'ai-docs',
+        tag: 'Document Intelligence',
+        title: 'Intelligent Document Processing System',
+        desc: 'Deployed an OCR and NLP pipeline to extract, classify, and route structured data from 10,000+ monthly invoices and contracts for an enterprise finance team.',
+        img: '/cs-accounting.png',
+        tech: ['python']
+      },
+      {
+        id: 'ai-support',
+        tag: 'Customer Support AI',
+        title: 'RAG-Powered Support Copilot',
+        desc: 'Designed a retrieval-augmented generation system that resolved 62% of support tickets autonomously, with seamless escalation to human agents for complex cases.',
+        img: '/cs-learning.png',
+        tech: ['python', 'node']
+      }
+    ]
   },
   {
     id: 'cloud',
@@ -209,6 +244,41 @@ const services = [
     heroDescription: 'Scalable cloud infrastructure that keeps your product fast, secure, and ready for global traffic.',
     heroButtonLabel: 'Hire Cloud Engineer',
     heroImage: '/src/assets/hero-visual.png',
+    detailedFeatures: [
+      { title: 'Cloud Architecture & Strategy', desc: 'Designing scalable, cost-efficient cloud architectures on AWS, GCP, or Azure that align with your product growth and compliance requirements.' },
+      { title: 'CI/CD Pipeline Automation', desc: 'Building fully automated deployment pipelines with GitHub Actions, GitLab CI, or Jenkins so every release is fast, tested, and repeatable.' },
+      { title: 'Infrastructure as Code (IaC)', desc: 'Managing cloud infrastructure through Terraform and CloudFormation, making environments reproducible, version-controlled, and auditable.' },
+      { title: 'Containerization & Orchestration', desc: 'Packaging applications into Docker containers and orchestrating workloads with Kubernetes for consistent environments and horizontal scaling.' },
+      { title: 'Cloud Security & Compliance', desc: 'Implementing IAM policies, network segmentation, encryption at rest and in transit, and compliance controls for SOC 2, HIPAA, and GDPR readiness.' },
+      { title: 'Monitoring, Logging & Alerting', desc: 'Setting up observability stacks with Datadog, Grafana, or CloudWatch so your team gets clear visibility into system health and incident signals.' },
+      { title: 'Cloud Cost Optimization', desc: 'Auditing resource utilization, rightsizing instances, and implementing autoscaling strategies to reduce cloud spend without sacrificing performance.' }
+    ],
+    caseStudies: [
+      {
+        id: 'cloud-migration',
+        tag: 'Cloud Migration',
+        title: 'Zero-Downtime Migration to AWS',
+        desc: 'Migrated a monolithic on-premise application serving 50,000 daily users to a containerized AWS architecture — achieving zero downtime and a 35% reduction in infrastructure costs.',
+        img: '/cs-performance.png',
+        tech: ['node']
+      },
+      {
+        id: 'cloud-cicd',
+        tag: 'DevOps Automation',
+        title: 'Enterprise CI/CD Pipeline Overhaul',
+        desc: 'Replaced a fragile manual deployment process with a fully automated GitHub Actions pipeline — reducing release time from 4 hours to under 12 minutes with full rollback support.',
+        img: '/cs-learning.png',
+        tech: ['node', 'react']
+      },
+      {
+        id: 'cloud-k8s',
+        tag: 'Platform Engineering',
+        title: 'Kubernetes Platform for Multi-Tenant SaaS',
+        desc: 'Designed and deployed a Kubernetes-based platform enabling a SaaS product to onboard new tenants in minutes with full namespace isolation, autoscaling, and cost attribution.',
+        img: '/cs-accounting.png',
+        tech: ['node']
+      }
+    ]
   },
   {
     id: 'game',
@@ -1945,7 +2015,7 @@ function ServicesPage() {
                   <span className="process-kicker">OUR PROCESS</span>
                   <h2>Innovative, Collaborative, Seamless Designs</h2>
                   <p className="process-description">
-                    SightInfusion focuses on delivering back-end systems that are secure, scalable, and future-ready. From consultation to deployment, our streamlined process ensures effective collaboration, seamless integration, and high-quality results that align with your business goals.
+                    SightInfusion focuses on delivering pixel-perfect front-end systems that are fast, accessible, and visually polished. From discovery to deployment, our structured process ensures every interface is built for performance and conversion.
                   </p>
                   <NavLink to="/contact" className="schedule-call-btn">
                     Schedule a Call
@@ -1961,24 +2031,24 @@ function ServicesPage() {
                   <div className="process-step-item">
                     <div className="step-number-circle">01</div>
                     <div className="step-content">
-                      <h3>Discuss your requirements</h3>
-                      <p>We begin by understanding your vision, goals, and audience, ensuring the design aligns with your business needs.</p>
+                      <h3>Discover and plan</h3>
+                      <p>We start by aligning on your brand, audience, and goals — mapping out component architecture, design tokens, and responsive breakpoints before writing a single line of code.</p>
                     </div>
                   </div>
 
                   <div className="process-step-item">
                     <div className="step-number-circle">02</div>
                     <div className="step-content">
-                      <h3>Create a plan and assemble a team</h3>
-                      <p>We develop a design plan with wireframes and prototypes, ensuring an intuitive, functional design.</p>
+                      <h3>Design and prototype</h3>
+                      <p>Our designers build high-fidelity Figma prototypes with motion specs, ensuring every interaction is validated before the development sprint begins.</p>
                     </div>
                   </div>
 
                   <div className="process-step-item">
                     <div className="step-number-circle">03</div>
                     <div className="step-content">
-                      <h3>Get to work</h3>
-                      <p>Our developers build and optimize your front-end with secure APIs and thorough testing for seamless operation.</p>
+                      <h3>Build, test, and deliver</h3>
+                      <p>Developers implement the approved designs with accessibility checks, cross-browser testing, and performance audits — handing off clean, documented component code.</p>
                     </div>
                   </div>
                 </div>
@@ -1988,14 +2058,22 @@ function ServicesPage() {
         </section>
       )}
 
-      {['backend', 'uiux'].includes(activeService.id) && (
+      {['backend', 'uiux', 'ai-ml', 'cloud'].includes(activeService.id) && (
         <section className="section-pad home-consulting-section">
           <div className="container consulting-grid">
             <div className="consulting-left reveal">
               <p className="consulting-kicker">OUR PROCESS</p>
-              <h2>Innovative, Collaborative, Seamless Designs</h2>
+              <h2>
+                {activeService.id === 'ai-ml' ? 'Practical, Iterative, Intelligence-First' :
+                 activeService.id === 'cloud' ? 'Resilient, Automated, Always Observable' :
+                 'Innovative, Collaborative, Seamless Designs'}
+              </h2>
               <p className="consulting-lead">
-                SightInfusion focuses on delivering back-end systems that are secure, scalable, and future-ready. From consultation to deployment, our streamlined process ensures effective collaboration, seamless integration, and high-quality results that align with your business goals.
+                {activeService.id === 'ai-ml'
+                  ? 'SightInfusion builds AI solutions anchored in real business problems. From use-case discovery to model deployment, our process ensures your AI investment delivers measurable, production-ready results.'
+                  : activeService.id === 'cloud'
+                  ? 'SightInfusion engineers cloud infrastructure for reliability, speed, and growth. Our process covers architecture planning, automated provisioning, and ongoing observability from day one.'
+                  : 'SightInfusion focuses on delivering back-end systems that are secure, scalable, and future-ready. From consultation to deployment, our streamlined process ensures effective collaboration, seamless integration, and high-quality results that align with your business goals.'}
               </p>
               <NavLink to="/contact" className="backend-process-btn">
                 Schedule a Call
@@ -2007,26 +2085,43 @@ function ServicesPage() {
 
             <div className="consulting-right">
               <div className="consulting-zigzag">
-                {/* Central dashed line */}
                 <div className="czz-line" />
 
-                {/* Step 01 — card on RIGHT */}
                 <div className="czz-row czz-row-right">
                   <div className="czz-spacer" />
                   <div className="czz-node">
                     <span className="czz-num">01</span>
                   </div>
                   <div className="czz-card">
-                    <h3>Discuss your requirements</h3>
-                    <p>We begin by understanding your vision, goals, and audience, ensuring the design aligns with your business needs.</p>
+                    <h3>
+                      {activeService.id === 'ai-ml' ? 'Define the problem and data landscape' :
+                       activeService.id === 'cloud' ? 'Audit your current infrastructure' :
+                       'Discuss your requirements'}
+                    </h3>
+                    <p>
+                      {activeService.id === 'ai-ml'
+                        ? 'We map out your business challenge, identify the right AI approach, and assess the data available — building a clear scope before any model work begins.'
+                        : activeService.id === 'cloud'
+                        ? 'We review your existing stack, workloads, and pain points — identifying the gaps in reliability, security, and scalability before recommending a path forward.'
+                        : 'We begin by understanding your vision, goals, and audience, ensuring the design aligns with your business needs.'}
+                    </p>
                   </div>
                 </div>
 
-                {/* Step 02 — card on LEFT */}
                 <div className="czz-row czz-row-left">
                   <div className="czz-card czz-card-left">
-                    <h3>Create a plan and assemble a team</h3>
-                    <p>We develop a design plan with wireframes and prototypes, ensuring an intuitive, functional design.</p>
+                    <h3>
+                      {activeService.id === 'ai-ml' ? 'Prototype and validate the approach' :
+                       activeService.id === 'cloud' ? 'Design and provision the architecture' :
+                       'Create a plan and assemble a team'}
+                    </h3>
+                    <p>
+                      {activeService.id === 'ai-ml'
+                        ? 'We build a focused proof-of-concept, validate model accuracy, and iterate on the pipeline with real data before committing to full production build-out.'
+                        : activeService.id === 'cloud'
+                        ? 'Our engineers define the target architecture in IaC, provision environments through automated pipelines, and document every component for your team.'
+                        : 'We develop a design plan with wireframes and prototypes, ensuring an intuitive, functional design.'}
+                    </p>
                   </div>
                   <div className="czz-node">
                     <span className="czz-num">02</span>
@@ -2034,15 +2129,27 @@ function ServicesPage() {
                   <div className="czz-spacer" />
                 </div>
 
-                {/* Step 03 — card on RIGHT */}
                 <div className="czz-row czz-row-right">
                   <div className="czz-spacer" />
                   <div className="czz-node">
                     <span className="czz-num">03</span>
                   </div>
                   <div className="czz-card">
-                    <h3>Get to work</h3>
-                    <p>{activeService.id === 'uiux' ? 'Our designers deliver high-fidelity screens, design systems, and interactive prototypes, refined through testing and feedback.' : 'Our developers build and optimize your back-end with secure APIs and thorough testing for seamless operation.'}</p>
+                    <h3>
+                      {activeService.id === 'ai-ml' ? 'Deploy, monitor, and improve' :
+                       activeService.id === 'cloud' ? 'Ship, monitor, and optimize' :
+                       activeService.id === 'uiux' ? 'Design, test, and hand off' :
+                       'Get to work'}
+                    </h3>
+                    <p>
+                      {activeService.id === 'ai-ml'
+                        ? 'We deploy models to production with monitoring, alerting, and retraining pipelines so your AI stays accurate and reliable as your data evolves.'
+                        : activeService.id === 'cloud'
+                        ? 'We deploy your infrastructure, wire up monitoring and alerting, and run load and failover tests — then hand off runbooks and on-call guides so your team owns it.'
+                        : activeService.id === 'uiux'
+                        ? 'Our designers deliver high-fidelity screens, design systems, and interactive prototypes, refined through testing and feedback.'
+                        : 'Our developers build and optimize your back-end with secure APIs and thorough testing for seamless operation.'}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -2051,26 +2158,57 @@ function ServicesPage() {
         </section>
       )}
 
-      {['backend', 'uiux'].includes(activeService.id) && (
+      {['backend', 'uiux', 'frontend', 'ai-ml', 'cloud'].includes(activeService.id) && (
         <section className="section-pad backend-why-choose-section">
           <div className="container">
             <div className="backend-why-choose-wrapper reveal">
               <div className="backend-why-choose-left">
                 <h2 className="backend-why-choose-title">
-                  {activeService.id === 'uiux'
-                    ? 'Why Choose us for UI/UX Design?'
-                    : 'Why Choose us for Backend Development Service?'}
+                  {activeService.id === 'uiux' ? 'Why Choose us for UI/UX Design?' :
+                   activeService.id === 'frontend' ? 'Why Choose us for Front-End Development?' :
+                   activeService.id === 'ai-ml' ? 'Why Choose us for AI/ML Development?' :
+                   activeService.id === 'cloud' ? 'Why Choose us for Cloud Services?' :
+                   'Why Choose us for Backend Development Service?'}
                 </h2>
                 <p className="backend-why-choose-subtitle">
                   {activeService.id === 'uiux'
                     ? 'A great design is not just how it looks — it is how it works. Our design process ensures:'
+                    : activeService.id === 'frontend'
+                    ? 'A great front-end is more than visual — it is performant, maintainable, and user-tested. We deliver:'
+                    : activeService.id === 'ai-ml'
+                    ? 'AI that delivers real business value requires more than a model — it requires the right process:'
+                    : activeService.id === 'cloud'
+                    ? 'Reliable cloud infrastructure is the foundation your product scales on. We make sure it is built right:'
                     : 'A well-structured backend not only ensures seamless functionality but also:'}
                 </p>
               </div>
 
               <div className="backend-why-choose-right">
                 <div className="backend-why-choose-grid">
-                  {activeService.id === 'uiux' ? (
+                  {activeService.id === 'frontend' ? (
+                    <>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>We write clean, component-driven code that your in-house team can maintain and extend without friction.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>Every interface we build is tested across devices, browsers, and screen sizes — no last-minute mobile surprises.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>We optimize for Core Web Vitals and Lighthouse scores — fast load times directly improve conversion and SEO.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>We collaborate directly with your designers and backend engineers, keeping handoff smooth and integration risk low.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>Accessibility is built in — semantic HTML, ARIA compliance, and keyboard navigation are non-negotiable for us.</p>
+                      </div>
+                    </>
+                  ) : activeService.id === 'uiux' ? (
                     <>
                       <div className="backend-why-choose-item">
                         <div className="backend-why-bullet"></div>
@@ -2091,6 +2229,52 @@ function ServicesPage() {
                       <div className="backend-why-choose-item">
                         <div className="backend-why-bullet"></div>
                         <p>Clean developer handoff with annotated specs, assets, and component documentation.</p>
+                      </div>
+                    </>
+                  ) : activeService.id === 'ai-ml' ? (
+                    <>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>We focus on business outcomes first — every model we build is tied to a measurable KPI, not a research benchmark.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>Our engineers have hands-on experience deploying LLMs, ML pipelines, and vision systems in production environments.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>We validate before we build — a rapid PoC phase ensures feasibility before you invest in full-scale development.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>AI models are only as good as their data — we help you structure, clean, and label your training data correctly from the start.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>We provide end-to-end support from problem framing and data strategy through model deployment and ongoing monitoring.</p>
+                      </div>
+                    </>
+                  ) : activeService.id === 'cloud' ? (
+                    <>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>We design cloud architectures that are cost-aware from day one — avoiding over-provisioning and wasteful resource allocation.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>Everything we build is version-controlled in IaC — your infrastructure is reproducible, auditable, and disaster-recoverable.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>We configure observability from the start — metrics, logs, traces, and on-call alerts so your team always knows system state.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>Our security practices are baked into the architecture — IAM least-privilege, encryption, and compliance controls are not afterthoughts.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>We hand off runbooks, architecture diagrams, and on-call guides so your team can fully own and operate the infrastructure we build.</p>
                       </div>
                     </>
                   ) : (
@@ -2124,7 +2308,7 @@ function ServicesPage() {
         </section>
       )}
 
-      {['backend', 'uiux'].includes(activeService.id) && (() => {
+      {['backend', 'uiux', 'frontend', 'ai-ml', 'cloud'].includes(activeService.id) && (() => {
         const backendTestimonials = [
           {
             tag: 'LinkedIn',
@@ -2183,7 +2367,99 @@ function ServicesPage() {
             img: '/src/assets/avatars/mira.png'
           }
         ]
-        const testimonials = activeService.id === 'uiux' ? uiuxTestimonials : backendTestimonials
+        const frontendTestimonials = [
+          {
+            tag: 'SaaS',
+            color: '#2a68ff',
+            quote: '"The React component library they built cut our dev time in half."',
+            text: 'Every screen matched our Figma designs pixel-for-pixel. The attention to responsive edge cases was something we had never experienced before.',
+            author: 'Lena Vasquez',
+            role: 'VP of Engineering, Nexaloom',
+            img: '/src/assets/avatars/serena.png'
+          },
+          {
+            tag: 'E-Commerce',
+            color: '#f59e0b',
+            quote: '"Our Lighthouse score went from 54 to 96 after their performance audit."',
+            text: 'SightInfusion rebuilt our checkout flow and product pages. The result was a dramatically faster experience and a measurable lift in conversion.',
+            author: 'Tom Brecker',
+            role: 'Head of Growth, CartFlux',
+            img: '/src/assets/avatars/alexander.png'
+          },
+          {
+            tag: 'Marketing',
+            color: '#ec4899',
+            quote: '"The animations they built made our product feel like a premium brand."',
+            text: 'They balanced visual polish with accessibility perfectly. Our accessibility score improved alongside the aesthetics — which we did not think was possible.',
+            author: 'Nadia Fourie',
+            role: 'Creative Director, PulseAgency',
+            img: '/src/assets/avatars/mira.png'
+          }
+        ]
+        const aimlTestimonials = [
+          {
+            tag: 'Operations',
+            color: '#6366f1',
+            quote: '"The AI pipeline they built is processing 10,000 documents a day flawlessly."',
+            text: 'What used to take a team of 5 people three days now runs automatically overnight. The ROI was immediate and undeniable.',
+            author: 'Carlos Mendez',
+            role: 'Director of Operations, DocuFlow',
+            img: '/src/assets/avatars/alexander.png'
+          },
+          {
+            tag: 'Sales Tech',
+            color: '#8b5cf6',
+            quote: '"Our AI sales assistant boosted qualified pipeline by 31% in 90 days."',
+            text: 'SightInfusion understood our domain deeply before writing a single line of code. The model performs like an expert, not a chatbot.',
+            author: 'Rachel Kim',
+            role: 'CRO, LeadSpark',
+            img: '/src/assets/avatars/serena.png'
+          },
+          {
+            tag: 'Healthcare',
+            color: '#14b8a6',
+            quote: '"The predictive model they delivered flagged risks our team had missed for years."',
+            text: 'The combination of domain consultation and ML expertise made SightInfusion stand out. They asked the right questions before touching the data.',
+            author: 'Dr. Farah Naseem',
+            role: 'Chief Medical Officer, MediSense',
+            img: '/src/assets/avatars/mira.png'
+          }
+        ]
+        const cloudTestimonials = [
+          {
+            tag: 'SaaS',
+            color: '#0ea5e9',
+            quote: '"We went from 4-hour deployments to 12-minute automated releases."',
+            text: "The CI/CD pipeline SightInfusion built gave our team back hours every week. Zero downtime deploys were a dream before — now they are the default.",
+            author: 'Ben Okafor',
+            role: 'Platform Lead, Cloudspace',
+            img: '/src/assets/avatars/alexander.png'
+          },
+          {
+            tag: 'FinTech',
+            color: '#22c55e',
+            quote: '"Our cloud bill dropped 38% after their infrastructure audit and rightsizing."',
+            text: 'They found waste we did not know existed and replaced it with autoscaling that actually fits our traffic patterns. We are faster and cheaper.',
+            author: 'Yuki Tanaka',
+            role: 'Infrastructure Engineer, PayBridge',
+            img: '/src/assets/avatars/serena.png'
+          },
+          {
+            tag: 'Healthcare',
+            color: '#f97316',
+            quote: '"SOC 2 Type II certification was a nightmare until SightInfusion stepped in."',
+            text: 'They mapped every infrastructure requirement to a compliance control and built automated evidence collection into the pipeline. Certification was painless.',
+            author: 'Dr. Marcus Hill',
+            role: 'CTO, HealthNode',
+            img: '/src/assets/avatars/mira.png'
+          }
+        ]
+        const testimonials =
+          activeService.id === 'uiux' ? uiuxTestimonials :
+          activeService.id === 'frontend' ? frontendTestimonials :
+          activeService.id === 'ai-ml' ? aimlTestimonials :
+          activeService.id === 'cloud' ? cloudTestimonials :
+          backendTestimonials
 
         const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % testimonials.length)
         const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length)
@@ -2230,7 +2506,7 @@ function ServicesPage() {
         )
       })()}
 
-      {['backend', 'uiux'].includes(activeService.id) && (
+      {['backend', 'uiux', 'frontend', 'ai-ml', 'cloud'].includes(activeService.id) && (
         <section className="contact-new-section">
           <div className="container">
             <div className="contact-new-grid reveal">
