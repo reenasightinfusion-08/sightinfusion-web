@@ -41,28 +41,20 @@ const services = [
     ],
     caseStudies: [
       {
-        id: 'fe-spa',
-        tag: 'SaaS Platform',
-        title: 'React SPA for Project Management Tool',
-        desc: 'Rebuilt a legacy jQuery dashboard into a React 18 SPA with real-time updates, drag-and-drop kanban boards, and a token-based design system — reducing bundle size by 62%.',
-        img: '/cs-analytics.png',
-        tech: ['react', 'js']
+        id: 'fe-fourth',
+        tag: 'Golf Marketplace',
+        title: 'fourth. — Golf Tee-Time Web Platform',
+        desc: 'Built a Next.js 16 App Router site with island architecture — SSR-first marketing pages, live Firestore share pages, and iOS/Android deep-link handling, all with near-zero client JavaScript.',
+        img: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80&auto=format&fit=crop',
+        tech: ['next', 'ts']
       },
       {
-        id: 'fe-ecommerce',
-        tag: 'E-Commerce',
-        title: 'High-Performance E-Commerce Storefront',
-        desc: 'Built a Vite-powered storefront for a fashion brand with lazy-loaded product galleries, optimized checkout flow, and a 96 Lighthouse score — increasing mobile conversions by 41%.',
-        img: '/cs-ecommerce-frontend.png',
-        tech: ['react', 'js']
-      },
-      {
-        id: 'fe-marketing',
-        tag: 'Marketing Website',
-        title: 'Animated Product Marketing Website',
-        desc: 'Developed a high-impact marketing site with scroll-driven animations, interactive product demos, and full CMS integration — delivered in 3 weeks with zero post-launch defects.',
-        img: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80&auto=format&fit=crop',
-        tech: ['react']
+        id: 'fe-ptb',
+        tag: 'Spiritual Wellness App',
+        title: 'Pray the Bible AI — Web Platform',
+        desc: 'Delivered a Flutter web build featuring 11 feature areas, 7 custom UI themes, AI-assisted prayer flows, and a PWA-installable landing experience across iOS, Android, and web.',
+        img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80&auto=format&fit=crop',
+        tech: ['flutter', 'firebase']
       }
     ]
   },
@@ -1058,122 +1050,88 @@ const caseStudiesDetail = {
     heroImg: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80&auto=format&fit=crop',
     testimonial: { quote: 'The AI prayer generation feels personal and theologically sound — the Cloud Functions architecture handles rate limiting and cost control so we scale confidently. The team delivered a complex, multi-platform product on time.', author: 'Founder, Pray the Bible AI' }
   },
-  'fe-spa': {
-    id: 'fe-spa',
+  'fe-fourth': {
+    id: 'fe-fourth',
     service: 'frontend',
     serviceTitle: 'Front-End Development',
-    tag: 'SaaS Platform',
-    title: 'React SPA for Project Management Tool',
-    subtitle: 'Legacy jQuery dashboard rebuilt in React 18, cutting bundle size by 62% and boosting performance.',
-    overview: 'A full front-end modernization of a 6-year-old jQuery project management tool — rebuilt as a React 18 SPA with real-time updates via WebSockets, drag-and-drop kanban boards, and a token-based design system used by 25,000 active users.',
-    client: 'Nexaloom (SaaS)',
-    industry: 'Project Management SaaS',
-    timeline: '4 months',
-    teamSize: '4 frontend engineers, 1 designer',
-    challenge: 'Nexaloom\'s jQuery dashboard had accumulated 6 years of technical debt. Page load times exceeded 8 seconds, the codebase had no component reuse, and adding new features required modifying unmaintainable spaghetti JavaScript.',
-    challengePoints: [
-      '8-second page load times causing 34% of users to abandon the tool',
-      'Zero component reuse — every feature built from scratch with copy-paste',
-      'jQuery spaghetti preventing new engineer onboarding (2-month ramp time)',
-      'No real-time updates — users had to manually refresh for collaborator changes',
-      'Inconsistent UI across 40+ feature pages built by different contractors'
-    ],
-    solution: 'We conducted a parallel-build migration — new React components consumed the existing backend APIs unchanged, enabling a phased cutover by feature area with no backend changes required. The design system was built alongside.',
-    solutionPoints: [
-      'React 18 SPA with Vite — consuming existing REST APIs without backend changes',
-      'Zustand state management with optimistic updates for perceived performance',
-      'WebSocket integration for real-time collaboration across kanban boards',
-      'Drag-and-drop kanban built with dnd-kit for accessibility compliance',
-      'Token-based design system with 80+ React components in a shared library',
-      'Phased migration by feature area — zero big-bang cutover risk'
-    ],
-    tech: ['React 18', 'Vite', 'TypeScript', 'Zustand', 'WebSocket', 'dnd-kit', 'Storybook'],
-    results: [
-      { metric: '62%', label: 'Bundle size reduction' },
-      { metric: '8s→1.2s', label: 'Page load time' },
-      { metric: '2mo→1wk', label: 'Engineer onboarding time' },
-      { metric: '34%', label: 'Reduction in user abandonment' }
-    ],
-    heroImg: '/cs-analytics.png',
-    testimonial: { quote: 'The React SPA they built handles 25,000 daily users without breaking a sweat. Our engineers are actually excited to work in the codebase now.', author: 'VP of Engineering, Nexaloom' }
-  },
-  'fe-ecommerce': {
-    id: 'fe-ecommerce',
-    service: 'frontend',
-    serviceTitle: 'Front-End Development',
-    tag: 'E-Commerce',
-    title: 'High-Performance E-Commerce Storefront',
-    subtitle: 'Vite-powered storefront achieving a 96 Lighthouse score and 41% more mobile conversions.',
-    overview: 'A ground-up front-end build for a growing fashion brand — a Vite-powered storefront with lazy-loaded product galleries, a streamlined checkout flow, and a comprehensive component library that the client team could extend independently.',
-    client: 'CartFlux (Fashion E-Commerce)',
-    industry: 'Fashion Retail',
-    timeline: '3 months',
-    teamSize: '3 frontend engineers, 1 designer',
-    challenge: 'CartFlux\'s existing Shopify theme was too rigid for their brand, too slow for their mobile-first audience (72% mobile traffic), and too difficult to customize for seasonal campaigns without developer involvement every time.',
-    challengePoints: [
-      '72% mobile traffic but only a 1.8% mobile conversion rate',
-      'Shopify theme scoring 41 on Lighthouse — hurting SEO and Core Web Vitals',
-      'Every seasonal campaign required 3+ days of developer work',
-      'Product images loading at full resolution on mobile',
-      'Checkout abandonment at 69% on mobile devices'
-    ],
-    solution: 'We built a custom React storefront backed by Shopify Storefront API — giving full design control, enabling responsive image optimization via Cloudinary, and delivering a checkout experience designed specifically for thumb-friendly mobile interaction.',
-    solutionPoints: [
-      'Custom React storefront consuming Shopify Storefront API (headless)',
-      'Cloudinary responsive image pipeline serving WebP at correct breakpoints',
-      'Lazy-loaded product galleries with blur-up placeholder technique',
-      'Mobile-first checkout with thumb-zone optimized tap targets',
-      'CMS-driven campaign sections for no-code seasonal updates',
-      'Component library documented in Storybook for team self-service'
-    ],
-    tech: ['React', 'Vite', 'TypeScript', 'Shopify Storefront API', 'Cloudinary', 'Storybook'],
-    results: [
-      { metric: '96', label: 'Lighthouse performance score' },
-      { metric: '41%', label: 'Increase in mobile conversions' },
-      { metric: '3days→2hrs', label: 'Campaign update time' },
-      { metric: '69%→38%', label: 'Mobile checkout abandonment' }
-    ],
-    heroImg: '/cs-ecommerce-frontend.png',
-    testimonial: { quote: 'Our Lighthouse score went from 41 to 96 and mobile conversions jumped 41%. The headless build gave us the brand control we had been asking for since day one.', author: 'Head of Growth, CartFlux' }
-  },
-  'fe-marketing': {
-    id: 'fe-marketing',
-    service: 'frontend',
-    serviceTitle: 'Front-End Development',
-    tag: 'Marketing Website',
-    title: 'Animated Product Marketing Website',
-    subtitle: 'A scroll-driven product showcase delivering zero post-launch defects in 3 weeks.',
-    overview: 'An immersive marketing website for a B2B SaaS product launch — featuring scroll-driven animations, interactive product demos, a CMS-backed blog and resources section, and full GDPR compliance — shipped in 3 weeks and credited with 40% of pipeline generated at launch.',
-    client: 'PulseAgency (B2B SaaS)',
-    industry: 'B2B Marketing Technology',
-    timeline: '3 weeks',
+    tag: 'Golf Marketplace',
+    title: 'fourth. — Golf Tee-Time Web Platform',
+    subtitle: 'Next.js 16 App Router site with island architecture — SSR-first, live Firestore share pages, and deep-link handling with near-zero client JavaScript.',
+    overview: 'fourth. is a golf tee-time coordination platform that lets golfers post open spots, find players, and share live round tracking. We built the companion web platform — a Next.js 16 App Router site serving dual roles: a marketing site driving iOS/Android app downloads, and a live-data utility layer rendering shareable tee-time and round-tracker pages that work without the app installed.',
+    client: 'fourth. (Golf Marketplace)',
+    industry: 'Sports & Recreation Technology',
+    timeline: '6 weeks',
     teamSize: '2 frontend engineers, 1 designer',
-    challenge: 'PulseAgency needed a marketing site that could compete visually with well-funded competitors in a crowded category — fast. They had 3 weeks to a major industry conference and an existing Webflow site that communicated nothing about their product\'s differentiation.',
+    challenge: 'The fourth. team needed a web presence that could serve two fundamentally different audiences simultaneously — prospective users who needed to be convinced to download the app, and existing golfers sharing round links with friends who might not have the app. A standard marketing site would handle the first; the second required live Firestore data rendered server-side so shared links loaded instantly without a client-side JS bundle or app install.',
     challengePoints: [
-      '3-week deadline to a major industry conference',
-      'Existing Webflow site failing to communicate product differentiation',
-      'Interactive product demo needed but no native Webflow capability',
-      'Blog and resource center needed CMS for non-technical team',
-      'Marketing team needed to update content without developer dependency'
+      'Share links had to work for users without the app — no React hydration delay on first load',
+      'Live round data (current hole, elapsed time, player status) needed server-side Firestore reads to avoid exposing Firebase credentials in the browser',
+      'iOS Universal Links and Android App Links required serving AASA and Digital Asset Link files with exact Content-Type headers',
+      'Marketing page needed fast LCP for App Store conversion — every 100ms counted',
+      'Zero UI library dependency — custom design system needed to match the mobile app brand exactly'
     ],
-    solution: 'We chose a React + Contentful stack for maximum speed and content flexibility. Scroll-driven animations were built with Framer Motion, interactive demo sections used React portals, and the entire site was deployed on Vercel with automatic preview URLs for stakeholder review.',
+    solution: 'We architected the site on Next.js 16 App Router using an island architecture: the marketing page is a pure Server Component with a single client island for scroll-reveal animations. Dynamic share pages use Firebase Admin SDK server-side to read live Firestore data at request time, so the full tee-time state is in the initial HTML — no client JS required to see round progress. Universal Link and App Link files are served via Next.js route handlers with correct headers.',
     solutionPoints: [
-      'React + Vite with Contentful CMS for all marketeter-editable content',
-      'Framer Motion scroll-driven animations for hero and feature sections',
-      'Interactive product demo sections built as embedded React mini-apps',
-      'Vercel deployment with automatic branch preview URLs for review cycles',
-      'GDPR-compliant cookie consent and analytics integration',
-      'Zero post-launch defects across 3 weeks of conference traffic'
+      'Next.js 16 App Router with React 19 — Server Components by default throughout',
+      'Island architecture: one client component (IntersectionObserver scroll-reveal) on the entire marketing page',
+      'Firebase Admin SDK for server-side Firestore reads — API keys never reach the browser',
+      'Dynamic share pages render live tee-time data (players, holes, ETA) in initial SSR HTML',
+      'next/image with AVIF + WebP, priority LCP prop on hero, and aggressive Cache-Control headers',
+      'Custom CSS design system with 16 tokens — no Tailwind, no UI library, pixel-matched to mobile app',
+      'iOS AASA + Android DAL served via Next.js route handlers with programmatic Content-Type'
     ],
-    tech: ['React', 'Vite', 'Framer Motion', 'Contentful CMS', 'Vercel', 'TypeScript'],
+    tech: ['Next.js 16', 'React 19', 'TypeScript', 'Firebase Admin SDK', 'Firestore', 'Vercel', 'CSS Modules'],
     results: [
-      { metric: '0', label: 'Post-launch defects' },
-      { metric: '40%', label: 'Of launch pipeline attributed to site' },
-      { metric: '3 weeks', label: 'From brief to production' },
-      { metric: '4.2min', label: 'Average session duration' }
+      { metric: '1 JS island', label: 'On entire marketing page' },
+      { metric: '8 routes', label: '2 dynamic with live Firestore data' },
+      { metric: 'SSR-first', label: 'Share pages load without app install' },
+      { metric: '2 stores', label: 'iOS & Android deep-link coverage' }
     ],
-    heroImg: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80&auto=format&fit=crop',
-    testimonial: { quote: 'The animations made our product feel like a premium brand. We closed 3 enterprise deals at the conference specifically because of how the demo section worked.', author: 'Creative Director, PulseAgency' }
+    heroImg: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80&auto=format&fit=crop',
+    testimonial: { quote: 'The share pages work perfectly — golfers text a link to their group and everyone can see the live round without downloading the app. The marketing site converted exactly the way we needed it to.', author: 'Founder, fourth.' }
+  },
+  'fe-ptb': {
+    id: 'fe-ptb',
+    service: 'frontend',
+    serviceTitle: 'Front-End Development',
+    tag: 'Spiritual Wellness App',
+    title: 'Pray the Bible AI — Cross-Platform Web Experience',
+    subtitle: 'Flutter web build delivering 11 feature areas, 7 custom themes, AI prayer flows, and a PWA-installable experience across iOS, Android, and web.',
+    overview: 'Pray the Bible AI is an AI-assisted prayer and Bible study platform for Christians. We built the full cross-platform frontend — a Flutter 3 web application covering 11 major feature areas including AI-generated prayers, a 66-book Bible browser, a community prayer wall, mood-based verse recommendations, and a spiritual growth dashboard — all sharing a single codebase deployed to iOS, Android, and web.',
+    client: 'Pray the Bible AI',
+    industry: 'Spiritual Wellness & Faith Tech',
+    timeline: '5 months',
+    teamSize: '3 Flutter engineers, 1 UI/UX designer',
+    challenge: 'Building a spiritually-sensitive app for a faith audience meant the UI had to feel reverent and personal, not clinical. The product spanned 11 distinct feature areas — each with its own data model, AI integration, and interaction pattern — all required to share a single Flutter codebase that compiled to iOS, Android, and web without platform-specific rewrites. Seven distinct visual themes were required to match different user moods and worship styles.',
+    challengePoints: [
+      '11 major feature areas (Prayer, Bible Browser, Hub, Soul, Discover, My Journey, Voice, News, Auth, Settings, Web Landing) in one codebase',
+      '7 handcrafted UI themes (Light, Dark, Aubergine, Holy Ember, Hoth, Scripture Sepia, Water) requiring full app-level theming',
+      'AI prayer generation via Cloud Functions had to be responsive enough not to break the reverent UX flow',
+      '66 JSON Bible books bundled as assets for offline scripture access — no network call required for scripture display',
+      'Community prayer wall needed server-side AI moderation before posts went live — without adding latency to the submission flow',
+      'RevenueCat cross-platform subscription state had to stay in sync across iOS, Android, and web simultaneously'
+    ],
+    solution: 'We applied a strict feature-folder architecture with one Provider class per feature area, GoRouter for URL-based navigation across all platforms, and Hive for offline-first local persistence. The entire NET Bible (66 books) was bundled as JSON assets so scripture loads instantly offline. AI prayer generation is gated behind Cloud Functions that keep the OpenAI key server-side, with shimmer placeholders maintaining the meditative feel during generation.',
+    solutionPoints: [
+      'Flutter 3 + Dart SDK ^3.8.1 — single codebase compiling to iOS, Android, and web',
+      'Provider state management with one Provider class per feature area, enforced by architecture rules',
+      'GoRouter for declarative URL-based navigation — deep-link compatible on all platforms',
+      '66 NET Bible books bundled as JSON assets — instant offline scripture, zero network dependency',
+      'Hive local persistence for prayers, theme preference, and cached content across sessions',
+      '7 full-app themes with custom color systems — user-selectable without app restart',
+      'Cloud Functions AI pipeline: OpenAI key stays server-side, shimmer loading maintains UX feel',
+      'RevenueCat subscription management with webhook-triggered Firestore entitlement sync',
+      'PWA manifest + splash screens for web installability'
+    ],
+    tech: ['Flutter 3', 'Dart', 'Firebase', 'Provider', 'GoRouter', 'RevenueCat', 'Hive', 'Cloud Functions'],
+    results: [
+      { metric: '11', label: 'Feature areas in one codebase' },
+      { metric: '7', label: 'Custom UI themes' },
+      { metric: '66', label: 'Bible books available offline' },
+      { metric: '3 platforms', label: 'iOS, Android & Web from single build' }
+    ],
+    heroImg: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80&auto=format&fit=crop',
+    testimonial: { quote: 'The team nailed the reverence we needed — every screen feels intentional. The fact that it runs on iOS, Android, and web from one codebase without any platform hacks is exactly what we asked for.', author: 'Founder, Pray the Bible AI' }
   },
   'directory': {
     id: 'directory',
