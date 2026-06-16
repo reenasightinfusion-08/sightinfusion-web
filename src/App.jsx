@@ -45,7 +45,7 @@ const services = [
         tag: 'SaaS Platform',
         title: 'React SPA for Project Management Tool',
         desc: 'Rebuilt a legacy jQuery dashboard into a React 18 SPA with real-time updates, drag-and-drop kanban boards, and a token-based design system — reducing bundle size by 62%.',
-        img: '/cs-performance.png',
+        img: '/cs-analytics.png',
         tech: ['react', 'js']
       },
       {
@@ -53,7 +53,7 @@ const services = [
         tag: 'E-Commerce',
         title: 'High-Performance E-Commerce Storefront',
         desc: 'Built a Vite-powered storefront for a fashion brand with lazy-loaded product galleries, optimized checkout flow, and a 96 Lighthouse score — increasing mobile conversions by 41%.',
-        img: '/cs-learning.png',
+        img: '/cs-ecommerce-frontend.png',
         tech: ['react', 'js']
       },
       {
@@ -61,7 +61,7 @@ const services = [
         tag: 'Marketing Website',
         title: 'Animated Product Marketing Website',
         desc: 'Developed a high-impact marketing site with scroll-driven animations, interactive product demos, and full CMS integration — delivered in 3 weeks with zero post-launch defects.',
-        img: '/cs-accounting.png',
+        img: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80&auto=format&fit=crop',
         tech: ['react']
       }
     ]
@@ -230,7 +230,7 @@ const services = [
         tag: 'Analytics AI',
         title: 'AI-Powered Sales Intelligence Platform',
         desc: 'Built a LangChain-based assistant that analyzes CRM data, surfaces deal-risk signals, and generates personalized outreach — reducing sales cycle time by 28%.',
-        img: '/cs-performance.png',
+        img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop',
         tech: ['python', 'node']
       },
       {
@@ -238,7 +238,7 @@ const services = [
         tag: 'Document Intelligence',
         title: 'Intelligent Document Processing System',
         desc: 'Deployed an OCR and NLP pipeline to extract, classify, and route structured data from 10,000+ monthly invoices and contracts for an enterprise finance team.',
-        img: '/cs-accounting.png',
+        img: 'https://images.unsplash.com/photo-1568027762272-e4da8b386fe9?w=800&q=80&auto=format&fit=crop',
         tech: ['python']
       },
       {
@@ -246,7 +246,7 @@ const services = [
         tag: 'Customer Support AI',
         title: 'RAG-Powered Support Copilot',
         desc: 'Designed a retrieval-augmented generation system that resolved 62% of support tickets autonomously, with seamless escalation to human agents for complex cases.',
-        img: '/cs-learning.png',
+        img: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80&auto=format&fit=crop',
         tech: ['python', 'node']
       }
     ]
@@ -285,7 +285,7 @@ const services = [
         tag: 'Cloud Migration',
         title: 'Zero-Downtime Migration to AWS',
         desc: 'Migrated a monolithic on-premise application serving 50,000 daily users to a containerized AWS architecture — achieving zero downtime and a 35% reduction in infrastructure costs.',
-        img: '/cs-performance.png',
+        img: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80&auto=format&fit=crop',
         tech: ['node']
       },
       {
@@ -293,7 +293,7 @@ const services = [
         tag: 'DevOps Automation',
         title: 'Enterprise CI/CD Pipeline Overhaul',
         desc: 'Replaced a fragile manual deployment process with a fully automated GitHub Actions pipeline — reducing release time from 4 hours to under 12 minutes with full rollback support.',
-        img: '/cs-learning.png',
+        img: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&q=80&auto=format&fit=crop',
         tech: ['node', 'react']
       },
       {
@@ -301,7 +301,7 @@ const services = [
         tag: 'Platform Engineering',
         title: 'Kubernetes Platform for Multi-Tenant SaaS',
         desc: 'Designed and deployed a Kubernetes-based platform enabling a SaaS product to onboard new tenants in minutes with full namespace isolation, autoscaling, and cost attribution.',
-        img: '/cs-accounting.png',
+        img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80&auto=format&fit=crop',
         tech: ['node']
       }
     ]
@@ -482,7 +482,7 @@ const caseStudiesDetail = {
       { metric: '40+', label: 'Enterprise tenants onboarded' }
     ],
     heroImg: '/cs-performance.png',
-    testimonial: { quote: '"The backend architecture is incredibly robust and performs perfectly under load. Their team understood our data complexity from day one."', author: 'CEO, Perception Group' }
+    testimonial: { quote: 'The backend architecture is incredibly robust and performs perfectly under load. Their team understood our data complexity from day one.', author: 'CEO, Perception Group' }
   },
   'learning': {
     id: 'learning',
@@ -598,8 +598,8 @@ const caseStudiesDetail = {
       { metric: '42%', label: 'Reduction in new user churn' },
       { metric: '4.7/5', label: 'Post-launch user satisfaction' }
     ],
-    heroImg: '/cs-performance.png',
-    testimonial: { quote: '"Our product went from something our customers tolerated to something they show off. The redesign paid for itself in reduced churn in the first quarter."', author: 'Head of Product, DataFlow Analytics' }
+    heroImg: '/cs-saas-dashboard.png',
+    testimonial: { quote: 'Our product went from something our customers tolerated to something they show off. The redesign paid for itself in reduced churn in the first quarter.', author: 'Head of Product, DataFlow Analytics' }
   },
   'ecommerce-redesign': {
     id: 'ecommerce-redesign',
@@ -637,8 +637,8 @@ const caseStudiesDetail = {
       { metric: '22%', label: 'Reduction in return rate' },
       { metric: '3.2s→1.1s', label: 'Page load improvement' }
     ],
-    heroImg: '/cs-learning.png',
-    testimonial: { quote: '"Conversion rates jumped 38% within 3 months of the redesign launch. The checkout redesign alone recovered six figures in monthly revenue we were leaving on the table."', author: 'CEO, StyleVault' }
+    heroImg: '/cs-ecommerce-ui.png',
+    testimonial: { quote: 'Conversion rates jumped 38% within 3 months of the redesign launch. The checkout redesign alone recovered six figures in monthly revenue we were leaving on the table.', author: 'CEO, StyleVault' }
   },
   'mobile-health': {
     id: 'mobile-health',
@@ -676,8 +676,8 @@ const caseStudiesDetail = {
       { metric: '3.2min', label: 'Average daily session length' },
       { metric: '#4', label: 'Health & Fitness charts on launch week' }
     ],
-    heroImg: '/cs-accounting.png',
-    testimonial: { quote: '"Users immediately understood the value of our app because of how clearly the design communicated it. We hit #4 in Health & Fitness in our first week."', author: 'Founder, WellPath' }
+    heroImg: '/cs-mobile-app.png',
+    testimonial: { quote: 'Users immediately understood the value of our app because of how clearly the design communicated it. We hit #4 in Health & Fitness in our first week.', author: 'Founder, WellPath' }
   },
   'ai-sales': {
     id: 'ai-sales',
@@ -715,8 +715,8 @@ const caseStudiesDetail = {
       { metric: '35%→8%', label: 'Time on manual CRM analysis' },
       { metric: '31%', label: 'Increase in qualified pipeline' }
     ],
-    heroImg: '/cs-performance.png',
-    testimonial: { quote: '"Our reps stopped dreading CRM hygiene the day the assistant launched. Deal risk alerts alone recovered two enterprise deals in the first month."', author: 'CRO, LeadSpark' }
+    heroImg: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop',
+    testimonial: { quote: 'Our reps stopped dreading CRM hygiene the day the assistant launched. Deal risk alerts alone recovered two enterprise deals in the first month.', author: 'CRO, LeadSpark' }
   },
   'ai-docs': {
     id: 'ai-docs',
@@ -754,8 +754,8 @@ const caseStudiesDetail = {
       { metric: '3 days→4hrs', label: 'Reconciliation cycle time' },
       { metric: '10x', label: 'Capacity headroom for volume growth' }
     ],
-    heroImg: '/cs-accounting.png',
-    testimonial: { quote: '"The pipeline processes 62% of documents end-to-end without a human touch. Our team now focuses on exceptions, not data entry. The ROI was visible in month two."', author: 'Director of Operations, DocuFlow' }
+    heroImg: 'https://images.unsplash.com/photo-1568027762272-e4da8b386fe9?w=800&q=80&auto=format&fit=crop',
+    testimonial: { quote: 'The pipeline processes 62% of documents end-to-end without a human touch. Our team now focuses on exceptions, not data entry. The ROI was visible in month two.', author: 'Director of Operations, DocuFlow' }
   },
   'ai-support': {
     id: 'ai-support',
@@ -793,8 +793,8 @@ const caseStudiesDetail = {
       { metric: '2.3→1.1', label: 'Interactions per resolution' },
       { metric: '+22pts', label: 'NPS improvement in 90 days' }
     ],
-    heroImg: '/cs-learning.png',
-    testimonial: { quote: '"First response time dropped from 6 hours to 18 minutes. Our agents now work on genuinely complex problems instead of answering the same 40 questions repeatedly."', author: 'VP of Customer Success, ServiceEdge' }
+    heroImg: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80&auto=format&fit=crop',
+    testimonial: { quote: 'First response time dropped from 6 hours to 18 minutes. Our agents now work on genuinely complex problems instead of answering the same 40 questions repeatedly.', author: 'VP of Customer Success, ServiceEdge' }
   },
   'cloud-migration': {
     id: 'cloud-migration',
@@ -832,8 +832,8 @@ const caseStudiesDetail = {
       { metric: '4-6/mo→0', label: 'Monthly outage incidents' },
       { metric: 'SOC 2', label: 'Type II ready post-migration' }
     ],
-    heroImg: '/cs-performance.png',
-    testimonial: { quote: '"We were live on AWS before our users noticed anything changed. The zero-downtime cutover was executed flawlessly and our infrastructure bill dropped by 35% in the first month."', author: 'Platform Lead, Cloudspace' }
+    heroImg: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80&auto=format&fit=crop',
+    testimonial: { quote: 'We were live on AWS before our users noticed anything changed. The zero-downtime cutover was executed flawlessly and our infrastructure bill dropped by 35% in the first month.', author: 'Platform Lead, Cloudspace' }
   },
   'cloud-cicd': {
     id: 'cloud-cicd',
@@ -871,8 +871,8 @@ const caseStudiesDetail = {
       { metric: '8x', label: 'Increase in deployment frequency' },
       { metric: '90min→auto', label: 'Rollback time' }
     ],
-    heroImg: '/cs-learning.png',
-    testimonial: { quote: '"Our engineers went from dreading deployments to doing them 8x more frequently. The automatic rollback has caught two issues before customers noticed anything."', author: 'Engineering Lead, PayBridge' }
+    heroImg: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&q=80&auto=format&fit=crop',
+    testimonial: { quote: 'Our engineers went from dreading deployments to doing them 8x more frequently. The automatic rollback has caught two issues before customers noticed anything.', author: 'Engineering Lead, PayBridge' }
   },
   'cloud-k8s': {
     id: 'cloud-k8s',
@@ -910,8 +910,8 @@ const caseStudiesDetail = {
       { metric: '30%→5%', label: 'DevOps time on tenant ops' },
       { metric: '50/qtr', label: 'Enterprise tenant capacity' }
     ],
-    heroImg: '/cs-accounting.png',
-    testimonial: { quote: '"Our customer success team can now provision a new enterprise tenant in 4 minutes without touching DevOps. The Kubernetes platform completely unblocked our growth."', author: 'CTO, HealthNode' }
+    heroImg: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80&auto=format&fit=crop',
+    testimonial: { quote: 'Our customer success team can now provision a new enterprise tenant in 4 minutes without touching DevOps. The Kubernetes platform completely unblocked our growth.', author: 'CTO, HealthNode' }
   },
   'fe-spa': {
     id: 'fe-spa',
@@ -949,8 +949,8 @@ const caseStudiesDetail = {
       { metric: '2mo→1wk', label: 'Engineer onboarding time' },
       { metric: '34%', label: 'Reduction in user abandonment' }
     ],
-    heroImg: '/cs-performance.png',
-    testimonial: { quote: '"The React SPA they built handles 25,000 daily users without breaking a sweat. Our engineers are actually excited to work in the codebase now."', author: 'VP of Engineering, Nexaloom' }
+    heroImg: '/cs-analytics.png',
+    testimonial: { quote: 'The React SPA they built handles 25,000 daily users without breaking a sweat. Our engineers are actually excited to work in the codebase now.', author: 'VP of Engineering, Nexaloom' }
   },
   'fe-ecommerce': {
     id: 'fe-ecommerce',
@@ -988,8 +988,8 @@ const caseStudiesDetail = {
       { metric: '3days→2hrs', label: 'Campaign update time' },
       { metric: '69%→38%', label: 'Mobile checkout abandonment' }
     ],
-    heroImg: '/cs-learning.png',
-    testimonial: { quote: '"Our Lighthouse score went from 41 to 96 and mobile conversions jumped 41%. The headless build gave us the brand control we had been asking for since day one."', author: 'Head of Growth, CartFlux' }
+    heroImg: '/cs-ecommerce-frontend.png',
+    testimonial: { quote: 'Our Lighthouse score went from 41 to 96 and mobile conversions jumped 41%. The headless build gave us the brand control we had been asking for since day one.', author: 'Head of Growth, CartFlux' }
   },
   'fe-marketing': {
     id: 'fe-marketing',
@@ -1027,8 +1027,8 @@ const caseStudiesDetail = {
       { metric: '3 weeks', label: 'From brief to production' },
       { metric: '4.2min', label: 'Average session duration' }
     ],
-    heroImg: '/cs-accounting.png',
-    testimonial: { quote: '"The animations made our product feel like a premium brand. We closed 3 enterprise deals at the conference specifically because of how the demo section worked."', author: 'Creative Director, PulseAgency' }
+    heroImg: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80&auto=format&fit=crop',
+    testimonial: { quote: 'The animations made our product feel like a premium brand. We closed 3 enterprise deals at the conference specifically because of how the demo section worked.', author: 'Creative Director, PulseAgency' }
   },
   'directory': {
     id: 'directory',
@@ -1066,8 +1066,8 @@ const caseStudiesDetail = {
       { metric: '85%', label: 'Mobile traffic share' },
       { metric: '4.5★', label: 'User rating on app stores' }
     ],
-    heroImg: '/cs-performance.png',
-    testimonial: { quote: '"Tulse City gave our local business community a professional platform we had been asking for. The search and map experience is seamless."', author: 'Community Manager, Tulse City' }
+    heroImg: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80&auto=format&fit=crop',
+    testimonial: { quote: 'Tulse City gave our local business community a professional platform we had been asking for. The search and map experience is seamless.', author: 'Community Manager, Tulse City' }
   },
   'lms': {
     id: 'lms',
@@ -1105,8 +1105,8 @@ const caseStudiesDetail = {
       { metric: '94%', label: 'Course completion rate' },
       { metric: '50+', label: 'Enterprise organizations deployed' }
     ],
-    heroImg: '/cs-learning.png',
-    testimonial: { quote: '"The LMS replaced our fragmented training tools in one platform. Certificate automation alone saved our HR team 20 hours per week."', author: 'Head of L&D, EduCorp' }
+    heroImg: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80&auto=format&fit=crop',
+    testimonial: { quote: 'The LMS replaced our fragmented training tools in one platform. Certificate automation alone saved our HR team 20 hours per week.', author: 'Head of L&D, EduCorp' }
   }
 }
 
@@ -1738,6 +1738,93 @@ function Header() {
   )
 }
 
+const PROCESS_STEPS = [
+  { id: 'brain',    title: 'Brainstorming', sub: 'Ideas' },
+  { id: 'design',   title: 'Product',       sub: 'Design' },
+  { id: 'frontend', title: 'Front-End',     sub: 'Development' },
+  { id: 'backend',  title: 'Back-End',      sub: 'Development' },
+  { id: 'seo',      title: 'SEO',           sub: 'Optimization' },
+  { id: 'marketing',title: 'Digital',       sub: 'Marketing' },
+]
+
+function ProcessMap() {
+  const mapRef = useRef(null)
+  const cardRefs = useRef([])
+  const [pathD, setPathD] = useState('')
+
+  useEffect(() => {
+    const compute = () => {
+      if (!mapRef.current) return
+      const map = mapRef.current.getBoundingClientRect()
+      const cards = cardRefs.current.map(el => {
+        if (!el) return null
+        const r = el.getBoundingClientRect()
+        return {
+          l:  r.left   - map.left,
+          r:  r.right  - map.left,
+          my: (r.top + r.bottom) / 2 - map.top,
+        }
+      })
+      if (cards.some(c => !c)) return
+
+      // card order: 0=Brainstorm 1=Product 2=Frontend 3=Backend(18%) 4=SEO(53%) 5=Digital
+      // visual snake: row1 L→R (0,1,2), row2 R→L (4=SEO first, 3=Backend), row3 (5)
+      const [c0, c1, c2, c3, c4, c5] = cards
+      const y1  = c0.my
+      const y2  = c4.my
+      const y3  = c5.my
+      const xR  = c2.r + 30   // right-turn column (past Frontend)
+      const xL  = c3.l - 30   // left-turn column  (past Backend)
+      const rad = 18
+
+      const d = [
+        `M ${c0.r} ${y1}`,                                   // start: right of Brainstorm
+        `H ${c1.l}`,                                          // → dot: left of Product
+        `H ${c2.l}`,                                          // → dot: left of Frontend
+        `H ${xR - rad}`,                                      // approach right corner
+        `Q ${xR} ${y1} ${xR} ${y1 + rad}`,                   // turn: right → down
+        `V ${y2 - rad}`,                                      // vertical to row2
+        `Q ${xR} ${y2} ${xR - rad} ${y2}`,                   // turn: down → left
+        `H ${c4.r}`,                                          // → dot: right of SEO
+        `H ${c3.r}`,                                          // → dot: right of Backend
+        `H ${xL + rad}`,                                      // approach left corner
+        `Q ${xL} ${y2} ${xL} ${y2 + rad}`,                   // turn: left → down
+        `V ${y3 - rad}`,                                      // vertical to row3
+        `Q ${xL} ${y3} ${xL + rad} ${y3}`,                   // turn: down → right
+        `H ${c5.l}`,                                          // → dot: left of Digital
+      ].join(' ')
+
+      setPathD(d)
+    }
+    const t = setTimeout(compute, 80)
+    window.addEventListener('resize', compute)
+    return () => { clearTimeout(t); window.removeEventListener('resize', compute) }
+  }, [])
+
+  return (
+    <div className="process-map" ref={mapRef}>
+      <svg fill="none" style={{ position:'absolute', inset:0, width:'100%', height:'100%', pointerEvents:'none', zIndex:1, overflow:'visible' }}>
+        {pathD && (
+          <path d={pathD} stroke="#4c7ef3" strokeWidth="1.5" strokeDasharray="7 5" strokeLinecap="round" opacity="0.65" />
+        )}
+      </svg>
+      <div className="process-steps-wrap">
+        {PROCESS_STEPS.map((step, idx) => (
+          <div key={step.id} className={`process-step-card step-${idx + 1}`}
+            ref={el => { cardRefs.current[idx] = el }}>
+            <div className="step-icon"><ProcessIcon id={step.id} /></div>
+            <div className="step-label">
+              <strong>{step.title}</strong>
+              <span>{step.sub}</span>
+            </div>
+            <div className="step-dot" />
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function HomePage() {
   const [hasAnimated, setHasAnimated] = useState(false)
   const servicesRef = useRef(null)
@@ -1885,7 +1972,6 @@ function HomePage() {
         <div className="container">
           <div className="process-shell">
             <div className="process-grid-bg" />
-
             <div className="process-content">
               <div className="process-info reveal">
                 <p className="process-kicker">OUR MODEL</p>
@@ -1894,42 +1980,7 @@ function HomePage() {
                   Save time and money with our poderosa method.
                 </p>
               </div>
-
-              <div className="process-map">
-                {/* SVG Connecting Line */}
-                <svg className="process-line-svg" viewBox="0 0 800 400" fill="none" preserveAspectRatio="none">
-                  <path
-                    d="M 120 42 H 720 Q 750 42 750 72 V 172 Q 750 202 720 202 H 80 Q 50 202 50 232 V 332 Q 50 362 80 362 H 450"
-                    stroke="#5d7ab5" strokeWidth="1.5" strokeDasharray="6 6" opacity="0.6"
-                  />
-                </svg>
-
-                <div className="process-steps-wrap">
-                  {[
-                    { id: 'brain', title: 'Brainstorming', sub: 'Ideas', x: 0, y: 0 },
-                    { id: 'design', title: 'Product', sub: 'Design', x: 0, y: 0 },
-                    { id: 'frontend', title: 'Front-End', sub: 'Development', x: 0, y: 0 },
-                    { id: 'backend', title: 'Back-End', sub: 'Development', x: 0, y: 0 },
-                    { id: 'seo', title: 'SEO', sub: 'Optimization', x: 0, y: 0 },
-                    { id: 'marketing', title: 'Digital', sub: 'Marketing', x: 0, y: 0 }
-                  ].map((step, idx) => (
-                    <div
-                      key={step.id}
-                      className={`process-step-card step-${idx + 1}`}
-                      style={{ '--step-x': `${step.x}px`, '--step-y': `${step.y}px` }}
-                    >
-                      <div className="step-icon">
-                        <ProcessIcon id={step.id} />
-                      </div>
-                      <div className="step-label">
-                        <strong>{step.title}</strong>
-                        <span>{step.sub}</span>
-                      </div>
-                      <div className="step-dot" />
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <ProcessMap />
             </div>
           </div>
         </div>
@@ -3300,78 +3351,90 @@ function CaseStudyPage() {
     )
   }
 
+  const featIcons = [
+    <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6l8-4z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+    <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.8"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.8"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.8"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.8"/></svg>,
+    <svg viewBox="0 0 24 24" fill="none"><path d="M3 12h4l3 8 4-16 3 8h4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+    <svg viewBox="0 0 24 24" fill="none"><path d="M4 7l8-4 8 4-8 4-8-4z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/><path d="M4 12l8 4 8-4M4 17l8 4 8-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+  ]
+  const related = Object.values(caseStudiesDetail)
+    .filter(c => c.id !== cs.id)
+    .sort((a, b) => (a.service === cs.service ? -1 : 0) - (b.service === cs.service ? -1 : 0))
+    .slice(0, 3)
+
   return (
     <>
       {/* Hero */}
-      <section className="cs-detail-hero">
+      <section className="cs-hero">
+        <div className="cs-hero-glow" />
         <div className="container">
           <div className="cs-detail-breadcrumb reveal">
             <NavLink to="/">Home</NavLink>
             <span>/</span>
-            <NavLink to={`/services/${cs.service}`}>{cs.serviceTitle}</NavLink>
+            <NavLink to="/portfolio">Portfolio</NavLink>
             <span>/</span>
-            <span>Case Study</span>
+            <span>{cs.title}</span>
           </div>
-          <div className="cs-detail-hero-content reveal">
-            <div className="cs-detail-hero-left">
+          <div className="cs-hero-grid reveal">
+            <div className="cs-hero-head">
               <span className="cs-detail-tag">{cs.tag}</span>
-              <h1 className="cs-detail-title">{cs.title}</h1>
-              <p className="cs-detail-subtitle">{cs.subtitle}</p>
-              <div className="cs-detail-meta-pills">
-                <div className="cs-meta-pill"><span className="cs-meta-label">Client</span><span className="cs-meta-value">{cs.client}</span></div>
-                <div className="cs-meta-pill"><span className="cs-meta-label">Industry</span><span className="cs-meta-value">{cs.industry}</span></div>
-                <div className="cs-meta-pill"><span className="cs-meta-label">Timeline</span><span className="cs-meta-value">{cs.timeline}</span></div>
-                <div className="cs-meta-pill"><span className="cs-meta-label">Team</span><span className="cs-meta-value">{cs.teamSize}</span></div>
+              <h1 className="cs-hero-title">{cs.title}</h1>
+              <p className="cs-hero-subtitle">{cs.subtitle}</p>
+              <div className="cs-hero-meta">
+                <div className="cs-hero-meta-item"><span>Client</span><strong>{cs.client}</strong></div>
+                <div className="cs-hero-meta-item"><span>Industry</span><strong>{cs.industry}</strong></div>
+                <div className="cs-hero-meta-item"><span>Timeline</span><strong>{cs.timeline}</strong></div>
+                <div className="cs-hero-meta-item"><span>Team</span><strong>{cs.teamSize}</strong></div>
               </div>
             </div>
-            <div className="cs-detail-hero-right">
-              <img src={cs.heroImg} alt={cs.title} className="cs-detail-hero-img" />
+            <div className="cs-hero-figure">
+              <img src={cs.heroImg} alt={cs.title} className="cs-hero-img" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Results banner */}
-      <section className="cs-results-banner">
+      {/* Results — floating stat cards */}
+      <section className="cs-stats">
         <div className="container">
-          <div className="cs-results-grid reveal">
+          <div className="cs-stats-grid reveal">
             {cs.results.map((r, i) => (
-              <div key={i} className="cs-result-item">
-                <div className="cs-result-metric">{r.metric}</div>
-                <div className="cs-result-label">{r.label}</div>
+              <div key={i} className="cs-stat-card">
+                <div className="cs-stat-metric">{r.metric}</div>
+                <div className="cs-stat-label">{r.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Overview */}
+      {/* Overview + Challenge/Approach cards */}
       <section className="section-pad cs-overview-section">
-        <div className="container cs-two-col reveal">
-          <div className="cs-col-label">
-            <span className="cs-section-tag">OVERVIEW</span>
-          </div>
-          <div className="cs-col-body">
-            <p className="cs-overview-text">{cs.overview}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Challenge */}
-      <section className="section-pad cs-challenge-section">
         <div className="container">
-          <div className="cs-challenge-wrapper reveal">
-            <div className="cs-section-header">
-              <span className="cs-section-tag">THE CHALLENGE</span>
-              <h2>What we were up against</h2>
+          <div className="cs-overview-head reveal">
+            <span className="cs-section-tag">PROJECT OVERVIEW</span>
+            <h2>{cs.overview}</h2>
+          </div>
+          <div className="cs-split-cards reveal">
+            <div className="cs-split-card cs-card-challenge">
+              <span className="cs-card-kicker">The Challenge</span>
+              <p>{cs.challenge}</p>
+              <ul className="cs-card-list">
+                {cs.challengePoints.slice(0, 4).map((pt, i) => (
+                  <li key={i}><span className="cs-dash" />{pt}</li>
+                ))}
+              </ul>
             </div>
-            <div className="cs-challenge-body">
-              <p className="cs-challenge-lead">{cs.challenge}</p>
-              <ul className="cs-challenge-list">
-                {cs.challengePoints.map((pt, i) => (
-                  <li key={i} className="cs-challenge-item">
-                    <div className="cs-list-bullet" />
-                    <span>{pt}</span>
+            <div className="cs-split-card cs-card-approach">
+              <span className="cs-card-kicker">Our Approach</span>
+              <p>{cs.solution}</p>
+              <ul className="cs-card-list">
+                {cs.solutionPoints.slice(0, 4).map((pt, i) => (
+                  <li key={i}>
+                    <svg className="cs-li-check" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    {pt}
                   </li>
                 ))}
               </ul>
@@ -3380,70 +3443,90 @@ function CaseStudyPage() {
         </div>
       </section>
 
-      {/* Solution */}
-      <section className="section-pad cs-solution-section">
+      {/* Key features grid */}
+      <section className="section-pad cs-features-section">
         <div className="container">
-          <div className="cs-solution-wrapper reveal">
-            <div className="cs-section-header">
-              <span className="cs-section-tag">OUR SOLUTION</span>
-              <h2>How we solved it</h2>
-            </div>
-            <div className="cs-solution-body">
-              <p className="cs-solution-lead">{cs.solution}</p>
-              <div className="cs-solution-grid">
-                {cs.solutionPoints.map((pt, i) => (
-                  <div key={i} className="cs-solution-item">
-                    <div className="cs-solution-check">
-                      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#2a68ff"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                    </div>
-                    <span>{pt}</span>
-                  </div>
-                ))}
+          <div className="cs-section-header cs-center reveal">
+            <span className="cs-section-tag">KEY FEATURES</span>
+            <h2>What makes it work</h2>
+          </div>
+          <div className="cs-features-grid reveal">
+            {cs.solutionPoints.map((pt, i) => (
+              <div key={i} className="cs-feature-card">
+                <div className="cs-feature-icon">{featIcons[i % featIcons.length]}</div>
+                <p>{pt}</p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Tech stack */}
       <section className="section-pad cs-tech-section">
-        <div className="container cs-two-col reveal">
-          <div className="cs-col-label">
-            <span className="cs-section-tag">TECH STACK</span>
+        <div className="container">
+          <div className="cs-section-header cs-center reveal">
+            <span className="cs-section-tag">TECHNOLOGY STACK</span>
+            <h2>Built with a modern toolchain</h2>
           </div>
-          <div className="cs-col-body">
-            <div className="cs-tech-tags">
-              {cs.tech.map((t, i) => (
-                <span key={i} className="cs-tech-tag">{t}</span>
-              ))}
-            </div>
+          <div className="cs-tech-tags reveal">
+            {cs.tech.map((t, i) => (
+              <span key={i} className="cs-tech-tag">{t}</span>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Testimonial */}
       {cs.testimonial && (
-        <section className="section-pad cs-testimonial-section">
+        <section className="cs-testimonial-section">
           <div className="container">
             <div className="cs-testimonial-card reveal">
               <div className="cs-quote-mark">&ldquo;</div>
-              <p className="cs-testimonial-quote">{cs.testimonial.quote.replace(/^"|"$/g, '')}</p>
+              <p className="cs-testimonial-quote">{cs.testimonial.quote}</p>
               <p className="cs-testimonial-author">— {cs.testimonial.author}</p>
             </div>
           </div>
         </section>
       )}
 
+      {/* Related case studies */}
+      {related.length > 0 && (
+        <section className="section-pad cs-related-section">
+          <div className="container">
+            <div className="cs-section-header cs-center reveal">
+              <span className="cs-section-tag">MORE WORK</span>
+              <h2>Related case studies</h2>
+            </div>
+            <div className="cs-related-grid reveal">
+              {related.map((c) => (
+                <NavLink key={c.id} to={`/case-study/${c.id}`} className="cs-related-card">
+                  <div className="cs-related-img-wrap">
+                    <img src={c.heroImg} alt={c.title} />
+                  </div>
+                  <div className="cs-related-body">
+                    <span className="cs-related-tag">{c.tag}</span>
+                    <h3>{c.title}</h3>
+                    <span className="cs-related-link">View case study
+                      <svg viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </span>
+                  </div>
+                </NavLink>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CTA */}
-      <section className="contact-new-section cs-cta-section">
+      <section className="cs-cta-section">
         <div className="container">
           <div className="cs-cta-inner reveal">
             <div className="cs-cta-text">
-              <span className="cs-section-tag">START YOUR PROJECT</span>
+              <span className="cs-section-tag cs-tag-light">START YOUR PROJECT</span>
               <h2>Ready for results like these?</h2>
               <p>Tell us about your challenge and we will put together the right team and approach to get you there.</p>
             </div>
-            <NavLink to="/contact" className="service-hero-btn">
+            <NavLink to="/contact" className="service-hero-btn cs-cta-btn">
               Get in Touch
               <svg viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </NavLink>
@@ -3454,41 +3537,123 @@ function CaseStudyPage() {
   )
 }
 
+const portfolioFilters = ['All', 'Backend', 'Frontend', 'UI/UX', 'AI/ML', 'Cloud']
+const portfolioServiceMap = {
+  backend: 'Backend',
+  frontend: 'Frontend',
+  uiux: 'UI/UX',
+  'ai-ml': 'AI/ML',
+  cloud: 'Cloud',
+}
+
 function PortfolioPage() {
+  const [activeFilter, setActiveFilter] = useState('All')
+  const allProjects = Object.values(caseStudiesDetail)
+  const filtered = activeFilter === 'All'
+    ? allProjects
+    : allProjects.filter(p => portfolioServiceMap[p.service] === activeFilter)
+
   return (
     <>
-      <section className="page-hero-banner">
-        <div className="container reveal">
-          <p className="kicker">Portfolio</p>
-          <h1>Selected work designed for technical authority.</h1>
-          <p className="page-hero-sub">
-            A focused set of projects across AI product framing, premium websites, and operational tools.
-          </p>
+      {/* Hero */}
+      <section className="pf-hero">
+        <div className="container">
+          <div className="pf-hero-inner reveal">
+            <span className="pf-kicker">Our Work</span>
+            <h1 className="pf-title">Projects that<br />deliver real results</h1>
+            <p className="pf-subtitle">
+              {Object.keys(caseStudiesDetail).length} projects across backend, frontend, AI/ML, cloud, and UI/UX — each built to solve a specific problem and move a business forward.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="section-pad">
-        <div className="container portfolio-grid">
-          {portfolioItems.map((item, index) => (
-            <div
-              key={item.name}
-              className={`portfolio-card-v2 reveal ${index === 1 ? 'reveal-delay' : ''} ${index === 2 ? 'reveal-delay-2' : ''}`}
-            >
-              <div className="pc-visual">
-                <span>{item.category}</span>
-              </div>
-              <div className="pc-body">
-                <span className="pc-category">{item.category}</span>
-                <h3>{item.name}</h3>
-                <p>{item.summary}</p>
-                <div className="pc-tags">
-                  {item.tags.map((tag) => (
-                    <span key={tag} className="pc-tag">{tag}</span>
-                  ))}
+      {/* Stats strip */}
+      <div className="pf-stats-strip">
+        <div className="container">
+          <div className="pf-stats-row">
+            <div className="pf-stat"><strong>17</strong><span>Case Studies</span></div>
+            <div className="pf-stat-divider" />
+            <div className="pf-stat"><strong>5</strong><span>Service areas</span></div>
+            <div className="pf-stat-divider" />
+            <div className="pf-stat"><strong>600+</strong><span>Projects delivered</span></div>
+            <div className="pf-stat-divider" />
+            <div className="pf-stat"><strong>99%</strong><span>Client satisfaction</span></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Filter + Grid */}
+      <section className="pf-grid-section">
+        <div className="container">
+          {/* Filter tabs */}
+          <div className="pf-filters reveal">
+            {portfolioFilters.map(f => (
+              <button
+                key={f}
+                className={`pf-filter-btn${activeFilter === f ? ' active' : ''}`}
+                onClick={() => setActiveFilter(f)}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
+
+          {/* Project grid */}
+          <div className="pf-grid reveal">
+            {filtered.map((project) => (
+              <NavLink
+                key={project.id}
+                to={`/case-study/${project.id}`}
+                className="pf-card"
+              >
+                <div className="pf-card-img-wrap">
+                  <img src={project.heroImg} alt={project.title} />
+                  <span className="pf-card-service">{portfolioServiceMap[project.service]}</span>
                 </div>
-              </div>
+                <div className="pf-card-body">
+                  <span className="pf-card-tag">{project.tag}</span>
+                  <h3 className="pf-card-title">{project.title}</h3>
+                  <p className="pf-card-desc">{project.subtitle}</p>
+                  <div className="pf-card-metrics">
+                    {project.results.slice(0, 2).map((r, i) => (
+                      <div key={i} className="pf-metric">
+                        <strong>{r.metric}</strong>
+                        <span>{r.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="pf-card-footer">
+                    <span className="pf-card-link">
+                      View case study
+                      <svg viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </span>
+                    <div className="pf-card-tech">
+                      {project.tech.slice(0, 3).map((t, i) => (
+                        <span key={i}>{t}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </NavLink>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="pf-cta">
+        <div className="container">
+          <div className="pf-cta-inner reveal">
+            <div>
+              <h2>Have a project in mind?</h2>
+              <p>Tell us what you're building and we'll put together the right team.</p>
             </div>
-          ))}
+            <NavLink to="/contact" className="service-hero-btn">
+              Start a conversation
+              <svg viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </NavLink>
+          </div>
         </div>
       </section>
     </>
