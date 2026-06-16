@@ -38,6 +38,32 @@ const services = [
       { title: 'UI/UX Design & Development', desc: 'Our designers and developers work together to build artistically satisfying, user-centric frontend interfaces.' },
       { title: 'Migration & Modernization Services', desc: 'Upgrade legacy front-end systems to modern, efficient, and secure frameworks like React, Vue.js, and Angular.' },
       { title: 'Cross-Platform & Mobile-Responsive Front-End', desc: 'We make certain your front-end adapts utterly to any screen size, serving an intuitive experience across devices.' }
+    ],
+    caseStudies: [
+      {
+        id: 'fe-spa',
+        tag: 'SaaS Platform',
+        title: 'React SPA for Project Management Tool',
+        desc: 'Rebuilt a legacy jQuery dashboard into a React 18 SPA with real-time updates, drag-and-drop kanban boards, and a token-based design system — reducing bundle size by 62%.',
+        img: '/cs-performance.png',
+        tech: ['react', 'js']
+      },
+      {
+        id: 'fe-ecommerce',
+        tag: 'E-Commerce',
+        title: 'High-Performance E-Commerce Storefront',
+        desc: 'Built a Vite-powered storefront for a fashion brand with lazy-loaded product galleries, optimized checkout flow, and a 96 Lighthouse score — increasing mobile conversions by 41%.',
+        img: '/cs-learning.png',
+        tech: ['react', 'js']
+      },
+      {
+        id: 'fe-marketing',
+        tag: 'Marketing Website',
+        title: 'Animated Product Marketing Website',
+        desc: 'Developed a high-impact marketing site with scroll-driven animations, interactive product demos, and full CMS integration — delivered in 3 weeks with zero post-launch defects.',
+        img: '/cs-accounting.png',
+        tech: ['react']
+      }
     ]
   },
   {
@@ -188,7 +214,7 @@ const services = [
     heroTitle: 'Custom AI/ML Solutions.<br />Practical automation for business.',
     heroDescription: 'Design AI-powered workflows, assistants, and intelligence layers that fit practical business use cases.',
     heroButtonLabel: 'Hire AI Developer',
-    heroImage: '/src/assets/hero-visual.png',
+    heroImage: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&q=80&auto=format&fit=crop',
     detailedFeatures: [
       { title: 'LLM & Chatbot Development', desc: 'Building production-grade conversational AI and LLM-powered workflows using OpenAI, Anthropic, and open-source models tailored to your domain.' },
       { title: 'Custom ML Model Training', desc: 'Training and fine-tuning machine learning models on your proprietary data to solve classification, regression, and ranking problems with high accuracy.' },
@@ -243,7 +269,7 @@ const services = [
     heroTitle: 'Scalable Cloud Services.<br />Reliable systems, global reach.',
     heroDescription: 'Scalable cloud infrastructure that keeps your product fast, secure, and ready for global traffic.',
     heroButtonLabel: 'Hire Cloud Engineer',
-    heroImage: '/src/assets/hero-visual.png',
+    heroImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&q=80&auto=format&fit=crop',
     detailedFeatures: [
       { title: 'Cloud Architecture & Strategy', desc: 'Designing scalable, cost-efficient cloud architectures on AWS, GCP, or Azure that align with your product growth and compliance requirements.' },
       { title: 'CI/CD Pipeline Automation', desc: 'Building fully automated deployment pipelines with GitHub Actions, GitLab CI, or Jenkins so every release is fast, tested, and repeatable.' },
@@ -418,6 +444,671 @@ const homeServices = [
   { id: 'dataviz', title: 'Data Visualization', desc: 'Transforming Complex Data into Clear, Actionable Business Insights.' },
   { id: '3d', title: '3D Design', desc: 'Innovative 3D Visuals and High-Precision Modeling for Digital Excellence.' },
 ]
+
+const caseStudiesDetail = {
+  'performance': {
+    id: 'performance',
+    service: 'backend',
+    serviceTitle: 'Back-End Development',
+    tag: 'Analytics AI',
+    title: 'Performance Management System',
+    subtitle: 'AI-powered B2B sales talent prediction platform built on a robust, scalable backend.',
+    overview: 'PerceptionPredict.ai, developed by Perception Group, leverages AI and performance prediction to optimize B2B sales talent management — from hiring signals to performance coaching.',
+    client: 'Perception Group',
+    industry: 'HR Technology / B2B SaaS',
+    timeline: '6 months',
+    teamSize: '5 engineers',
+    challenge: 'Perception Group needed a backend capable of ingesting high-volume behavioral data, running ML inference in near-real-time, and serving a multi-tenant SaaS product to enterprise HR teams — all while maintaining GDPR-compliant data handling.',
+    challengePoints: [
+      'Multi-tenant data isolation with enterprise-grade access control',
+      'Real-time ML inference pipeline integrated into the hiring workflow',
+      'High-volume event ingestion with sub-200ms API response times',
+      'GDPR-compliant data storage and audit trail requirements'
+    ],
+    solution: 'We designed a Node.js microservices backend with PostgreSQL for structured talent data and Redis for caching inference results. A separate Python service handled ML model serving via REST, with queued jobs for batch scoring runs.',
+    solutionPoints: [
+      'Node.js REST API with role-based access control per tenant',
+      'Python ML service for real-time scoring and batch prediction jobs',
+      'PostgreSQL with row-level security for tenant data isolation',
+      'Redis caching layer reducing inference latency by 78%',
+      'Event-driven architecture using job queues for batch operations',
+      'Comprehensive audit log system meeting GDPR Article 30 requirements'
+    ],
+    tech: ['Node.js', 'Express', 'PostgreSQL', 'Redis', 'Python', 'Vue.js', 'Docker', 'AWS'],
+    results: [
+      { metric: '78%', label: 'Reduction in API latency' },
+      { metric: '99.97%', label: 'Uptime over 12 months' },
+      { metric: '3x', label: 'Faster hiring cycle for clients' },
+      { metric: '40+', label: 'Enterprise tenants onboarded' }
+    ],
+    heroImg: '/cs-performance.png',
+    testimonial: { quote: '"The backend architecture is incredibly robust and performs perfectly under load. Their team understood our data complexity from day one."', author: 'CEO, Perception Group' }
+  },
+  'learning': {
+    id: 'learning',
+    service: 'backend',
+    serviceTitle: 'Back-End Development',
+    tag: 'Automobile E-Learning',
+    title: 'Servitization Learning System',
+    subtitle: 'An interactive, milestone-driven e-learning platform for Volvo\'s global dealer network.',
+    overview: 'The Volvo Servitization Learning Path offers a visually dynamic training platform with milestones, animated progress tracking, and certification management for Volvo\'s worldwide aftersales and service teams.',
+    client: 'Volvo (Global Dealer Training)',
+    industry: 'Automotive / E-Learning',
+    timeline: '5 months',
+    teamSize: '4 engineers',
+    challenge: 'Volvo needed a scalable e-learning backend capable of serving thousands of concurrent learners across 50+ countries, managing multilingual course content, and issuing tamper-proof digital certificates.',
+    challengePoints: [
+      'Global delivery with sub-300ms response times across regions',
+      'Multilingual content management for 12+ languages',
+      'Tamper-proof certificate issuance and verification system',
+      'Complex progress tracking with branched learning paths',
+      'Integration with Volvo\'s existing identity provider (SSO)'
+    ],
+    solution: 'We built a Node.js API with a PostgreSQL content store, a separate certification microservice, and a CDN-backed content delivery layer. SSO integration via SAML 2.0 enabled seamless dealer portal login.',
+    solutionPoints: [
+      'Node.js API with optimized course content delivery',
+      'PostgreSQL with JSON support for flexible multilingual content',
+      'SAML 2.0 SSO integration with Volvo\'s identity provider',
+      'PDF certificate generation with cryptographic signing',
+      'Branched learning path engine with completion tracking',
+      'CDN integration for global sub-300ms asset delivery'
+    ],
+    tech: ['Node.js', 'React', 'JavaScript', 'PostgreSQL', 'AWS CloudFront', 'SAML 2.0'],
+    results: [
+      { metric: '50+', label: 'Countries served' },
+      { metric: '98%', label: 'Course completion rate' },
+      { metric: '<300ms', label: 'Global response time' },
+      { metric: '12', label: 'Languages supported' }
+    ],
+    heroImg: '/cs-learning.png',
+    testimonial: { quote: '"The platform handles our global dealer network without a hitch. Certificate issuance is instant and the multilingual support works flawlessly."', author: 'Digital Learning Manager, Volvo' }
+  },
+  'accounting': {
+    id: 'accounting',
+    service: 'backend',
+    serviceTitle: 'Back-End Development',
+    tag: 'Accounting',
+    title: 'Account Management System (TBook)',
+    subtitle: 'An integrated enterprise operations platform covering accounting, CRM, marketing, and project management.',
+    overview: 'The Jon Tunis Enterprise Solution (TBook) streamlines business operations with interconnected modules for Marketing, Customer Management, Accounting, and project tracking — serving an enterprise client with 200+ internal users.',
+    client: 'Jon Tunis Enterprises',
+    industry: 'Enterprise Operations',
+    timeline: '8 months',
+    teamSize: '6 engineers',
+    challenge: 'The client ran their operations across seven disconnected tools — causing data duplication, manual reconciliation overhead, and a lack of real-time financial visibility across departments.',
+    challengePoints: [
+      'Data siloed across 7 separate legacy systems',
+      'Manual reconciliation taking 40+ hours per month',
+      'No unified customer view across sales, support, and finance',
+      'Audit trail gaps creating compliance risk',
+      'Role-based access needed for 6 distinct department types'
+    ],
+    solution: 'We built a modular Node.js backend with PostgreSQL, where each business domain (accounting, CRM, projects) had its own service layer but shared a unified data model for customers, transactions, and users.',
+    solutionPoints: [
+      'Unified customer data model across CRM, accounting, and support',
+      'Module-based Node.js services with shared authentication layer',
+      'Double-entry accounting engine with real-time P&L reporting',
+      'Role-based access control with 6 permission tiers',
+      'Audit log for every financial transaction',
+      'Automated reconciliation engine reducing manual work by 94%'
+    ],
+    tech: ['Node.js', 'PostgreSQL', 'Express', 'Redis', 'React', 'Chart.js'],
+    results: [
+      { metric: '94%', label: 'Reduction in manual reconciliation' },
+      { metric: '7→1', label: 'Systems consolidated' },
+      { metric: '200+', label: 'Internal users served' },
+      { metric: '40hrs', label: 'Monthly overhead eliminated' }
+    ],
+    heroImg: '/cs-accounting.png',
+    testimonial: { quote: '"TBook replaced 7 tools in one. Our finance team finally has real-time visibility and the audit trail has eliminated our compliance risk entirely."', author: 'COO, Jon Tunis Enterprises' }
+  },
+  'saas-dashboard': {
+    id: 'saas-dashboard',
+    service: 'uiux',
+    serviceTitle: 'UI/UX Design',
+    tag: 'SaaS Platform',
+    title: 'Enterprise Analytics Dashboard',
+    subtitle: 'A complete UX overhaul of a B2B analytics platform that reduced time-to-insight by 60%.',
+    overview: 'A comprehensive UX redesign for a B2B analytics platform serving data teams at Fortune 500 companies — restructuring information hierarchy, introducing a new data visualization language, and dramatically reducing cognitive load.',
+    client: 'DataFlow Analytics (B2B SaaS)',
+    industry: 'Data & Analytics SaaS',
+    timeline: '4 months',
+    teamSize: '3 designers, 2 developers',
+    challenge: 'The existing dashboard had evolved organically over 5 years, resulting in 14 navigation levels, inconsistent chart patterns, and an average time-to-insight of 12 minutes — causing high churn among new users.',
+    challengePoints: [
+      '14-level navigation causing disorientation and abandonment',
+      'Inconsistent chart types making cross-metric comparison impossible',
+      'Average 12-minute time-to-insight driving new user churn',
+      'No mobile experience for field teams',
+      'No design system causing every new feature to look different'
+    ],
+    solution: 'We conducted 24 user interviews, ran tree testing on the navigation, and rebuilt the information architecture from scratch. We introduced a unified chart component library and a progressive disclosure pattern for advanced features.',
+    solutionPoints: [
+      '24 user interviews + card sorting to rebuild IA',
+      'Navigation collapsed from 14 levels to 3',
+      'Unified chart component library with consistent visual grammar',
+      'Progressive disclosure pattern for advanced analyst features',
+      'Responsive design system for field team mobile access',
+      'Figma component library with 200+ documented components'
+    ],
+    tech: ['Figma', 'Framer', 'React', 'D3.js', 'Design Systems'],
+    results: [
+      { metric: '60%', label: 'Reduction in time-to-insight' },
+      { metric: '14→3', label: 'Navigation levels' },
+      { metric: '42%', label: 'Reduction in new user churn' },
+      { metric: '4.7/5', label: 'Post-launch user satisfaction' }
+    ],
+    heroImg: '/cs-performance.png',
+    testimonial: { quote: '"Our product went from something our customers tolerated to something they show off. The redesign paid for itself in reduced churn in the first quarter."', author: 'Head of Product, DataFlow Analytics' }
+  },
+  'ecommerce-redesign': {
+    id: 'ecommerce-redesign',
+    service: 'uiux',
+    serviceTitle: 'UI/UX Design',
+    tag: 'E-Commerce',
+    title: 'Premium Fashion Marketplace Redesign',
+    subtitle: 'End-to-end UI/UX redesign increasing conversion rate by 38% in 90 days.',
+    overview: 'A complete visual identity and UX overhaul for a premium fashion e-commerce platform — improving product discovery, streamlining checkout from 7 steps to 3, and establishing a design system that supports 300+ monthly product launches.',
+    client: 'StyleVault (E-Commerce)',
+    industry: 'Fashion Retail',
+    timeline: '3 months',
+    teamSize: '2 designers, 3 developers',
+    challenge: 'StyleVault had a 2.1% conversion rate and a 73% cart abandonment rate. User research revealed that the product discovery experience felt cluttered, the checkout was confusing, and the brand felt inconsistent across device types.',
+    challengePoints: [
+      '2.1% conversion rate well below industry average of 3.5%',
+      '73% cart abandonment rate, highest at the shipping step',
+      'Cluttered product listings with inconsistent photography framing',
+      '7-step checkout flow causing drop-off on mobile',
+      'Brand inconsistency across web and mobile experiences'
+    ],
+    solution: 'We rebuilt the product grid with editorial layout modes, redesigned the checkout as a 3-step flow with inline validation, and created a comprehensive design system that the StyleVault team could use to launch new categories consistently.',
+    solutionPoints: [
+      'New editorial product grid with curated collection layouts',
+      'Checkout redesigned from 7 steps to 3 with inline validation',
+      'Smart size recommendation component reducing return rate',
+      'Wishlist redesigned as social sharing feature',
+      'Design system with 150+ components for consistent launches',
+      'Performance-optimized image loading for 40% faster product pages'
+    ],
+    tech: ['Figma', 'React', 'Design Systems', 'A/B Testing'],
+    results: [
+      { metric: '38%', label: 'Increase in conversion rate' },
+      { metric: '61%', label: 'Reduction in cart abandonment' },
+      { metric: '22%', label: 'Reduction in return rate' },
+      { metric: '3.2s→1.1s', label: 'Page load improvement' }
+    ],
+    heroImg: '/cs-learning.png',
+    testimonial: { quote: '"Conversion rates jumped 38% within 3 months of the redesign launch. The checkout redesign alone recovered six figures in monthly revenue we were leaving on the table."', author: 'CEO, StyleVault' }
+  },
+  'mobile-health': {
+    id: 'mobile-health',
+    service: 'uiux',
+    serviceTitle: 'UI/UX Design',
+    tag: 'Health & Wellness App',
+    title: 'Wellness Companion Mobile App',
+    subtitle: 'A calming mobile health tracking experience that launched to a 4.8-star rating.',
+    overview: 'A complete UX design for a wellness and habit tracking mobile app — from brand identity through onboarding flows, habit dashboards, and community features — launched on iOS and Android to immediate critical acclaim.',
+    client: 'WellPath (Health Tech Startup)',
+    industry: 'Health & Wellness',
+    timeline: '3 months',
+    teamSize: '2 designers',
+    challenge: 'Most health apps fail because they feel like medical interfaces rather than supportive companions. WellPath needed a design that felt calming, personal, and motivating — especially during the critical first 7 days of habit formation.',
+    challengePoints: [
+      'Existing health apps have 75% drop-off rate within first week',
+      'Users needed motivation, not clinical data overwhelming them',
+      'Complex data (sleep, nutrition, movement) needed to feel simple',
+      'Accessibility for users with anxiety and attention difficulties',
+      'Dark mode needed to feel relaxing, not just inverted'
+    ],
+    solution: 'We designed around the concept of "calm momentum" — using soft color progressions, celebratory micro-interactions, and a daily focus mode that surfaced only the most relevant habits. The onboarding was conversational, not form-based.',
+    solutionPoints: [
+      'Conversational onboarding flow across 5 screens (vs typical 12)',
+      '"Calm momentum" visual language with soft gradients and breathing animations',
+      'Daily focus mode surfacing only 3 priority habits',
+      'Celebratory micro-interactions triggered at habit milestones',
+      'WCAG 2.1 AA accessibility compliance throughout',
+      'Dark mode designed as a first-class experience, not an afterthought'
+    ],
+    tech: ['Figma', 'Framer', 'iOS Design Guidelines', 'Material Design'],
+    results: [
+      { metric: '4.8★', label: 'App Store rating at launch' },
+      { metric: '68%', label: 'Day-7 retention (vs 25% industry avg)' },
+      { metric: '3.2min', label: 'Average daily session length' },
+      { metric: '#4', label: 'Health & Fitness charts on launch week' }
+    ],
+    heroImg: '/cs-accounting.png',
+    testimonial: { quote: '"Users immediately understood the value of our app because of how clearly the design communicated it. We hit #4 in Health & Fitness in our first week."', author: 'Founder, WellPath' }
+  },
+  'ai-sales': {
+    id: 'ai-sales',
+    service: 'ai-ml',
+    serviceTitle: 'AI-ML Development',
+    tag: 'Analytics AI',
+    title: 'AI-Powered Sales Intelligence Platform',
+    subtitle: 'A LangChain-based assistant that reduced sales cycle time by 28%.',
+    overview: 'An AI-driven sales intelligence assistant that analyzes CRM data in real-time, surfaces deal-risk signals, generates personalized outreach copy, and forecasts pipeline health — deployed to a 150-person sales team at a SaaS company.',
+    client: 'LeadSpark (Sales Technology)',
+    industry: 'Sales Technology / SaaS',
+    timeline: '4 months',
+    teamSize: '3 AI engineers, 1 backend engineer',
+    challenge: 'LeadSpark\'s sales team was spending 35% of their time on manual data analysis — reviewing CRM notes, identifying at-risk deals, and writing personalized follow-up emails. Deal risk was identified too late, and pipeline forecasting was wildly inaccurate.',
+    challengePoints: [
+      '35% of sales rep time consumed by manual CRM analysis',
+      'Deal risks identified only after deals were already lost',
+      'Pipeline forecast accuracy below 55%',
+      'Follow-up email personalization inconsistent across the team',
+      'No unified signal from calls, emails, and CRM activity'
+    ],
+    solution: 'We built a LangChain-based pipeline that ingested CRM activity, email threads, and call transcripts — generating deal-health scores, risk alerts, and personalized follow-up drafts via a React sidebar embedded directly in Salesforce.',
+    solutionPoints: [
+      'LangChain pipeline combining CRM, email, and call transcript data',
+      'Deal-health scoring model trained on 3 years of historical outcomes',
+      'Real-time risk alerts surfaced 14 days earlier than before',
+      'GPT-4 powered follow-up generation with rep tone calibration',
+      'Salesforce embedded sidebar via LWC for zero-workflow-change adoption',
+      'Pipeline forecasting model with 81% accuracy vs previous 55%'
+    ],
+    tech: ['Python', 'LangChain', 'GPT-4', 'Node.js', 'Salesforce LWC', 'PostgreSQL', 'Redis'],
+    results: [
+      { metric: '28%', label: 'Reduction in sales cycle time' },
+      { metric: '81%', label: 'Pipeline forecast accuracy' },
+      { metric: '35%→8%', label: 'Time on manual CRM analysis' },
+      { metric: '31%', label: 'Increase in qualified pipeline' }
+    ],
+    heroImg: '/cs-performance.png',
+    testimonial: { quote: '"Our reps stopped dreading CRM hygiene the day the assistant launched. Deal risk alerts alone recovered two enterprise deals in the first month."', author: 'CRO, LeadSpark' }
+  },
+  'ai-docs': {
+    id: 'ai-docs',
+    service: 'ai-ml',
+    serviceTitle: 'AI-ML Development',
+    tag: 'Document Intelligence',
+    title: 'Intelligent Document Processing System',
+    subtitle: 'An OCR and NLP pipeline processing 10,000+ documents per month for enterprise finance.',
+    overview: 'A production-grade intelligent document processing system that automatically extracts, classifies, validates, and routes structured data from invoices, contracts, and purchase orders — eliminating a 5-person manual processing team.',
+    client: 'DocuFlow (Enterprise Finance)',
+    industry: 'Financial Operations',
+    timeline: '5 months',
+    teamSize: '4 AI engineers, 1 backend engineer',
+    challenge: 'DocuFlow\'s finance team processed 10,000+ mixed-format documents monthly using a 5-person team. Error rates ran at 4.2%, reconciliation took 3 days, and the team had no capacity for the 40% volume growth planned for the following year.',
+    challengePoints: [
+      '5-person team manually processing 10,000+ documents monthly',
+      '4.2% error rate creating downstream accounting discrepancies',
+      'Mixed formats: PDFs, scanned images, Word docs, emails',
+      '3-day reconciliation cycle delaying financial close',
+      'No capacity headroom for planned 40% volume growth'
+    ],
+    solution: 'We built a multi-stage pipeline: AWS Textract for OCR, a custom NLP classifier for document type detection, a field extraction model fine-tuned on 18 months of historical documents, and a rules-based validation engine before routing to ERP.',
+    solutionPoints: [
+      'AWS Textract OCR layer with layout-aware text extraction',
+      'Custom NLP classifier distinguishing 12 document types with 97% accuracy',
+      'Fine-tuned field extraction model on 50,000 historical documents',
+      'Rules-based validation engine flagging anomalies before ERP posting',
+      'Human-in-the-loop queue for edge cases with confidence <85%',
+      'SAP ERP integration for straight-through processing'
+    ],
+    tech: ['Python', 'AWS Textract', 'HuggingFace Transformers', 'Node.js', 'PostgreSQL', 'SAP ERP API'],
+    results: [
+      { metric: '0.3%', label: 'Error rate (down from 4.2%)' },
+      { metric: '62%', label: 'Documents processed with zero human touch' },
+      { metric: '3 days→4hrs', label: 'Reconciliation cycle time' },
+      { metric: '10x', label: 'Capacity headroom for volume growth' }
+    ],
+    heroImg: '/cs-accounting.png',
+    testimonial: { quote: '"The pipeline processes 62% of documents end-to-end without a human touch. Our team now focuses on exceptions, not data entry. The ROI was visible in month two."', author: 'Director of Operations, DocuFlow' }
+  },
+  'ai-support': {
+    id: 'ai-support',
+    service: 'ai-ml',
+    serviceTitle: 'AI-ML Development',
+    tag: 'Customer Support AI',
+    title: 'RAG-Powered Support Copilot',
+    subtitle: 'A retrieval-augmented generation system resolving 62% of tickets autonomously.',
+    overview: 'A production RAG system that resolves customer support tickets by retrieving context from a 15,000-article knowledge base, generating accurate responses, and escalating complex cases to human agents — deployed across email, chat, and a help portal.',
+    client: 'ServiceEdge (B2B SaaS)',
+    industry: 'Customer Support Technology',
+    timeline: '3 months',
+    teamSize: '3 AI engineers, 1 backend engineer',
+    challenge: 'ServiceEdge\'s support team handled 8,000+ tickets monthly. First response time averaged 6 hours, resolution required 2.3 agent interactions per ticket, and a growing backlog was hurting NPS scores despite hiring more agents.',
+    challengePoints: [
+      '8,000+ monthly tickets with 6-hour average first response time',
+      '2.3 average agent interactions per ticket to reach resolution',
+      'Growing backlog despite continuous agent hiring',
+      'Knowledge base scattered across Confluence, Notion, and PDFs',
+      'No context-passing between channels (email, chat, portal) for same customer'
+    ],
+    solution: 'We built a RAG pipeline ingesting all knowledge sources into a Pinecone vector store, with a LangChain orchestrator generating responses grounded in retrieved context. A confidence-based routing layer determined autonomous resolution vs human escalation.',
+    solutionPoints: [
+      'Unified vector knowledge base from Confluence, Notion, and PDFs using Pinecone',
+      'LangChain RAG pipeline with source citation in every response',
+      'Confidence-based routing: >85% confidence → auto-resolve, <85% → agent queue',
+      'Customer context panel for agents showing full cross-channel history',
+      'Continuous learning loop retraining retrieval on resolved ticket feedback',
+      'Slack integration for agent escalation with pre-populated context'
+    ],
+    tech: ['Python', 'LangChain', 'Pinecone', 'GPT-4', 'Node.js', 'PostgreSQL', 'Slack API'],
+    results: [
+      { metric: '62%', label: 'Tickets resolved autonomously' },
+      { metric: '6hrs→18min', label: 'First response time' },
+      { metric: '2.3→1.1', label: 'Interactions per resolution' },
+      { metric: '+22pts', label: 'NPS improvement in 90 days' }
+    ],
+    heroImg: '/cs-learning.png',
+    testimonial: { quote: '"First response time dropped from 6 hours to 18 minutes. Our agents now work on genuinely complex problems instead of answering the same 40 questions repeatedly."', author: 'VP of Customer Success, ServiceEdge' }
+  },
+  'cloud-migration': {
+    id: 'cloud-migration',
+    service: 'cloud',
+    serviceTitle: 'Cloud Services',
+    tag: 'Cloud Migration',
+    title: 'Zero-Downtime Migration to AWS',
+    subtitle: 'Migrated a 50,000 daily-user platform to AWS with zero downtime and 35% cost reduction.',
+    overview: 'A full lift-and-shift migration of a monolithic on-premise application to a containerized AWS architecture — executed with a live traffic cutover strategy that achieved zero downtime across a 3-week migration window.',
+    client: 'Cloudspace (SaaS Platform)',
+    industry: 'B2B SaaS',
+    timeline: '4 months',
+    teamSize: '3 cloud engineers, 1 DBA',
+    challenge: 'Cloudspace was running on aging on-premise hardware with unpredictable performance spikes, a manual deployment process, and no disaster recovery capability. A planned 40% user growth would have exceeded their physical capacity.',
+    challengePoints: [
+      'Aging on-premise hardware causing 4-6 unpredictable outages per month',
+      'Manual deployments taking 4 hours with high rollback risk',
+      'No disaster recovery — single point of failure across all services',
+      'Database at 87% capacity with no clear path to scaling',
+      'Compliance audit flagging infrastructure as non-SOC 2 ready'
+    ],
+    solution: 'We containerized the application with Docker, migrated the database to Aurora PostgreSQL with read replicas, and used AWS Application Load Balancer with blue-green deployments to achieve a zero-downtime cutover from on-premise to AWS.',
+    solutionPoints: [
+      'Containerized monolith with Docker, deployed on ECS Fargate',
+      'Database migrated to Aurora PostgreSQL with read replicas',
+      'Blue-green deployment with ALB for zero-downtime cutover',
+      'S3 + CloudFront for static asset delivery (reducing origin load by 65%)',
+      'Terraform for all infrastructure — fully reproducible and version-controlled',
+      'CloudWatch dashboards and PagerDuty alerting from day one'
+    ],
+    tech: ['AWS ECS Fargate', 'Aurora PostgreSQL', 'Terraform', 'Docker', 'CloudFront', 'GitHub Actions'],
+    results: [
+      { metric: '0min', label: 'Downtime during migration' },
+      { metric: '35%', label: 'Infrastructure cost reduction' },
+      { metric: '4-6/mo→0', label: 'Monthly outage incidents' },
+      { metric: 'SOC 2', label: 'Type II ready post-migration' }
+    ],
+    heroImg: '/cs-performance.png',
+    testimonial: { quote: '"We were live on AWS before our users noticed anything changed. The zero-downtime cutover was executed flawlessly and our infrastructure bill dropped by 35% in the first month."', author: 'Platform Lead, Cloudspace' }
+  },
+  'cloud-cicd': {
+    id: 'cloud-cicd',
+    service: 'cloud',
+    serviceTitle: 'Cloud Services',
+    tag: 'DevOps Automation',
+    title: 'Enterprise CI/CD Pipeline Overhaul',
+    subtitle: 'Release time cut from 4 hours to 12 minutes with full automated rollback support.',
+    overview: 'A complete replacement of a fragile, semi-manual deployment process with a fully automated GitHub Actions CI/CD pipeline — including automated testing gates, environment promotion, canary deployments, and one-click rollback.',
+    client: 'PayBridge (FinTech)',
+    industry: 'Financial Technology',
+    timeline: '2 months',
+    teamSize: '2 DevOps engineers',
+    challenge: 'PayBridge\'s release process required a dedicated ops engineer, 4 hours of manual coordination, and had failed catastrophically twice in 6 months — causing outages that cost the company clients. Engineers were avoiding deployments out of fear.',
+    challengePoints: [
+      '4-hour manual release requiring dedicated ops engineer presence',
+      'Two major deployment failures in 6 months causing customer-facing outages',
+      'No automated test execution before production deployment',
+      'Rollback required 90 minutes of manual database intervention',
+      'Engineers avoiding deployments creating a growing backlog of small changes'
+    ],
+    solution: 'We rebuilt the entire pipeline in GitHub Actions with environment-specific secrets, mandatory test gates, automated database migration validation, canary deployment to 5% traffic before full rollout, and automated rollback on error-rate spike.',
+    solutionPoints: [
+      'GitHub Actions pipeline with environment-specific OIDC secrets management',
+      'Mandatory test gates: unit, integration, and E2E before any promotion',
+      'Automated database migration dry-run with rollback on failure',
+      'Canary deployment to 5% traffic with automated error-rate monitoring',
+      'Automatic rollback triggered if error rate exceeds 0.5% threshold',
+      'Deployment frequency moved from weekly to multiple times per day'
+    ],
+    tech: ['GitHub Actions', 'Docker', 'AWS ECS', 'Terraform', 'Playwright', 'Datadog'],
+    results: [
+      { metric: '4hrs→12min', label: 'Release cycle time' },
+      { metric: '0', label: 'Failed production deployments since launch' },
+      { metric: '8x', label: 'Increase in deployment frequency' },
+      { metric: '90min→auto', label: 'Rollback time' }
+    ],
+    heroImg: '/cs-learning.png',
+    testimonial: { quote: '"Our engineers went from dreading deployments to doing them 8x more frequently. The automatic rollback has caught two issues before customers noticed anything."', author: 'Engineering Lead, PayBridge' }
+  },
+  'cloud-k8s': {
+    id: 'cloud-k8s',
+    service: 'cloud',
+    serviceTitle: 'Cloud Services',
+    tag: 'Platform Engineering',
+    title: 'Kubernetes Platform for Multi-Tenant SaaS',
+    subtitle: 'A self-service Kubernetes platform enabling new tenant onboarding in under 4 minutes.',
+    overview: 'Design and deployment of a Kubernetes-based internal developer platform (IDP) enabling a growing SaaS product to onboard new enterprise tenants in minutes with full namespace isolation, autoscaling, and per-tenant cost attribution.',
+    client: 'HealthNode (Healthcare SaaS)',
+    industry: 'Healthcare Technology',
+    timeline: '5 months',
+    teamSize: '3 platform engineers',
+    challenge: 'HealthNode\'s manual tenant provisioning process took 2 days, required DevOps involvement for each new client, had no resource isolation between tenants, and could not support their aggressive growth target of 50 new enterprise customers per quarter.',
+    challengePoints: [
+      '2-day manual tenant provisioning requiring DevOps for each client',
+      'No resource isolation — noisy neighbor incidents affecting multiple tenants',
+      'No per-tenant cost attribution making pricing decisions impossible',
+      'Engineers spending 30% of time on tenant ops instead of product',
+      'No self-service capability for the customer success team'
+    ],
+    solution: 'We deployed a Kubernetes-based platform on EKS with namespace-per-tenant isolation, Helm chart templates for standard tenant provisioning, Karpenter for autoscaling, and Kubecost for per-tenant cost attribution — with a self-service portal for the CS team.',
+    solutionPoints: [
+      'AWS EKS cluster with namespace-per-tenant isolation and network policies',
+      'Helm chart templates enabling self-service tenant provisioning',
+      'Karpenter autoscaling with per-tenant resource quotas',
+      'Kubecost integration for real-time per-tenant cost attribution',
+      'RBAC policies ensuring tenants cannot access cross-namespace resources',
+      'Self-service portal for customer success team to provision new tenants'
+    ],
+    tech: ['Kubernetes', 'AWS EKS', 'Helm', 'Terraform', 'Karpenter', 'Kubecost', 'ArgoCD'],
+    results: [
+      { metric: '2 days→4 min', label: 'Tenant provisioning time' },
+      { metric: '100%', label: 'Tenant resource isolation' },
+      { metric: '30%→5%', label: 'DevOps time on tenant ops' },
+      { metric: '50/qtr', label: 'Enterprise tenant capacity' }
+    ],
+    heroImg: '/cs-accounting.png',
+    testimonial: { quote: '"Our customer success team can now provision a new enterprise tenant in 4 minutes without touching DevOps. The Kubernetes platform completely unblocked our growth."', author: 'CTO, HealthNode' }
+  },
+  'fe-spa': {
+    id: 'fe-spa',
+    service: 'frontend',
+    serviceTitle: 'Front-End Development',
+    tag: 'SaaS Platform',
+    title: 'React SPA for Project Management Tool',
+    subtitle: 'Legacy jQuery dashboard rebuilt in React 18, cutting bundle size by 62% and boosting performance.',
+    overview: 'A full front-end modernization of a 6-year-old jQuery project management tool — rebuilt as a React 18 SPA with real-time updates via WebSockets, drag-and-drop kanban boards, and a token-based design system used by 25,000 active users.',
+    client: 'Nexaloom (SaaS)',
+    industry: 'Project Management SaaS',
+    timeline: '4 months',
+    teamSize: '4 frontend engineers, 1 designer',
+    challenge: 'Nexaloom\'s jQuery dashboard had accumulated 6 years of technical debt. Page load times exceeded 8 seconds, the codebase had no component reuse, and adding new features required modifying unmaintainable spaghetti JavaScript.',
+    challengePoints: [
+      '8-second page load times causing 34% of users to abandon the tool',
+      'Zero component reuse — every feature built from scratch with copy-paste',
+      'jQuery spaghetti preventing new engineer onboarding (2-month ramp time)',
+      'No real-time updates — users had to manually refresh for collaborator changes',
+      'Inconsistent UI across 40+ feature pages built by different contractors'
+    ],
+    solution: 'We conducted a parallel-build migration — new React components consumed the existing backend APIs unchanged, enabling a phased cutover by feature area with no backend changes required. The design system was built alongside.',
+    solutionPoints: [
+      'React 18 SPA with Vite — consuming existing REST APIs without backend changes',
+      'Zustand state management with optimistic updates for perceived performance',
+      'WebSocket integration for real-time collaboration across kanban boards',
+      'Drag-and-drop kanban built with dnd-kit for accessibility compliance',
+      'Token-based design system with 80+ React components in a shared library',
+      'Phased migration by feature area — zero big-bang cutover risk'
+    ],
+    tech: ['React 18', 'Vite', 'TypeScript', 'Zustand', 'WebSocket', 'dnd-kit', 'Storybook'],
+    results: [
+      { metric: '62%', label: 'Bundle size reduction' },
+      { metric: '8s→1.2s', label: 'Page load time' },
+      { metric: '2mo→1wk', label: 'Engineer onboarding time' },
+      { metric: '34%', label: 'Reduction in user abandonment' }
+    ],
+    heroImg: '/cs-performance.png',
+    testimonial: { quote: '"The React SPA they built handles 25,000 daily users without breaking a sweat. Our engineers are actually excited to work in the codebase now."', author: 'VP of Engineering, Nexaloom' }
+  },
+  'fe-ecommerce': {
+    id: 'fe-ecommerce',
+    service: 'frontend',
+    serviceTitle: 'Front-End Development',
+    tag: 'E-Commerce',
+    title: 'High-Performance E-Commerce Storefront',
+    subtitle: 'Vite-powered storefront achieving a 96 Lighthouse score and 41% more mobile conversions.',
+    overview: 'A ground-up front-end build for a growing fashion brand — a Vite-powered storefront with lazy-loaded product galleries, a streamlined checkout flow, and a comprehensive component library that the client team could extend independently.',
+    client: 'CartFlux (Fashion E-Commerce)',
+    industry: 'Fashion Retail',
+    timeline: '3 months',
+    teamSize: '3 frontend engineers, 1 designer',
+    challenge: 'CartFlux\'s existing Shopify theme was too rigid for their brand, too slow for their mobile-first audience (72% mobile traffic), and too difficult to customize for seasonal campaigns without developer involvement every time.',
+    challengePoints: [
+      '72% mobile traffic but only a 1.8% mobile conversion rate',
+      'Shopify theme scoring 41 on Lighthouse — hurting SEO and Core Web Vitals',
+      'Every seasonal campaign required 3+ days of developer work',
+      'Product images loading at full resolution on mobile',
+      'Checkout abandonment at 69% on mobile devices'
+    ],
+    solution: 'We built a custom React storefront backed by Shopify Storefront API — giving full design control, enabling responsive image optimization via Cloudinary, and delivering a checkout experience designed specifically for thumb-friendly mobile interaction.',
+    solutionPoints: [
+      'Custom React storefront consuming Shopify Storefront API (headless)',
+      'Cloudinary responsive image pipeline serving WebP at correct breakpoints',
+      'Lazy-loaded product galleries with blur-up placeholder technique',
+      'Mobile-first checkout with thumb-zone optimized tap targets',
+      'CMS-driven campaign sections for no-code seasonal updates',
+      'Component library documented in Storybook for team self-service'
+    ],
+    tech: ['React', 'Vite', 'TypeScript', 'Shopify Storefront API', 'Cloudinary', 'Storybook'],
+    results: [
+      { metric: '96', label: 'Lighthouse performance score' },
+      { metric: '41%', label: 'Increase in mobile conversions' },
+      { metric: '3days→2hrs', label: 'Campaign update time' },
+      { metric: '69%→38%', label: 'Mobile checkout abandonment' }
+    ],
+    heroImg: '/cs-learning.png',
+    testimonial: { quote: '"Our Lighthouse score went from 41 to 96 and mobile conversions jumped 41%. The headless build gave us the brand control we had been asking for since day one."', author: 'Head of Growth, CartFlux' }
+  },
+  'fe-marketing': {
+    id: 'fe-marketing',
+    service: 'frontend',
+    serviceTitle: 'Front-End Development',
+    tag: 'Marketing Website',
+    title: 'Animated Product Marketing Website',
+    subtitle: 'A scroll-driven product showcase delivering zero post-launch defects in 3 weeks.',
+    overview: 'An immersive marketing website for a B2B SaaS product launch — featuring scroll-driven animations, interactive product demos, a CMS-backed blog and resources section, and full GDPR compliance — shipped in 3 weeks and credited with 40% of pipeline generated at launch.',
+    client: 'PulseAgency (B2B SaaS)',
+    industry: 'B2B Marketing Technology',
+    timeline: '3 weeks',
+    teamSize: '2 frontend engineers, 1 designer',
+    challenge: 'PulseAgency needed a marketing site that could compete visually with well-funded competitors in a crowded category — fast. They had 3 weeks to a major industry conference and an existing Webflow site that communicated nothing about their product\'s differentiation.',
+    challengePoints: [
+      '3-week deadline to a major industry conference',
+      'Existing Webflow site failing to communicate product differentiation',
+      'Interactive product demo needed but no native Webflow capability',
+      'Blog and resource center needed CMS for non-technical team',
+      'Marketing team needed to update content without developer dependency'
+    ],
+    solution: 'We chose a React + Contentful stack for maximum speed and content flexibility. Scroll-driven animations were built with Framer Motion, interactive demo sections used React portals, and the entire site was deployed on Vercel with automatic preview URLs for stakeholder review.',
+    solutionPoints: [
+      'React + Vite with Contentful CMS for all marketeter-editable content',
+      'Framer Motion scroll-driven animations for hero and feature sections',
+      'Interactive product demo sections built as embedded React mini-apps',
+      'Vercel deployment with automatic branch preview URLs for review cycles',
+      'GDPR-compliant cookie consent and analytics integration',
+      'Zero post-launch defects across 3 weeks of conference traffic'
+    ],
+    tech: ['React', 'Vite', 'Framer Motion', 'Contentful CMS', 'Vercel', 'TypeScript'],
+    results: [
+      { metric: '0', label: 'Post-launch defects' },
+      { metric: '40%', label: 'Of launch pipeline attributed to site' },
+      { metric: '3 weeks', label: 'From brief to production' },
+      { metric: '4.2min', label: 'Average session duration' }
+    ],
+    heroImg: '/cs-accounting.png',
+    testimonial: { quote: '"The animations made our product feel like a premium brand. We closed 3 enterprise deals at the conference specifically because of how the demo section worked."', author: 'Creative Director, PulseAgency' }
+  },
+  'directory': {
+    id: 'directory',
+    service: 'general',
+    serviceTitle: 'Full-Stack Development',
+    tag: 'Popular Listing',
+    title: 'Local Business Directory Search Engine',
+    subtitle: 'A smart local discovery platform connecting users with vendors across categories.',
+    overview: 'Tulse City is a smart local business discovery platform connecting users with local vendors across categories including restaurants, doctors, hotels, and retail — featuring real-time search, ratings, map integration, and a merchant dashboard.',
+    client: 'Tulse City Platform',
+    industry: 'Local Commerce',
+    timeline: '5 months',
+    teamSize: '4 engineers, 2 designers',
+    challenge: 'Local business discovery in the target market relied on word-of-mouth and fragmented Facebook groups. No unified platform offered filtered search, verified reviews, and merchant self-service in a single mobile-friendly experience.',
+    challengePoints: [
+      'No unified local discovery platform in the target market',
+      'Real-time search needed across 10,000+ business listings',
+      'Merchant self-service portal for updating business info and hours',
+      'Map integration with accurate geolocation filtering',
+      'Review system resistant to manipulation'
+    ],
+    solution: 'We built a full-stack platform with a React frontend, Node.js API, and PostgreSQL with PostGIS for geo queries. Elasticsearch powered sub-200ms search, and Mapbox provided the map integration. Merchants got a self-service portal for their listings.',
+    solutionPoints: [
+      'React frontend with Mapbox integration for geographic discovery',
+      'Node.js API with Elasticsearch for sub-200ms full-text search',
+      'PostgreSQL with PostGIS for radius-based geo filtering',
+      'Merchant self-service portal for listings, hours, and photo management',
+      'Verified review system with flagging and moderation queue',
+      'Mobile-first PWA with offline capability for low-connectivity areas'
+    ],
+    tech: ['React', 'Node.js', 'PostgreSQL', 'Elasticsearch', 'Mapbox', 'PostGIS'],
+    results: [
+      { metric: '10,000+', label: 'Business listings at launch' },
+      { metric: '<200ms', label: 'Search response time' },
+      { metric: '85%', label: 'Mobile traffic share' },
+      { metric: '4.5★', label: 'User rating on app stores' }
+    ],
+    heroImg: '/cs-performance.png',
+    testimonial: { quote: '"Tulse City gave our local business community a professional platform we had been asking for. The search and map experience is seamless."', author: 'Community Manager, Tulse City' }
+  },
+  'lms': {
+    id: 'lms',
+    service: 'general',
+    serviceTitle: 'Full-Stack Development',
+    tag: 'E-Learning',
+    title: 'Learning Management System',
+    subtitle: 'An enterprise SaaS LMS with certification management for corporate training.',
+    overview: 'A full-featured enterprise LMS deployed as a SaaS platform — offering a vast course library with progress tracking, interactive module types, certification management, and a white-label option for corporate training programs.',
+    client: 'EduCorp Learning Solutions',
+    industry: 'Corporate Training / EdTech',
+    timeline: '7 months',
+    teamSize: '5 engineers, 2 designers',
+    challenge: 'Corporate training programs were relying on outdated LMS platforms with poor UX, no mobile access, and certification systems that required manual PDF generation and email delivery.',
+    challengePoints: [
+      'Existing LMS had 42% mobile abandon rate due to non-responsive design',
+      'Certification issuance required 3 days of manual processing',
+      'No SCORM/xAPI support for existing content library',
+      'Analytics limited to pass/fail — no learning path insights',
+      'White-label needed for enterprise clients with brand requirements'
+    ],
+    solution: 'We built a multi-tenant SaaS LMS with SCORM/xAPI support, automated certificate generation, a learner analytics dashboard, and a white-label theming system — deployed on AWS with tenant data isolation.',
+    solutionPoints: [
+      'Multi-tenant SaaS architecture with full data isolation per organization',
+      'SCORM 1.2/2004 and xAPI (Tin Can) support for existing content libraries',
+      'Automated PDF certificate generation with cryptographic signing',
+      'Learner analytics with path completion rates and engagement metrics',
+      'White-label theming system for enterprise brand customization',
+      'Offline-capable mobile PWA for field learners'
+    ],
+    tech: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'SCORM', 'PDF generation'],
+    results: [
+      { metric: '42%→8%', label: 'Mobile abandon rate' },
+      { metric: '3 days→instant', label: 'Certificate issuance time' },
+      { metric: '94%', label: 'Course completion rate' },
+      { metric: '50+', label: 'Enterprise organizations deployed' }
+    ],
+    heroImg: '/cs-learning.png',
+    testimonial: { quote: '"The LMS replaced our fragmented training tools in one platform. Certificate automation alone saved our HR team 20 hours per week."', author: 'Head of L&D, EduCorp' }
+  }
+}
 
 const techStack = [
   'React',
@@ -867,6 +1558,7 @@ function App() {
           <Route path="/services/:serviceId" element={<ServicesPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/case-study/:caseStudyId" element={<CaseStudyPage />} />
         </Routes>
         <Footer />
       </div>
@@ -1994,10 +2686,10 @@ function ServicesPage() {
                   <div className="case-study-content">
                     <h3>{cs.title}</h3>
                     <p>{cs.desc}</p>
-                    <a href="#" className="case-study-link">
+                    <NavLink to={`/case-study/${cs.id}`} className="case-study-link">
                       Read full case study
                       <ArrowIcon />
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               ))}
@@ -2006,59 +2698,7 @@ function ServicesPage() {
         </div>
       </section>
 
-      {activeService.id === 'frontend' && (
-        <section className="section-pad frontend-process-section">
-          <div className="container">
-            <div className="frontend-process-grid">
-              <div className="frontend-process-left">
-                <div className="process-header">
-                  <span className="process-kicker">OUR PROCESS</span>
-                  <h2>Innovative, Collaborative, Seamless Designs</h2>
-                  <p className="process-description">
-                    SightInfusion focuses on delivering pixel-perfect front-end systems that are fast, accessible, and visually polished. From discovery to deployment, our structured process ensures every interface is built for performance and conversion.
-                  </p>
-                  <NavLink to="/contact" className="schedule-call-btn">
-                    Schedule a Call
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                  </NavLink>
-                </div>
-              </div>
-
-              <div className="frontend-process-right">
-                <div className="process-steps-container">
-                  <div className="process-step-item">
-                    <div className="step-number-circle">01</div>
-                    <div className="step-content">
-                      <h3>Discover and plan</h3>
-                      <p>We start by aligning on your brand, audience, and goals — mapping out component architecture, design tokens, and responsive breakpoints before writing a single line of code.</p>
-                    </div>
-                  </div>
-
-                  <div className="process-step-item">
-                    <div className="step-number-circle">02</div>
-                    <div className="step-content">
-                      <h3>Design and prototype</h3>
-                      <p>Our designers build high-fidelity Figma prototypes with motion specs, ensuring every interaction is validated before the development sprint begins.</p>
-                    </div>
-                  </div>
-
-                  <div className="process-step-item">
-                    <div className="step-number-circle">03</div>
-                    <div className="step-content">
-                      <h3>Build, test, and deliver</h3>
-                      <p>Developers implement the approved designs with accessibility checks, cross-browser testing, and performance audits — handing off clean, documented component code.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {['backend', 'uiux', 'ai-ml', 'cloud'].includes(activeService.id) && (
+      {['backend', 'uiux', 'frontend', 'ai-ml', 'cloud'].includes(activeService.id) && (
         <section className="section-pad home-consulting-section">
           <div className="container consulting-grid">
             <div className="consulting-left reveal">
@@ -2066,6 +2706,7 @@ function ServicesPage() {
               <h2>
                 {activeService.id === 'ai-ml' ? 'Practical, Iterative, Intelligence-First' :
                  activeService.id === 'cloud' ? 'Resilient, Automated, Always Observable' :
+                 activeService.id === 'frontend' ? 'Discover, Design, Deliver — Front-End at Full Speed' :
                  'Innovative, Collaborative, Seamless Designs'}
               </h2>
               <p className="consulting-lead">
@@ -2073,6 +2714,8 @@ function ServicesPage() {
                   ? 'SightInfusion builds AI solutions anchored in real business problems. From use-case discovery to model deployment, our process ensures your AI investment delivers measurable, production-ready results.'
                   : activeService.id === 'cloud'
                   ? 'SightInfusion engineers cloud infrastructure for reliability, speed, and growth. Our process covers architecture planning, automated provisioning, and ongoing observability from day one.'
+                  : activeService.id === 'frontend'
+                  ? 'SightInfusion front-end teams move fast without breaking things. From component architecture to final delivery, our structured process keeps every sprint on time and every pixel on spec.'
                   : 'SightInfusion focuses on delivering back-end systems that are secure, scalable, and future-ready. From consultation to deployment, our streamlined process ensures effective collaboration, seamless integration, and high-quality results that align with your business goals.'}
               </p>
               <NavLink to="/contact" className="backend-process-btn">
@@ -2096,6 +2739,7 @@ function ServicesPage() {
                     <h3>
                       {activeService.id === 'ai-ml' ? 'Define the problem and data landscape' :
                        activeService.id === 'cloud' ? 'Audit your current infrastructure' :
+                       activeService.id === 'frontend' ? 'Discover and align' :
                        'Discuss your requirements'}
                     </h3>
                     <p>
@@ -2103,6 +2747,8 @@ function ServicesPage() {
                         ? 'We map out your business challenge, identify the right AI approach, and assess the data available — building a clear scope before any model work begins.'
                         : activeService.id === 'cloud'
                         ? 'We review your existing stack, workloads, and pain points — identifying the gaps in reliability, security, and scalability before recommending a path forward.'
+                        : activeService.id === 'frontend'
+                        ? 'We audit your existing codebase, align on your brand and audience, and map out component architecture, design tokens, and breakpoints before writing a line of code.'
                         : 'We begin by understanding your vision, goals, and audience, ensuring the design aligns with your business needs.'}
                     </p>
                   </div>
@@ -2113,6 +2759,7 @@ function ServicesPage() {
                     <h3>
                       {activeService.id === 'ai-ml' ? 'Prototype and validate the approach' :
                        activeService.id === 'cloud' ? 'Design and provision the architecture' :
+                       activeService.id === 'frontend' ? 'Design and prototype' :
                        'Create a plan and assemble a team'}
                     </h3>
                     <p>
@@ -2120,6 +2767,8 @@ function ServicesPage() {
                         ? 'We build a focused proof-of-concept, validate model accuracy, and iterate on the pipeline with real data before committing to full production build-out.'
                         : activeService.id === 'cloud'
                         ? 'Our engineers define the target architecture in IaC, provision environments through automated pipelines, and document every component for your team.'
+                        : activeService.id === 'frontend'
+                        ? 'Our designers produce high-fidelity Figma prototypes with motion specs and responsive variants, validated before the build sprint starts.'
                         : 'We develop a design plan with wireframes and prototypes, ensuring an intuitive, functional design.'}
                     </p>
                   </div>
@@ -2139,6 +2788,7 @@ function ServicesPage() {
                       {activeService.id === 'ai-ml' ? 'Deploy, monitor, and improve' :
                        activeService.id === 'cloud' ? 'Ship, monitor, and optimize' :
                        activeService.id === 'uiux' ? 'Design, test, and hand off' :
+                       activeService.id === 'frontend' ? 'Build, test, and deliver' :
                        'Get to work'}
                     </h3>
                     <p>
@@ -2148,6 +2798,8 @@ function ServicesPage() {
                         ? 'We deploy your infrastructure, wire up monitoring and alerting, and run load and failover tests — then hand off runbooks and on-call guides so your team owns it.'
                         : activeService.id === 'uiux'
                         ? 'Our designers deliver high-fidelity screens, design systems, and interactive prototypes, refined through testing and feedback.'
+                        : activeService.id === 'frontend'
+                        ? 'Developers implement designs with accessibility audits, cross-browser testing, and Lighthouse performance checks — delivering clean, documented component code.'
                         : 'Our developers build and optimize your back-end with secure APIs and thorough testing for seamless operation.'}
                     </p>
                   </div>
@@ -2626,6 +3278,178 @@ function ServicesPage() {
           </div>
         </section>
       )}
+    </>
+  )
+}
+
+function CaseStudyPage() {
+  const { caseStudyId } = useParams()
+  const cs = caseStudiesDetail[caseStudyId]
+
+  if (!cs) {
+    return (
+      <section className="section-pad">
+        <div className="container" style={{ textAlign: 'center', padding: '8rem 0' }}>
+          <h2>Case study not found</h2>
+          <NavLink to="/services" className="service-hero-btn" style={{ marginTop: '2rem', display: 'inline-flex' }}>
+            Back to Services
+            <svg viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </NavLink>
+        </div>
+      </section>
+    )
+  }
+
+  return (
+    <>
+      {/* Hero */}
+      <section className="cs-detail-hero">
+        <div className="container">
+          <div className="cs-detail-breadcrumb reveal">
+            <NavLink to="/">Home</NavLink>
+            <span>/</span>
+            <NavLink to={`/services/${cs.service}`}>{cs.serviceTitle}</NavLink>
+            <span>/</span>
+            <span>Case Study</span>
+          </div>
+          <div className="cs-detail-hero-content reveal">
+            <div className="cs-detail-hero-left">
+              <span className="cs-detail-tag">{cs.tag}</span>
+              <h1 className="cs-detail-title">{cs.title}</h1>
+              <p className="cs-detail-subtitle">{cs.subtitle}</p>
+              <div className="cs-detail-meta-pills">
+                <div className="cs-meta-pill"><span className="cs-meta-label">Client</span><span className="cs-meta-value">{cs.client}</span></div>
+                <div className="cs-meta-pill"><span className="cs-meta-label">Industry</span><span className="cs-meta-value">{cs.industry}</span></div>
+                <div className="cs-meta-pill"><span className="cs-meta-label">Timeline</span><span className="cs-meta-value">{cs.timeline}</span></div>
+                <div className="cs-meta-pill"><span className="cs-meta-label">Team</span><span className="cs-meta-value">{cs.teamSize}</span></div>
+              </div>
+            </div>
+            <div className="cs-detail-hero-right">
+              <img src={cs.heroImg} alt={cs.title} className="cs-detail-hero-img" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Results banner */}
+      <section className="cs-results-banner">
+        <div className="container">
+          <div className="cs-results-grid reveal">
+            {cs.results.map((r, i) => (
+              <div key={i} className="cs-result-item">
+                <div className="cs-result-metric">{r.metric}</div>
+                <div className="cs-result-label">{r.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Overview */}
+      <section className="section-pad cs-overview-section">
+        <div className="container cs-two-col reveal">
+          <div className="cs-col-label">
+            <span className="cs-section-tag">OVERVIEW</span>
+          </div>
+          <div className="cs-col-body">
+            <p className="cs-overview-text">{cs.overview}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Challenge */}
+      <section className="section-pad cs-challenge-section">
+        <div className="container">
+          <div className="cs-challenge-wrapper reveal">
+            <div className="cs-section-header">
+              <span className="cs-section-tag">THE CHALLENGE</span>
+              <h2>What we were up against</h2>
+            </div>
+            <div className="cs-challenge-body">
+              <p className="cs-challenge-lead">{cs.challenge}</p>
+              <ul className="cs-challenge-list">
+                {cs.challengePoints.map((pt, i) => (
+                  <li key={i} className="cs-challenge-item">
+                    <div className="cs-list-bullet" />
+                    <span>{pt}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solution */}
+      <section className="section-pad cs-solution-section">
+        <div className="container">
+          <div className="cs-solution-wrapper reveal">
+            <div className="cs-section-header">
+              <span className="cs-section-tag">OUR SOLUTION</span>
+              <h2>How we solved it</h2>
+            </div>
+            <div className="cs-solution-body">
+              <p className="cs-solution-lead">{cs.solution}</p>
+              <div className="cs-solution-grid">
+                {cs.solutionPoints.map((pt, i) => (
+                  <div key={i} className="cs-solution-item">
+                    <div className="cs-solution-check">
+                      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#2a68ff"/><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </div>
+                    <span>{pt}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tech stack */}
+      <section className="section-pad cs-tech-section">
+        <div className="container cs-two-col reveal">
+          <div className="cs-col-label">
+            <span className="cs-section-tag">TECH STACK</span>
+          </div>
+          <div className="cs-col-body">
+            <div className="cs-tech-tags">
+              {cs.tech.map((t, i) => (
+                <span key={i} className="cs-tech-tag">{t}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      {cs.testimonial && (
+        <section className="section-pad cs-testimonial-section">
+          <div className="container">
+            <div className="cs-testimonial-card reveal">
+              <div className="cs-quote-mark">&ldquo;</div>
+              <p className="cs-testimonial-quote">{cs.testimonial.quote.replace(/^"|"$/g, '')}</p>
+              <p className="cs-testimonial-author">— {cs.testimonial.author}</p>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* CTA */}
+      <section className="contact-new-section cs-cta-section">
+        <div className="container">
+          <div className="cs-cta-inner reveal">
+            <div className="cs-cta-text">
+              <span className="cs-section-tag">START YOUR PROJECT</span>
+              <h2>Ready for results like these?</h2>
+              <p>Tell us about your challenge and we will put together the right team and approach to get you there.</p>
+            </div>
+            <NavLink to="/contact" className="service-hero-btn">
+              Get in Touch
+              <svg viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </NavLink>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
