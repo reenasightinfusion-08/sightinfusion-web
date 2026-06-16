@@ -26,6 +26,19 @@ const services = [
     pageDescription: 'Front-end systems designed to feel premium, perform quickly, and support better conversion from the first screen onward.',
     benefits: ['Pixel-accurate responsive UI', 'Micro-interactions that feel intentional', 'Developer-friendly component structure'],
     industries: ['SaaS platforms', 'AI products', 'Marketing websites'],
+    heroTitle: 'Pixel-perfect front-end.<br />Designed to impress, built to perform.',
+    heroDescription: 'Get high-performance, visually stunning, responsive web interfaces, built by top-tier front-end developers using React, Angular, and Vue.js. Delivered on time, optimized for engagement.',
+    heroButtonLabel: 'Hire Front-End Developer',
+    heroImage: '/src/assets/man2.webp',
+    detailedFeatures: [
+      { title: 'Custom Web Front-End Development', desc: 'Delivery of high-quality, interactive, and feature-rich web applications with a front-end that captivates end-users.' },
+      { title: 'Single Page Applications (SPA) Development', desc: 'Using novel frameworks like React.js, Angular, and Vue.js, we develop ultra-fast SPAs that provide unified user experiences.' },
+      { title: 'Progressive Web Apps (PWA) Development', desc: 'Enrich engagement with offline-first, mobile-friendly web applications that offer near-native functioning on any device.' },
+      { title: 'Front-End Performance Optimization', desc: 'We safeguard faster load speeds, improved accessibility, and seamless performance across all devices.' },
+      { title: 'UI/UX Design & Development', desc: 'Our designers and developers work together to build artistically satisfying, user-centric frontend interfaces.' },
+      { title: 'Migration & Modernization Services', desc: 'Upgrade legacy front-end systems to modern, efficient, and secure frameworks like React, Vue.js, and Angular.' },
+      { title: 'Cross-Platform & Mobile-Responsive Front-End', desc: 'We make certain your front-end adapts utterly to any screen size, serving an intuitive experience across devices.' }
+    ]
   },
   {
     id: 'backend',
@@ -42,6 +55,45 @@ const services = [
     pageDescription: 'Back-end foundations engineered for secure data handling, API performance, and long-term product maintainability.',
     benefits: ['Scalable API architecture', 'Robust database planning', 'Clear service separation'],
     industries: ['Internal platforms', 'Client-server apps', 'Enterprise systems'],
+    heroTitle: 'Rock-solid backend<br />solutions for your growing business.',
+    heroDescription: "Design a backend infrastructure that's as scalable as your ambitions. Collaborate with elite backend developers, ready to join your team and start delivering results in a matter of weeks.",
+    heroButtonLabel: 'Hire Back-End Developer',
+    heroImage: '/src/assets/backend-hero.png',
+    detailedFeatures: [
+      { title: 'Custom API Development', desc: 'Building secure, robust, and scalable APIs that connect your front-end with your data seamlessly.' },
+      { title: 'Database Architecture & Modeling', desc: 'Designing optimized database schemas for performance, reliability, and long-term data integrity.' },
+      { title: 'Server-Side Security', desc: 'Implementing enterprise-grade authentication, authorization, and data encryption to keep your systems safe.' },
+      { title: 'Infrastructure & DevOps', desc: 'Setting up automated deployment pipelines and cloud infrastructure for seamless operations.' },
+      { title: 'Microservices Architecture', desc: 'Breaking down complex applications into manageable, scalable services for better maintainability.' },
+      { title: 'Legacy System Migration', desc: 'Helping you transition from old server systems to modern, cloud-native architectures without data loss.' },
+      { title: 'Database Performance Tuning', desc: 'Optimizing queries and indexing to ensure your backend remains fast even under high load.' }
+    ],
+    caseStudies: [
+      {
+        id: 'performance',
+        tag: 'Analytics AI',
+        title: 'Performance Management System',
+        desc: 'PerceptionPredict.ai, developed by Perception Group, uses AI and performance prediction to optimize B2B sales talent management, enhancing hiring...',
+        img: '/cs-performance.png',
+        tech: ['vue', 'node']
+      },
+      {
+        id: 'learning',
+        tag: 'Automobile E-Learning',
+        title: 'Servitization Learning System',
+        desc: 'The Volvo Servitization Learning Path offers an interactive, visually dynamic platform with milestones, animations, and examination modules for...',
+        img: '/cs-learning.png',
+        tech: ['react', 'js', 'node']
+      },
+      {
+        id: 'accounting',
+        tag: 'Accounting',
+        title: 'Account Management System (TBook)',
+        desc: 'The Jon Tunis Enterprise Solution streamlines business operations with modules for Marketing, Customer Management, Accounting, and more,...',
+        img: '/cs-accounting.png',
+        tech: ['node']
+      }
+    ]
   },
   {
     id: 'arvr',
@@ -58,6 +110,10 @@ const services = [
     pageDescription: 'AR and VR experiences built to help products feel more memorable, more interactive, and easier to understand.',
     benefits: ['Interactive storytelling', 'Spatial product demonstrations', 'High-clarity immersive UX'],
     industries: ['Real estate', 'Training systems', 'Product marketing'],
+    heroTitle: 'Immersive AR/VR.<br />Experiences that bridge worlds.',
+    heroDescription: 'Create vibrant, intuitive, and immersive experiences for next-generation digital platforms using Unity and WebXR.',
+    heroButtonLabel: 'Hire AR/VR Developer',
+    heroImage: '/src/assets/hero-visual.png',
   },
   {
     id: 'uiux',
@@ -74,6 +130,45 @@ const services = [
     pageDescription: 'UI and UX direction focused on cleaner structure, stronger trust, and interfaces that guide users naturally.',
     benefits: ['Research-informed user flows', 'Design systems for scale', 'Premium visual polish'],
     industries: ['Startups', 'Enterprise tools', 'Consumer apps'],
+    heroTitle: 'Premium UI/UX Design.<br />Intuitive and conversion-focused.',
+    heroDescription: 'We turn digital products into user experiences that feel premium, intuitive, and conversion-focused. From wireframes to pixel-perfect delivery, our design process is built around clarity, user intent, and measurable outcomes.',
+    heroButtonLabel: 'Hire UI/UX Designer',
+    heroImage: '/uiux-hero.png',
+    detailedFeatures: [
+      { title: 'UX Research & Strategy', desc: 'We start with deep user research, competitive analysis, and journey mapping to ensure every design decision is rooted in real user needs.' },
+      { title: 'Wireframing & Information Architecture', desc: 'Structured low-fidelity wireframes that map out content hierarchy, navigation flows, and feature placement before visual design begins.' },
+      { title: 'High-Fidelity UI Design', desc: 'Pixel-perfect, branded visual designs crafted in Figma with reusable components, color systems, and precise spacing.' },
+      { title: 'Interactive Prototyping', desc: 'Clickable Figma prototypes that simulate the full user experience, allowing early testing and client validation before development.' },
+      { title: 'Design Systems & Component Libraries', desc: 'Scalable design systems with documented tokens, variants, and usage guidelines that accelerate development handoff.' },
+      { title: 'Usability Testing & Iteration', desc: 'We conduct structured usability tests, gather feedback, and refine designs iteratively to reduce friction and increase conversion.' },
+      { title: 'Developer Handoff & Support', desc: 'Clean, annotated design files with specs, assets, and interactive guides ensuring your development team can implement designs flawlessly.' }
+    ],
+    caseStudies: [
+      {
+        id: 'saas-dashboard',
+        tag: 'SaaS Platform',
+        title: 'Enterprise Analytics Dashboard',
+        desc: 'A complete UX overhaul for a B2B analytics platform — restructuring information hierarchy, designing a new data visualization language, and reducing time-to-insight by 60%.',
+        img: '/cs-saas-dashboard.png',
+        tech: ['react', 'js']
+      },
+      {
+        id: 'ecommerce-redesign',
+        tag: 'E-Commerce',
+        title: 'Premium Fashion Marketplace Redesign',
+        desc: 'End-to-end UI/UX redesign of a fashion e-commerce platform increasing conversion rate by 38% through improved product discovery, streamlined checkout, and a refined visual identity.',
+        img: '/cs-ecommerce-ui.png',
+        tech: ['react']
+      },
+      {
+        id: 'mobile-health',
+        tag: 'Health & Wellness App',
+        title: 'Wellness Companion Mobile App',
+        desc: 'Designed a calming and intuitive mobile experience for a health tracking app — from onboarding flows to habit dashboards — achieving a 4.8-star rating on launch.',
+        img: '/cs-mobile-app.png',
+        tech: ['js']
+      }
+    ]
   },
   {
     id: 'ai-ml',
@@ -90,6 +185,10 @@ const services = [
     pageDescription: 'AI solutions connected to real workflows so teams can automate work, unlock insights, and build smarter products.',
     benefits: ['LLM workflow design', 'Custom model integration', 'Practical automation layers'],
     industries: ['Operations', 'Support', 'Analytics products'],
+    heroTitle: 'Custom AI/ML Solutions.<br />Practical automation for business.',
+    heroDescription: 'Design AI-powered workflows, assistants, and intelligence layers that fit practical business use cases.',
+    heroButtonLabel: 'Hire AI Developer',
+    heroImage: '/src/assets/hero-visual.png',
   },
   {
     id: 'cloud',
@@ -106,6 +205,10 @@ const services = [
     pageDescription: 'Cloud services that keep systems reliable under growth while making releases and maintenance easier for teams.',
     benefits: ['Better deployment confidence', 'Infrastructure visibility', 'Resilient scaling patterns'],
     industries: ['SaaS', 'Marketplaces', 'High-traffic apps'],
+    heroTitle: 'Scalable Cloud Services.<br />Reliable systems, global reach.',
+    heroDescription: 'Scalable cloud infrastructure that keeps your product fast, secure, and ready for global traffic.',
+    heroButtonLabel: 'Hire Cloud Engineer',
+    heroImage: '/src/assets/hero-visual.png',
   },
   {
     id: 'game',
@@ -122,6 +225,10 @@ const services = [
     pageDescription: 'Game development support spanning mechanics, interface systems, visual feedback, and stronger prototyping speed.',
     benefits: ['Gameplay system design', 'UI and HUD refinement', 'Rapid iteration support'],
     industries: ['Indie studios', 'Interactive media', 'Gamified products'],
+    heroTitle: 'Expert Game Development.<br />Strong mechanics, visual flow.',
+    heroDescription: 'Production support across gameplay systems, UI, world building, and feature prototyping.',
+    heroButtonLabel: 'Hire Game Developer',
+    heroImage: '/src/assets/hero-visual.png',
   },
   {
     id: 'staff',
@@ -138,6 +245,10 @@ const services = [
     pageDescription: 'Dedicated experts who can join your workflow quickly and help your team deliver without long hiring cycles.',
     benefits: ['Timezone-aligned talent', 'Flexible scaling', 'Reliable ongoing collaboration'],
     industries: ['Startups', 'Agencies', 'Growing product teams'],
+    heroTitle: 'Staff Augmentation.<br />Expert talent in your timezone.',
+    heroDescription: 'Flexible hiring support for startups and established teams that need experienced engineering capacity fast.',
+    heroButtonLabel: 'Hire Dedicated Developers',
+    heroImage: '/src/assets/hero-visual.png',
   },
   {
     id: 'qa',
@@ -154,6 +265,10 @@ const services = [
     pageDescription: 'QA systems that reduce release risk through structured testing, automation coverage, and dependable checks.',
     benefits: ['Regression protection', 'Automation coverage', 'Cross-platform confidence'],
     industries: ['Web apps', 'Mobile products', 'Enterprise software'],
+    heroTitle: 'QA & Automation.<br />Seamless testing, flawless performance.',
+    heroDescription: 'Reduce regression risk through structured QA, automation coverage, and repeatable release confidence.',
+    heroButtonLabel: 'Hire QA Engineer',
+    heroImage: '/src/assets/hero-visual.png',
   },
   {
     id: 'enterprise',
@@ -170,6 +285,10 @@ const services = [
     pageDescription: 'Enterprise software built around business workflows, permissions, integrations, and long-term operational stability.',
     benefits: ['Workflow clarity', 'Role-based access systems', 'System integration planning'],
     industries: ['Manufacturing', 'Operations', 'Corporate platforms'],
+    heroTitle: 'Enterprise Software.<br />Operational efficiency at scale.',
+    heroDescription: 'Large-scale internal platforms and enterprise workflows designed for usability, controls, and reliability.',
+    heroButtonLabel: 'Hire Enterprise Expert',
+    heroImage: '/src/assets/hero-visual.png',
   },
   {
     id: 'dataviz',
@@ -186,6 +305,10 @@ const services = [
     pageDescription: 'Visualization systems that turn complicated metrics into dashboards and reports people can act on quickly.',
     benefits: ['Clear metric hierarchy', 'Usable analytics UX', 'Decision-friendly views'],
     industries: ['Finance', 'Operations', 'Executive reporting'],
+    heroTitle: 'Data Visualization.<br />Clearer insights, faster analysis.',
+    heroDescription: 'Transforming complex data into clear, actionable business insights with strong visual storytelling.',
+    heroButtonLabel: 'Hire Data Viz Specialist',
+    heroImage: '/src/assets/hero-visual.png',
   },
   {
     id: '3d',
@@ -202,6 +325,10 @@ const services = [
     pageDescription: '3D design support for product showcases, digital storytelling, immersive scenes, and higher-end visual presentation.',
     benefits: ['Premium product rendering', 'Motion-ready assets', 'Interactive showcase support'],
     industries: ['Product marketing', 'Architecture', 'Immersive brands'],
+    heroTitle: 'Innovative 3D visuals.<br />Designed for realism and depth.',
+    heroDescription: 'High-precision 3D modeling and rendering for digital experiences that need a premium visual finish.',
+    heroButtonLabel: 'Hire 3D Designer',
+    heroImage: '/src/assets/hero-visual.png',
   },
 ]
 
@@ -537,6 +664,45 @@ function HomeTechLogo({ id }) {
   return null
 }
 
+function TechIcon({ type }) {
+  if (type === 'react') {
+    return (
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="8" fill="#58C4DC" />
+        <ellipse cx="50" cy="50" rx="40" ry="16" stroke="#58C4DC" strokeWidth="2" fill="none" />
+        <ellipse cx="50" cy="50" rx="40" ry="16" stroke="#58C4DC" strokeWidth="2" fill="none" transform="rotate(60 50 50)" />
+        <ellipse cx="50" cy="50" rx="40" ry="16" stroke="#58C4DC" strokeWidth="2" fill="none" transform="rotate(120 50 50)" />
+      </svg>
+    )
+  }
+  if (type === 'node') {
+    return (
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 10L85 30V70L50 90L15 70V30L50 10Z" fill="#339933" />
+        <path d="M50 25V75M30 40L50 50L70 40" stroke="white" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    )
+  }
+  if (type === 'js') {
+    return (
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100" height="100" fill="#F7DF1E" />
+        <path d="M75 75C75 80 70 85 62 85C54 85 50 80 50 75" stroke="black" strokeWidth="8" strokeLinecap="round" />
+        <path d="M30 55V85" stroke="black" strokeWidth="8" strokeLinecap="round" />
+      </svg>
+    )
+  }
+  if (type === 'vue') {
+    return (
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 85L15 25H30L50 60L70 25H85L50 85Z" fill="#41B883" />
+        <path d="M50 60L32 25H41L50 42L59 25H68L50 60Z" fill="#35495E" />
+      </svg>
+    )
+  }
+  return null
+}
+
 function ProcessIcon({ id }) {
   const common = {
     fill: 'none',
@@ -680,37 +846,109 @@ function Header() {
           </button>
 
           {servicesOpen && (
-            <div className="dropdown-panel">
-              <div className="dropdown-grid">
-                {featuredServices.map((service) => (
-                  <NavLink
-                    key={service.id}
-                    to={serviceHref(service.id)}
-                    className="drop-item"
-                    onClick={() => {
-                      setServicesOpen(false)
-                      setMenuOpen(false)
-                    }}
-                  >
-                    <span className="drop-copy">
-                      <strong>{service.title}</strong>
-                      <small>{service.desc}</small>
-                    </span>
-                  </NavLink>
-                ))}
-              </div>
-
-              <div className="dropdown-footer">
-                <span>Explore all our capabilities</span>
+            <div className="dropdown-panel-light">
+              <div className="dropdown-light-grid">
                 <NavLink
-                  to="/services"
-                  className="drop-view-all"
+                  to={serviceHref('frontend')}
+                  className="drop-light-item"
                   onClick={() => {
                     setServicesOpen(false)
                     setMenuOpen(false)
                   }}
                 >
-                  View All Services
+                  <div className="drop-light-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <div className="drop-light-text">
+                    <div className="drop-light-title">Front-End Development</div>
+                  </div>
+                </NavLink>
+
+                <NavLink
+                  to={serviceHref('backend')}
+                  className="drop-light-item"
+                  onClick={() => {
+                    setServicesOpen(false)
+                    setMenuOpen(false)
+                  }}
+                >
+                  <div className="drop-light-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <div className="drop-light-text">
+                    <div className="drop-light-title">Back-End Development</div>
+                  </div>
+                </NavLink>
+
+                <NavLink
+                  to={serviceHref('uiux')}
+                  className="drop-light-item"
+                  onClick={() => {
+                    setServicesOpen(false)
+                    setMenuOpen(false)
+                  }}
+                >
+                  <div className="drop-light-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <div className="drop-light-text">
+                    <div className="drop-light-title">UI/UX Designing</div>
+                  </div>
+                </NavLink>
+
+                <NavLink
+                  to={serviceHref('ai-ml')}
+                  className="drop-light-item"
+                  onClick={() => {
+                    setServicesOpen(false)
+                    setMenuOpen(false)
+                  }}
+                >
+                  <div className="drop-light-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <div className="drop-light-text">
+                    <div className="drop-light-title">AI-ML Development</div>
+                  </div>
+                </NavLink>
+
+                <NavLink
+                  to={serviceHref('cloud')}
+                  className="drop-light-item"
+                  onClick={() => {
+                    setServicesOpen(false)
+                    setMenuOpen(false)
+                  }}
+                >
+                  <div className="drop-light-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <div className="drop-light-text">
+                    <div className="drop-light-title">Cloud Services</div>
+                  </div>
+                </NavLink>
+              </div>
+
+              <div className="dropdown-light-footer">
+                <NavLink
+                  to="/services"
+                  className="view-all-services-text"
+                  onClick={() => {
+                    setServicesOpen(false)
+                    setMenuOpen(false)
+                  }}
+                >
+                  View all Services <span className="arrow-icon-text">→</span>
                 </NavLink>
               </div>
             </div>
@@ -718,9 +956,6 @@ function Header() {
         </div>
 
         <NavLink to="/portfolio" onClick={() => setMenuOpen(false)}>Portfolio</NavLink>
-        <a href="#" onClick={() => setMenuOpen(false)}>Career</a>
-        <a href="#" onClick={() => setMenuOpen(false)}>Blogs</a>
-        <a href="#" className="nav-ai-link" onClick={() => setMenuOpen(false)}>AI Expertise</a>
       </nav>
 
       <NavLink className="contact-link" to="/contact" onClick={() => setMenuOpen(false)}>
@@ -742,6 +977,38 @@ function Header() {
 }
 
 function HomePage() {
+  const [hasAnimated, setHasAnimated] = useState(false)
+  const servicesRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            const cards = entry.target.querySelectorAll('.home-service-card')
+            cards.forEach((card, index) => {
+              setTimeout(() => {
+                card.classList.add('animate-in')
+              }, index * 100)
+            })
+            setHasAnimated(true)
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    if (servicesRef.current) {
+      observer.observe(servicesRef.current)
+    }
+
+    return () => {
+      if (servicesRef.current) {
+        observer.unobserve(servicesRef.current)
+      }
+    }
+  }, [hasAnimated])
+
   return (
     <>
       <section className="hero hero-home">
@@ -813,12 +1080,12 @@ function HomePage() {
             </div>
           </div>
 
-          <div className="home-services-grid">
+          <div className="home-services-grid" ref={servicesRef}>
             {homeServices.map((service, index) => (
               <NavLink
                 to={serviceHref(service.id)}
                 key={service.id}
-                className={`home-service-card reveal ${index % 4 === 1 ? 'reveal-delay' : ''} ${index % 4 === 2 ? 'reveal-delay-2' : ''}`}
+                className="home-service-card"
               >
                 <div className="home-service-icon">
                   <HomeServiceIcon id={service.id} />
@@ -868,21 +1135,21 @@ function HomePage() {
 
               <div className="process-map">
                 {/* SVG Connecting Line */}
-                <svg className="process-line-svg" viewBox="0 0 800 400" fill="none">
+                <svg className="process-line-svg" viewBox="0 0 800 400" fill="none" preserveAspectRatio="none">
                   <path
-                    d="M320 60 H700 Q740 60 740 100 V180 Q740 220 700 220 H100 Q60 220 60 260 V340 Q60 380 100 380 H320"
-                    stroke="white" strokeWidth="2" strokeDasharray="5 5" opacity="0.15"
+                    d="M 120 42 H 720 Q 750 42 750 72 V 172 Q 750 202 720 202 H 80 Q 50 202 50 232 V 332 Q 50 362 80 362 H 450"
+                    stroke="#5d7ab5" strokeWidth="1.5" strokeDasharray="6 6" opacity="0.6"
                   />
                 </svg>
 
                 <div className="process-steps-wrap">
                   {[
-                    { id: 'brain', title: 'Brainstorming', sub: 'Ideas', x: 20, y: 0 },
-                    { id: 'design', title: 'Product', sub: 'Design', x: 140, y: 0 },
-                    { id: 'frontend', title: 'Front-End', sub: 'Development', x: 260, y: 0 },
-                    { id: 'seo', title: 'SEO', sub: 'Optimization', x: 80, y: 160 },
-                    { id: 'backend', title: 'Back-End', sub: 'Development', x: 200, y: 160 },
-                    { id: 'marketing', title: 'Digital', sub: 'Marketing', x: 140, y: 320 }
+                    { id: 'brain', title: 'Brainstorming', sub: 'Ideas', x: 0, y: 0 },
+                    { id: 'design', title: 'Product', sub: 'Design', x: 0, y: 0 },
+                    { id: 'frontend', title: 'Front-End', sub: 'Development', x: 0, y: 0 },
+                    { id: 'backend', title: 'Back-End', sub: 'Development', x: 0, y: 0 },
+                    { id: 'seo', title: 'SEO', sub: 'Optimization', x: 0, y: 0 },
+                    { id: 'marketing', title: 'Digital', sub: 'Marketing', x: 0, y: 0 }
                   ].map((step, idx) => (
                     <div
                       key={step.id}
@@ -938,32 +1205,43 @@ function HomePage() {
           </div>
 
           <div className="consulting-right">
-            <div className="timeline-container">
-              <div className="timeline-line" />
+            <div className="consulting-zigzag">
+              {/* Central dashed line */}
+              <div className="czz-line" />
 
-              <div className="timeline-steps">
-                <div className="timeline-item item-right-top">
-                  <div className="step-circle">01</div>
-                  <div className="step-card-v2">
-                    <h3>Fully flexible:</h3>
-                    <p>Whether you need a single developer or an entire integrated team, we&apos;ve got you covered.</p>
-                  </div>
+              {/* Step 01 — card on RIGHT */}
+              <div className="czz-row czz-row-right">
+                <div className="czz-spacer" />
+                <div className="czz-node">
+                  <span className="czz-num">01</span>
                 </div>
-
-                <div className="timeline-item item-left-mid">
-                  <div className="step-circle">02</div>
-                  <div className="step-card-v2">
-                    <h3>Time zone aligned:</h3>
-                    <p>No more delayed response or work delivery, get the developers in your timezone.</p>
-                  </div>
+                <div className="czz-card">
+                  <h3>Fully flexible:</h3>
+                  <p>Whether you need a single developer or an entire integrated team, we&apos;ve got you covered.</p>
                 </div>
+              </div>
 
-                <div className="timeline-item item-right-bot">
-                  <div className="step-circle">03</div>
-                  <div className="step-card-v2">
-                    <h3>No language barrier:</h3>
-                    <p>Not sure what technology you need help with? No worries. We have 70+ developers covering all the tech stacks.</p>
-                  </div>
+              {/* Step 02 — card on LEFT */}
+              <div className="czz-row czz-row-left">
+                <div className="czz-card czz-card-left">
+                  <h3>Time zone aligned:</h3>
+                  <p>No more delayed response or work delivery, get the developers in your timezone.</p>
+                </div>
+                <div className="czz-node">
+                  <span className="czz-num">02</span>
+                </div>
+                <div className="czz-spacer" />
+              </div>
+
+              {/* Step 03 — card on RIGHT */}
+              <div className="czz-row czz-row-right">
+                <div className="czz-spacer" />
+                <div className="czz-node">
+                  <span className="czz-num">03</span>
+                </div>
+                <div className="czz-card">
+                  <h3>No language barrier:</h3>
+                  <p>Not sure what technology you need help with? We have 70+ developers covering all the tech stacks.</p>
                 </div>
               </div>
             </div>
@@ -1030,46 +1308,421 @@ function TestiCard({ data }) {
 function AboutPage() {
   return (
     <>
-      <section className="page-hero-banner">
-        <div className="container reveal">
-          <p className="kicker">About SightInfusion</p>
-          <h1>We provide flexible services for ambitious digital products.</h1>
-          <p className="page-hero-sub">
-            SightInfusion combines technical depth with design clarity to help businesses
-            build stronger digital products, websites, and AI experiences.
-          </p>
+      <section className="about-hero-section">
+        <div className="container">
+          <div className="about-hero-content reveal">
+            <span className="about-badge">We Are Guilty!</span>
+            <h1 className="about-hero-title">We are responsible for your bug-free digital product</h1>
+            <p className="about-hero-description">
+              Almost every company needs software to run their business smoothly, even yours. We don't just develop
+              products, we build experiences that make the users stay.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="section-pad">
-        <div className="container about-split">
-          <div className="reveal">
-            <p className="kicker">About Us</p>
-            <h2>We are responsible for your bug-free digital product.</h2>
-            <p>
-              Almost every company needs software to run business smoothly. We do not just
-              develop products, we build experiences that make users stay and trust what they see.
-            </p>
-            <ul className="about-list">
-              <li>Design-led engineering approach</li>
-              <li>70+ specialized developers</li>
-              <li>Delivery built for scale</li>
-              <li>Long-term collaboration mindset</li>
-            </ul>
+      <section className="about-content-section">
+        <div className="container">
+          <div className="about-two-col reveal reveal-delay">
+            <div className="about-left">
+              <span className="about-section-badge">About SightInfusion</span>
+              <h2 className="about-section-title">We Provide You Flexible Services</h2>
+            </div>
+            <div className="about-right">
+              <p className="about-section-text">
+                SightInfusion Technical Authority Pvt. Ltd. is an emerging tech-based company specializing
+                in AI product design and high-performance development. With years of experience, we are known for
+                providing innovative solutions for all kinds of software development needs. We
+                are committed to delivering cost-effective and scalable solutions to our clients
+                across the globe, helping businesses transform with cutting-edge technology.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="about-values-section">
+        <div className="container">
+          <div className="values-grid">
+            <div className="value-card">
+              <div className="value-icon value-icon-history">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M12 6v6l4 2M12 2v2M12 20v2M2 12h2M20 12h2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none" />
+                </svg>
+              </div>
+              <h3 className="value-title">Our History</h3>
+              <p className="value-description">
+                Fifteen years ago, we merged technology with creativity, crafting over 600 digital solutions.
+                Each project tells a story, reflecting our dedication to innovation and excellence.
+              </p>
+            </div>
+
+            <div className="value-card">
+              <div className="value-icon value-icon-mission">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 22l-10-5 10-5 10 5-10 5z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M2.22 12L12 17l9.78-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M2.22 7L12 12l9.78-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.4" />
+                </svg>
+              </div>
+              <h3 className="value-title">Our Mission</h3>
+              <p className="value-description">
+                We aim to be architects of digital evolution, crafting custom solutions that surpass
+                expectations, turning the ordinary into extraordinary through visionary technology and innovation.
+              </p>
+            </div>
+
+            <div className="value-card">
+              <div className="value-icon value-icon-vision">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M12 12l2-2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="1 1" />
+                  <path d="M18 12a6 6 0 0 0-12 0" stroke="currentColor" strokeWidth="1" opacity="0.3" />
+                </svg>
+              </div>
+              <h3 className="value-title">Our Vision</h3>
+              <p className="value-description">
+                We strive to shape a future where technology feels human, ideas become legacies, and
+                businesses redefine their horizons. We're not just building solutions; we're designing tomorrow.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="about-stats-section">
+        <div className="container">
+          <div className="stats-layout">
+            <div className="stats-left">
+              <div className="stat-box">
+                <div className="stat-icon stat-icon-blue">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <circle cx="8.5" cy="7" r="4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87M17 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.4" />
+                  </svg>
+                </div>
+                <h3 className="stat-number">600+</h3>
+                <p className="stat-label">Companies Trust Us</p>
+              </div>
+
+              <div className="stat-box">
+                <div className="stat-icon stat-icon-green">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-10.6 8.38 8.38 0 0 1 3.8.9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M22 4L12 14.01l-3-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1" opacity="0.2" />
+                  </svg>
+                </div>
+                <h3 className="stat-number">280+</h3>
+                <p className="stat-label">Success Stories</p>
+              </div>
+
+              <div className="stat-box">
+                <div className="stat-icon stat-icon-purple">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <rect x="4" y="2" width="16" height="20" rx="2" stroke="currentColor" strokeWidth="1" opacity="0.1" />
+                  </svg>
+                </div>
+                <h3 className="stat-number">15+</h3>
+                <p className="stat-label">Years of experience</p>
+              </div>
+
+              <div className="stat-box">
+                <div className="stat-icon stat-icon-orange">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1" opacity="0.2" />
+                  </svg>
+                </div>
+                <h3 className="stat-number">99+</h3>
+                <p className="stat-label">Client Satisfaction</p>
+              </div>
+            </div>
+
+            <div className="stats-right">
+              <div className="company-image-card">
+                <div className="building-realistic-image">
+                  <img src="/src/assets/about-building.png" alt="SightInfusion Headquarters" className="hq-building-img" />
+                  <div className="hq-image-overlay" />
+                </div>
+                <div className="company-overlay">
+                  <h2 className="company-year">2023</h2>
+                  <p className="company-text">We Established on</p>
+                  <p className="company-subtext">Our company have a great history.</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="about-visual-grid reveal reveal-delay">
-            {[
-              { label: 'Companies Trust Us', value: '600+' },
-              { label: 'Success Stories', value: '280+' },
-              { label: 'Years Of Experience', value: '15+' },
-              { label: 'Client Satisfaction', value: '99+' },
-            ].map((item) => (
-              <div key={item.label} className="about-stat-card">
-                <strong>{item.value}</strong>
-                <span>{item.label}</span>
+          <div className="certifications-box">
+            <div className="cert-logos">
+              <div className="cert-item">
+                <div className="iso-badge modern-seal">
+                  <div className="seal-icon-wrapper">
+                    <svg className="iso-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="22" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2" />
+                      <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2.5" />
+                      <path d="M16 24l5.5 5.5L32 16" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M24 6v2M24 40v2M6 24h2M40 24h2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                    </svg>
+                  </div>
+                  <div className="iso-seal-text">
+                    <strong>ISO</strong>
+                    <span>9001 : 2015</span>
+                  </div>
+                </div>
               </div>
-            ))}
+              <div className="cert-item">
+                <div className="iso-badge modern-seal">
+                  <div className="seal-icon-wrapper">
+                    <svg className="iso-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="22" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2" />
+                      <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2.5" />
+                      <path d="M24 12v12m0 0l-6-6m6 6l6-6" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M36 24a12 12 0 11-24 0 12 12 0 0124 0z" stroke="currentColor" strokeWidth="1" opacity="0.3" />
+                    </svg>
+                  </div>
+                  <div className="iso-seal-text">
+                    <strong>ISO</strong>
+                    <span>27001 : 2022</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="cert-text">
+              <p>
+                As an <strong>ISO-certified</strong> company, we proudly hold <strong>ISO 9001:2015</strong> for unparalleled quality management
+                and <strong>ISO 27001:2022</strong> for top-tier information security. Your success and data security are at the core
+                of everything we do.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="about-brands-section">
+        <div className="container">
+          <p className="brands-heading">Trusted by start-ups, enterprises, and Fortune 500</p>
+          <div className="brands-track-wrapper">
+            <div className="brands-track">
+              <div className="brand-logo-item">
+                <svg className="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="#FFA500" opacity="0.1" stroke="#FFA500" strokeWidth="2" />
+                  <path d="M50 25L60 45H80L65 58L72 78L50 65L28 78L35 58L20 45H40L50 25Z" fill="#FFA500" />
+                </svg>
+                <span>Tru Performance</span>
+              </div>
+              <div className="brand-logo-item">
+                <svg className="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="#1E90FF" opacity="0.1" stroke="#1E90FF" strokeWidth="2" />
+                  <text x="50" y="60" fontSize="40" fontWeight="bold" fill="#1E90FF" textAnchor="middle">L&T</text>
+                </svg>
+                <span>L&T</span>
+              </div>
+              <div className="brand-logo-item">
+                <svg className="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="#DC143C" opacity="0.1" stroke="#DC143C" strokeWidth="2" />
+                  <rect x="30" y="35" width="40" height="30" fill="#DC143C" rx="4" />
+                  <text x="50" y="60" fontSize="16" fontWeight="bold" fill="#FFFFFF" textAnchor="middle">MHI</text>
+                </svg>
+                <span>MHI POWER</span>
+              </div>
+              <div className="brand-logo-item">
+                <svg className="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="#3B5998" opacity="0.1" stroke="#3B5998" strokeWidth="2" />
+                  <circle cx="50" cy="50" r="35" fill="#3B5998" />
+                  <text x="50" y="65" fontSize="38" fontWeight="bold" fill="#FFFFFF" textAnchor="middle">f</text>
+                </svg>
+                <span>facebook</span>
+              </div>
+              <div className="brand-logo-item">
+                <svg className="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="#8B4789" opacity="0.1" stroke="#8B4789" strokeWidth="2" />
+                  <rect x="25" y="30" width="50" height="40" fill="none" stroke="#8B4789" strokeWidth="3" rx="4" />
+                  <circle cx="35" cy="40" r="4" fill="#8B4789" />
+                  <polyline points="25,50 40,35 55,45 75,25" stroke="#8B4789" strokeWidth="3" fill="none" strokeLinejoin="round" />
+                </svg>
+                <span>GAMING</span>
+              </div>
+              <div className="brand-logo-item">
+                <svg className="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="#00A8E8" opacity="0.1" stroke="#00A8E8" strokeWidth="2" />
+                  <circle cx="50" cy="50" r="35" fill="none" stroke="#00A8E8" strokeWidth="3" />
+                  <circle cx="50" cy="50" r="25" fill="none" stroke="#00A8E8" strokeWidth="3" />
+                  <circle cx="50" cy="50" r="8" fill="#00A8E8" />
+                </svg>
+                <span>Infinity</span>
+              </div>
+              <div className="brand-logo-item">
+                <svg className="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="#9333EA" opacity="0.1" stroke="#9333EA" strokeWidth="2" />
+                  <circle cx="40" cy="50" r="12" fill="#9333EA" />
+                  <circle cx="50" cy="50" r="12" fill="#9333EA" />
+                  <circle cx="60" cy="50" r="12" fill="#9333EA" />
+                </svg>
+                <span>Perception</span>
+              </div>
+              <div className="brand-logo-item">
+                <svg className="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="#E60000" opacity="0.1" stroke="#E60000" strokeWidth="2" />
+                  <circle cx="50" cy="50" r="30" fill="#E60000" />
+                  <text x="50" y="62" fontSize="32" fontWeight="bold" fill="#FFFFFF" textAnchor="middle">J</text>
+                </svg>
+                <span>Jio</span>
+              </div>
+
+              {/* Duplicate for continuous scroll */}
+              <div className="brand-logo-item">
+                <svg className="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="#FFA500" opacity="0.1" stroke="#FFA500" strokeWidth="2" />
+                  <path d="M50 25L60 45H80L65 58L72 78L50 65L28 78L35 58L20 45H40L50 25Z" fill="#FFA500" />
+                </svg>
+                <span>Tru Performance</span>
+              </div>
+              <div className="brand-logo-item">
+                <svg className="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="#1E90FF" opacity="0.1" stroke="#1E90FF" strokeWidth="2" />
+                  <text x="50" y="60" fontSize="40" fontWeight="bold" fill="#1E90FF" textAnchor="middle">L&T</text>
+                </svg>
+                <span>L&T</span>
+              </div>
+              <div className="brand-logo-item">
+                <svg className="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="#DC143C" opacity="0.1" stroke="#DC143C" strokeWidth="2" />
+                  <rect x="30" y="35" width="40" height="30" fill="#DC143C" rx="4" />
+                  <text x="50" y="60" fontSize="16" fontWeight="bold" fill="#FFFFFF" textAnchor="middle">MHI</text>
+                </svg>
+                <span>MHI POWER</span>
+              </div>
+              <div className="brand-logo-item">
+                <svg className="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="#3B5998" opacity="0.1" stroke="#3B5998" strokeWidth="2" />
+                  <circle cx="50" cy="50" r="35" fill="#3B5998" />
+                  <text x="50" y="65" fontSize="38" fontWeight="bold" fill="#FFFFFF" textAnchor="middle">f</text>
+                </svg>
+                <span>facebook</span>
+              </div>
+              <div className="brand-logo-item">
+                <svg className="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="#8B4789" opacity="0.1" stroke="#8B4789" strokeWidth="2" />
+                  <rect x="25" y="30" width="50" height="40" fill="none" stroke="#8B4789" strokeWidth="3" rx="4" />
+                  <circle cx="35" cy="40" r="4" fill="#8B4789" />
+                  <polyline points="25,50 40,35 55,45 75,25" stroke="#8B4789" strokeWidth="3" fill="none" strokeLinejoin="round" />
+                </svg>
+                <span>GAMING</span>
+              </div>
+              <div className="brand-logo-item">
+                <svg className="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="#00A8E8" opacity="0.1" stroke="#00A8E8" strokeWidth="2" />
+                  <circle cx="50" cy="50" r="35" fill="none" stroke="#00A8E8" strokeWidth="3" />
+                  <circle cx="50" cy="50" r="25" fill="none" stroke="#00A8E8" strokeWidth="3" />
+                  <circle cx="50" cy="50" r="8" fill="#00A8E8" />
+                </svg>
+                <span>Infinity</span>
+              </div>
+              <div className="brand-logo-item">
+                <svg className="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="#9333EA" opacity="0.1" stroke="#9333EA" strokeWidth="2" />
+                  <circle cx="40" cy="50" r="12" fill="#9333EA" />
+                  <circle cx="50" cy="50" r="12" fill="#9333EA" />
+                  <circle cx="60" cy="50" r="12" fill="#9333EA" />
+                </svg>
+                <span>Perception</span>
+              </div>
+              <div className="brand-logo-item">
+                <svg className="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="45" fill="#E60000" opacity="0.1" stroke="#E60000" strokeWidth="2" />
+                  <circle cx="50" cy="50" r="30" fill="#E60000" />
+                  <text x="50" y="62" fontSize="32" fontWeight="bold" fill="#FFFFFF" textAnchor="middle">J</text>
+                </svg>
+                <span>Jio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="about-why-services-section">
+        <div className="container">
+          <div className="why-services-horizontal-layout">
+            <div className="why-services-image-left">
+              <img src="/src/assets/services-visual.png" alt="Professional Services Team" className="why-services-img-horizontal" />
+            </div>
+
+            <div className="why-services-content-right">
+              <span className="why-services-badge">Contact Us</span>
+              <h2 className="why-services-title">Why Our Services are Better Than Others?</h2>
+
+              <div className="why-services-horizontal-grid">
+                <div className="why-service-horizontal-item">
+                  <div className="why-service-horizontal-icon why-icon-quality">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <h3>Quality Comes First</h3>
+                </div>
+
+                <div className="why-service-horizontal-item">
+                  <div className="why-service-horizontal-icon why-icon-flexible">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1" strokeDasharray="2 2" />
+                    </svg>
+                  </div>
+                  <h3>Flexible Cooperation</h3>
+                </div>
+
+                <div className="why-service-horizontal-item">
+                  <div className="why-service-horizontal-icon why-icon-delivery">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M8 21h8M12 17v4M7 8l3 3 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <h3>On-time Delivery</h3>
+                </div>
+
+                <div className="why-service-horizontal-item">
+                  <div className="why-service-horizontal-icon why-icon-transparent">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 1v22M5 12h14M12 1l4 4M12 1L8 5M12 23l4-4M12 23l-4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" opacity="0.3" />
+                    </svg>
+                  </div>
+                  <h3>Transparent Costs</h3>
+                </div>
+
+                <div className="why-service-horizontal-item">
+                  <div className="why-service-horizontal-icon why-icon-developers">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <h3>Qualified Developers</h3>
+                </div>
+
+                <div className="why-service-horizontal-item">
+                  <div className="why-service-horizontal-icon why-icon-scale">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 22v-5M9 7l3-3 3 3M12 4v12M17 10l5 5-5 5M22 15h-8M7 10l-5 5 5 5M2 15h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <h3>Quick Scale-up</h3>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1077,189 +1730,626 @@ function AboutPage() {
   )
 }
 
+const uiuxTechStack = [
+  { id: 'ps', name: 'Photoshop' },
+  { id: 'xd', name: 'Adobe XD' },
+  { id: 'sketch', name: 'Sketch' },
+  { id: 'ai', name: 'Illustrator' },
+  { id: 'figma', name: 'Figma' },
+  { id: 'canva', name: 'Canva' }
+]
+
+function UiUxToolLogo({ id }) {
+  if (id === 'ps') return <div style={{ background: '#001E36', color: '#31A8FF', fontWeight: 'bold', display: 'grid', placeItems: 'center', height: '50px', width: '50px', borderRadius: '10px', fontSize: '24px', margin: '0 auto' }}>Ps</div>;
+  if (id === 'xd') return <div style={{ background: '#470137', color: '#FF61F6', fontWeight: 'bold', display: 'grid', placeItems: 'center', height: '50px', width: '50px', borderRadius: '10px', fontSize: '24px', margin: '0 auto' }}>Xd</div>;
+  if (id === 'sketch') return (
+    <svg viewBox="0 0 24 24" fill="none" style={{ height: '50px', width: '50px', margin: '0 auto' }}>
+      <path d="M12 2L2 9.5 12 22l10-12.5L12 2z" fill="#FDB300" />
+      <path d="M2 9.5h20M12 2v20M7 6l5 16-5-16zm10 0l-5 16 5-16z" stroke="#FFECA1" strokeWidth="0.5" strokeOpacity="0.5" />
+    </svg>
+  );
+  if (id === 'ai') return <div style={{ background: '#330000', color: '#FF9A00', fontWeight: 'bold', display: 'grid', placeItems: 'center', height: '50px', width: '50px', borderRadius: '10px', fontSize: '24px', margin: '0 auto' }}>Ai</div>;
+  if (id === 'figma') return (
+    <svg viewBox="0 0 38 57" fill="none" style={{ height: '50px', width: '34px', margin: '0 auto' }}>
+      <path d="M19 28.5a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z" fill="#1ABCFE" />
+      <path d="M0 47.5A9.5 9.5 0 019.5 38h9.5v9.5A9.5 9.5 0 019.5 57 9.5 9.5 0 010 47.5z" fill="#0ACF83" />
+      <path d="M19 0h9.5A9.5 9.5 0 0138 9.5v0a9.5 9.5 0 01-9.5 9.5H19V0z" fill="#FF7262" />
+      <path d="M0 9.5A9.5 9.5 0 019.5 0H19v19H9.5A9.5 9.5 0 010 9.5v0z" fill="#F24E1E" />
+      <path d="M0 28.5A9.5 9.5 0 019.5 19H19v19H9.5A9.5 9.5 0 010 28.5v0z" fill="#A259FF" />
+    </svg>
+  );
+  if (id === 'canva') return (
+    <div style={{ background: '#00C4CC', color: 'white', fontWeight: 'bold', display: 'grid', placeItems: 'center', height: '50px', width: '50px', borderRadius: '50%', fontSize: '14px', margin: '0 auto', letterSpacing: '-0.5px', fontStyle: 'italic' }}>
+      Canva
+    </div>
+  );
+  return null;
+}
+
 function ServicesPage() {
   const { serviceId } = useParams()
   const activeService = services.find((service) => service.id === serviceId) ?? services[0]
+  const [currentSlide, setCurrentSlide] = useState(0)
 
   return (
     <>
-      <section className="page-hero-banner">
-        <div className="container reveal">
-          <p className="kicker">Our Services</p>
-          <h1>{activeService.title}</h1>
-          <p className="page-hero-sub">
-            {activeService.pageDescription}
-          </p>
-        </div>
-      </section>
-
-      <section className="section-pad">
+      <section className="service-hero-section">
         <div className="container">
-          <div className="section-header reveal">
-            <p className="kicker">What We&apos;re Offering</p>
-            <h2>Specialized service experience for {activeService.title}.</h2>
-            <p className="section-sub">
-              Switching the service tab now changes the full page content block, including overview,
-              benefits, deliverables, stack, and supporting sections for that specific service.
-            </p>
-          </div>
+          <div className="service-hero-content reveal">
+            <div className="service-hero-left">
+              <div className="service-breadcrumb">
+                <NavLink to="/">Home</NavLink>
+                <span>/</span>
+                <NavLink to="/services">Services</NavLink>
+                <span>/</span>
+                <span>{activeService.title}</span>
+              </div>
 
-          <div className="service-route-tabs reveal" role="tablist" aria-label="Services">
-            {services.map((service) => (
-              <NavLink
-                key={service.id}
-                role="tab"
-                aria-selected={activeService.id === service.id}
-                to={serviceHref(service.id)}
-                className={`service-route-tab ${activeService.id === service.id ? 'active' : ''}`}
-              >
-                <span>{service.title}</span>
-                <span className="service-route-arrow"><ArrowIcon /></span>
+              <span className="service-badge">{activeService.title}</span>
+
+              <h1 className="service-hero-title" dangerouslySetInnerHTML={{ __html: activeService.heroTitle }}></h1>
+
+              <p className="service-hero-description">
+                {activeService.heroDescription}
+              </p>
+
+              <NavLink to="/contact" className="service-hero-btn">
+                {activeService.heroButtonLabel}
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
               </NavLink>
-            ))}
-          </div>
-
-          <div key={activeService.id} className="service-detail-page reveal">
-            <div className="service-detail-hero">
-              <div className="service-detail-kicker">
-                <span className="service-detail-arrow"><ArrowIcon /></span>
-                <span>Selected Service</span>
-              </div>
-              <h3>{activeService.title}</h3>
-              <p className="service-panel-summary">{activeService.summary}</p>
             </div>
 
-            <div className="service-spotlight">
-              <span className="service-spotlight-label">Why this service matters</span>
-              <p>{activeService.spotlight}</p>
+            <div className="service-hero-right">
+              <img src={activeService.heroImage} alt={activeService.title} className="service-hero-image" />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-pad service-breakdown-section">
+      {activeService.id === 'uiux' ? (
+        <section className="section-pad uiux-tool-section">
+          <div className="container">
+            <div className="uiux-tool-track-wrap">
+              <div className="uiux-tool-track">
+                {[...uiuxTechStack, ...uiuxTechStack].map((item, index) => (
+                  <article key={`${item.id}-${index}`} className="uiux-tool-card">
+                    <div className="uiux-tool-logo">
+                      <UiUxToolLogo id={item.id} />
+                    </div>
+                    <h3>{item.name}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : (
+        <section className="section-pad tech-section home-tech-section">
+          <div className="container home-tech-shell">
+            <div className="home-tech-track-wrap">
+              <div className="home-tech-track">
+                {[...homeTechStack, ...homeTechStack].map((item, index) => (
+                  <article key={`${item.id}-${index}`} className="home-tech-card">
+                    <div className={`home-tech-logo home-tech-logo-${item.id}`}>
+                      <HomeTechLogo id={item.id} />
+                    </div>
+                    <h3>{item.name}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="section-pad service-features-section">
         <div className="container">
-          <div className="service-panel-grid reveal">
-            <div className="service-panel-box">
-              <h4>What we focus on</h4>
-              <ul>
-                {activeService.features.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+          <div className="service-features-wrapper reveal">
+            <div className="service-features-header">
+              <span className="features-label">FEATURES</span>
+              <h2 className="features-title">Our {activeService.title} Service</h2>
+              <div className="features-divider"></div>
             </div>
 
-            <div className="service-panel-box">
-              <h4>Typical deliverables</h4>
-              <ul>
-                {activeService.deliverables.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+            <div className="service-features-grid">
+              {(activeService.detailedFeatures || activeService.features).map((feature, idx) => (
+                <div key={idx} className="feature-item-box">
+                  <div className="feature-icon-check">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="12" cy="12" r="10" fill="#4c7ef3" />
+                      <path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <div className="feature-content">
+                    <h3>{feature.title || feature}</h3>
+                    <p>{feature.desc || activeService.summary}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-
-            <div className="service-panel-box">
-              <h4>Core benefits</h4>
-              <ul>
-                {activeService.benefits.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="service-panel-box">
-              <h4>Best fit industries</h4>
-              <ul>
-                {activeService.industries.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="service-stack-strip reveal">
-            {activeService.stack.map((item) => (
-              <span key={item} className="service-stack-pill">{item}</span>
-            ))}
-          </div>
-
-          <div className="service-outcomes reveal">
-            {activeService.outcomes.map((item) => (
-              <div key={item} className="service-outcome-card">
-                <strong>{item}</strong>
-              </div>
-            ))}
-          </div>
-
-          <div className="service-detail-cta reveal">
-            <NavLink className="hero-primary" to="/contact">Discuss This Service</NavLink>
           </div>
         </div>
       </section>
 
-      <section className="section-pad service-story-section">
-        <div className="container service-story-grid">
-          <div className="service-story-copy reveal">
-            <p className="kicker">Why Choose This Service</p>
-            <h2>{activeService.title} built around real delivery goals.</h2>
-            <p className="section-sub">
-              {activeService.summary} We shape the scope around your business goals, technical constraints,
-              and the level of polish needed to make the product feel trustworthy.
-            </p>
-          </div>
-
-          <div className="service-story-cards">
-            {activeService.outcomes.map((item, index) => (
-              <div
-                key={item}
-                className={`service-story-card reveal ${index === 1 ? 'reveal-delay' : ''} ${index === 2 ? 'reveal-delay-2' : ''}`}
-              >
-                <div className="service-story-icon"><ArrowIcon /></div>
-                <strong>{item}</strong>
-                <p>{activeService.title} is structured to deliver this outcome more reliably.</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-pad service-process-section">
+      <section className="section-pad service-case-study-section">
         <div className="container">
-          <div className="section-header centered reveal">
-            <p className="kicker">Delivery Model</p>
-            <h2>How we handle {activeService.title.toLowerCase()}.</h2>
-          </div>
+          <div className="case-study-wrapper reveal">
+            <div className="case-study-header">
+              <span className="case-study-label">CASE STUDY</span>
+              <h2 className="case-study-title">Achieving Success Through Innovation and Expertise</h2>
+            </div>
 
-          <div className="process-grid">
-            {processSteps.slice(0, 3).map((step, index) => (
-              <div
-                key={`${activeService.id}-${step.num}`}
-                className={`process-card reveal ${index === 1 ? 'reveal-delay' : ''} ${index === 2 ? 'reveal-delay-2' : ''}`}
-              >
-                <div className="process-num">{step.num}</div>
-                <h3>{step.title}</h3>
-                <p>{step.desc}</p>
+            <div className="case-study-grid">
+              {(activeService.caseStudies || [
+                {
+                  id: 'directory',
+                  tag: 'Popular Listing',
+                  title: 'Local Business Directory Search Engine',
+                  desc: 'Tulse City connects users with local vendors across categories like restaurants, doctors, and hotels. A smart search engine with real-time filters, ratings, and map integration.',
+                  img: '/cs-performance.png',
+                },
+                {
+                  id: 'lms',
+                  tag: 'E-Learning',
+                  title: 'Learning Management System',
+                  desc: 'An enterprise SaaS LMS offering a vast course library with progress tracking, interactive modules, and certification management for corporate training.',
+                  img: '/cs-learning.png',
+                },
+                {
+                  id: 'accounting',
+                  tag: 'Business Management',
+                  title: 'Account Management System',
+                  desc: 'A comprehensive business operations platform with modules for Marketing, Customer Management, Accounting, and project tracking for an enterprise client.',
+                  img: '/cs-accounting.png',
+                }
+              ]).map((cs) => (
+                <div key={cs.id} className="case-study-card">
+                  <div className="case-study-badge-container">
+                    <span className="case-study-badge">{cs.tag}</span>
+                  </div>
+                  {cs.tech && (
+                    <div className="case-study-tech-icons">
+                      {cs.tech.map((t) => (
+                        <div key={t} className={`cs-tech-icon icon-${t}`}>
+                          <TechIcon type={t} />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  <div className="case-study-image-container">
+                    <img src={cs.img} alt={cs.title} className="case-study-img" />
+                  </div>
+                  <div className="case-study-content">
+                    <h3>{cs.title}</h3>
+                    <p>{cs.desc}</p>
+                    <a href="#" className="case-study-link">
+                      Read full case study
+                      <ArrowIcon />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {activeService.id === 'frontend' && (
+        <section className="section-pad frontend-process-section">
+          <div className="container">
+            <div className="frontend-process-grid">
+              <div className="frontend-process-left">
+                <div className="process-header">
+                  <span className="process-kicker">OUR PROCESS</span>
+                  <h2>Innovative, Collaborative, Seamless Designs</h2>
+                  <p className="process-description">
+                    SightInfusion focuses on delivering back-end systems that are secure, scalable, and future-ready. From consultation to deployment, our streamlined process ensures effective collaboration, seamless integration, and high-quality results that align with your business goals.
+                  </p>
+                  <NavLink to="/contact" className="schedule-call-btn">
+                    Schedule a Call
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                  </NavLink>
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      <section className="section-pad tech-section">
-        <div className="container">
-          <div className="section-header centered reveal">
-            <p className="kicker">Technology</p>
-            <h2>Technology used for {activeService.title}.</h2>
+              <div className="frontend-process-right">
+                <div className="process-steps-container">
+                  <div className="process-step-item">
+                    <div className="step-number-circle">01</div>
+                    <div className="step-content">
+                      <h3>Discuss your requirements</h3>
+                      <p>We begin by understanding your vision, goals, and audience, ensuring the design aligns with your business needs.</p>
+                    </div>
+                  </div>
+
+                  <div className="process-step-item">
+                    <div className="step-number-circle">02</div>
+                    <div className="step-content">
+                      <h3>Create a plan and assemble a team</h3>
+                      <p>We develop a design plan with wireframes and prototypes, ensuring an intuitive, functional design.</p>
+                    </div>
+                  </div>
+
+                  <div className="process-step-item">
+                    <div className="step-number-circle">03</div>
+                    <div className="step-content">
+                      <h3>Get to work</h3>
+                      <p>Our developers build and optimize your front-end with secure APIs and thorough testing for seamless operation.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="tech-track-wrap">
-          <div className="tech-track">
-            {[...activeService.stack, ...techStack, ...activeService.stack].map((item, index) => (
-              <span key={`${item}-${index}`} className="tech-pill">{item}</span>
-            ))}
+        </section>
+      )}
+
+      {['backend', 'uiux'].includes(activeService.id) && (
+        <section className="section-pad home-consulting-section">
+          <div className="container consulting-grid">
+            <div className="consulting-left reveal">
+              <p className="consulting-kicker">OUR PROCESS</p>
+              <h2>Innovative, Collaborative, Seamless Designs</h2>
+              <p className="consulting-lead">
+                SightInfusion focuses on delivering back-end systems that are secure, scalable, and future-ready. From consultation to deployment, our streamlined process ensures effective collaboration, seamless integration, and high-quality results that align with your business goals.
+              </p>
+              <NavLink to="/contact" className="backend-process-btn">
+                Schedule a Call
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px' }}>
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </NavLink>
+            </div>
+
+            <div className="consulting-right">
+              <div className="consulting-zigzag">
+                {/* Central dashed line */}
+                <div className="czz-line" />
+
+                {/* Step 01 — card on RIGHT */}
+                <div className="czz-row czz-row-right">
+                  <div className="czz-spacer" />
+                  <div className="czz-node">
+                    <span className="czz-num">01</span>
+                  </div>
+                  <div className="czz-card">
+                    <h3>Discuss your requirements</h3>
+                    <p>We begin by understanding your vision, goals, and audience, ensuring the design aligns with your business needs.</p>
+                  </div>
+                </div>
+
+                {/* Step 02 — card on LEFT */}
+                <div className="czz-row czz-row-left">
+                  <div className="czz-card czz-card-left">
+                    <h3>Create a plan and assemble a team</h3>
+                    <p>We develop a design plan with wireframes and prototypes, ensuring an intuitive, functional design.</p>
+                  </div>
+                  <div className="czz-node">
+                    <span className="czz-num">02</span>
+                  </div>
+                  <div className="czz-spacer" />
+                </div>
+
+                {/* Step 03 — card on RIGHT */}
+                <div className="czz-row czz-row-right">
+                  <div className="czz-spacer" />
+                  <div className="czz-node">
+                    <span className="czz-num">03</span>
+                  </div>
+                  <div className="czz-card">
+                    <h3>Get to work</h3>
+                    <p>{activeService.id === 'uiux' ? 'Our designers deliver high-fidelity screens, design systems, and interactive prototypes, refined through testing and feedback.' : 'Our developers build and optimize your back-end with secure APIs and thorough testing for seamless operation.'}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
+
+      {['backend', 'uiux'].includes(activeService.id) && (
+        <section className="section-pad backend-why-choose-section">
+          <div className="container">
+            <div className="backend-why-choose-wrapper reveal">
+              <div className="backend-why-choose-left">
+                <h2 className="backend-why-choose-title">
+                  {activeService.id === 'uiux'
+                    ? 'Why Choose us for UI/UX Design?'
+                    : 'Why Choose us for Backend Development Service?'}
+                </h2>
+                <p className="backend-why-choose-subtitle">
+                  {activeService.id === 'uiux'
+                    ? 'A great design is not just how it looks — it is how it works. Our design process ensures:'
+                    : 'A well-structured backend not only ensures seamless functionality but also:'}
+                </p>
+              </div>
+
+              <div className="backend-why-choose-right">
+                <div className="backend-why-choose-grid">
+                  {activeService.id === 'uiux' ? (
+                    <>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>User-centered design process grounded in research, data, and real user behavior.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>We create scalable design systems that grow with your product and keep your team aligned.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>We collaborate closely as your design partner, ensuring your vision is translated accurately into pixels.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>Our designs are optimized for conversion, accessibility, and cross-platform consistency.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>Clean developer handoff with annotated specs, assets, and component documentation.</p>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>Customized backend services tailored to solve your business challenges and deliver measurable outcomes.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>We build backend systems that are uniquely designed to grow with your business needs.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>We act as your strategic partner, not just a backend development provider, ensuring your success.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>Our backend development prioritizes robust security to protect your data and ensure compliance.</p>
+                      </div>
+                      <div className="backend-why-choose-item">
+                        <div className="backend-why-bullet"></div>
+                        <p>End-to-end backend development support from planning to deployment and maintenance.</p>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {['backend', 'uiux'].includes(activeService.id) && (() => {
+        const backendTestimonials = [
+          {
+            tag: 'LinkedIn',
+            color: '#0077b5',
+            quote: '"The backend architecture is incredibly robust and performs perfectly under load."',
+            text: 'Their proactive approach to security and database optimization has been a game-changer for our platform.',
+            author: 'Serena Balluci',
+            role: 'Product Designer',
+            img: '/src/assets/avatars/serena.png'
+          },
+          {
+            tag: 'Fintech',
+            color: '#00a8e8',
+            quote: '"Scaling was a nightmare until we integrated their serverless solutions."',
+            text: "We've seen a 40% reduction in latency since the migration. The team's expertise is unmatched.",
+            author: 'Alexander Graham',
+            role: 'CTO, Global Tech',
+            img: '/src/assets/avatars/alexander.png'
+          },
+          {
+            tag: 'Commerce',
+            color: '#ff4b2b',
+            quote: '"Exceptional API design that simplified our third-party integrations."',
+            text: 'Working with SightInfusion was smooth. They understood our complex business logic immediately.',
+            author: 'Mira Kothari',
+            role: 'Engineering Manager',
+            img: '/src/assets/avatars/mira.png'
+          }
+        ]
+        const uiuxTestimonials = [
+          {
+            tag: 'SaaS',
+            color: '#7c3aed',
+            quote: '"Our product went from confusing to delightful after their UX redesign."',
+            text: 'The SightInfusion team took time to understand our users and delivered a design system that our engineering team loved.',
+            author: 'Priya Nair',
+            role: 'Head of Product, TechCore',
+            img: '/src/assets/avatars/serena.png'
+          },
+          {
+            tag: 'E-Commerce',
+            color: '#0ea5e9',
+            quote: '"Conversion rates jumped 38% within 3 months of the redesign launch."',
+            text: 'The attention to detail in every screen — from the micro-interactions to the checkout flow — was exceptional.',
+            author: 'James Whittaker',
+            role: 'CEO, StyleVault',
+            img: '/src/assets/avatars/alexander.png'
+          },
+          {
+            tag: 'Health App',
+            color: '#10b981',
+            quote: '"The onboarding experience they designed is the best in our category."',
+            text: 'Users immediately understood the value of our app because of how clearly the design communicated it. Brilliant work.',
+            author: 'Dr. Anita Sharma',
+            role: 'Founder, WellPath',
+            img: '/src/assets/avatars/mira.png'
+          }
+        ]
+        const testimonials = activeService.id === 'uiux' ? uiuxTestimonials : backendTestimonials
+
+        const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % testimonials.length)
+        const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+        const active = testimonials[currentSlide]
+
+        return (
+          <section className="section-pad backend-testimonial-section">
+            <div className="container">
+              <div className="backend-testimonial-wrapper reveal">
+                <div className="backend-testimonial-nav">
+                  <button className="testimonial-nav-btn testimonial-prev" onClick={prevSlide}>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>
+                  <button className="testimonial-nav-btn testimonial-next" onClick={nextSlide}>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+
+                <div className="backend-testimonial-card highlight-glow">
+                  <div className="backend-testimonial-content">
+                    <div className="testimonial-company-logo">
+                      <div className="company-logo-placeholder" style={{ background: active.color }}>{active.tag}</div>
+                    </div>
+                    <h3 className="backend-testimonial-quote">{active.quote}</h3>
+                    <p className="backend-testimonial-text">{active.text}</p>
+                    <div className="backend-testimonial-author">
+                      <div className="author-avatar">
+                        <img src={active.img} alt={active.author} />
+                      </div>
+                      <div className="author-info">
+                        <h4>{active.author}</h4>
+                        <p>{active.role}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )
+      })()}
+
+      {['backend', 'uiux'].includes(activeService.id) && (
+        <section className="contact-new-section">
+          <div className="container">
+            <div className="contact-new-grid reveal">
+              {/* Column 1: Form Card */}
+              <div className="contact-white-card form-column">
+                <span className="contact-kicker">CONTACT</span>
+                <h2 className="contact-inner-title">Lets get in touch</h2>
+                <p className="contact-top-desc">You can reach us anytime via <a href="mailto:info@sightinfusion.com">info@sightinfusion.com</a></p>
+
+                <form className="contact-premium-form">
+                  <div className="form-row">
+                    <div className="form-field">
+                      <label>First Name</label>
+                      <input type="text" placeholder="First Name" />
+                    </div>
+                    <div className="form-field">
+                      <label>Last Name</label>
+                      <input type="text" placeholder="Last Name" />
+                    </div>
+                  </div>
+
+                  <div className="form-field">
+                    <label>Email</label>
+                    <input type="email" placeholder="Your Email" />
+                  </div>
+
+                  <div className="form-row">
+                    <div className="form-field">
+                      <label>Phone Number</label>
+                      <input type="text" placeholder="Your Number" />
+                    </div>
+                    <div className="form-field">
+                      <label>Country</label>
+                      <input type="text" placeholder="Your Country" />
+                    </div>
+                  </div>
+
+                  <div className="form-field">
+                    <label>Message</label>
+                    <textarea placeholder="Leave us a message..."></textarea>
+                  </div>
+
+                  <div className="form-checkbox">
+                    <input type="checkbox" id="terms" />
+                    <label htmlFor="terms">You agree to our terms and conditions.</label>
+                  </div>
+
+                  <button type="submit" className="contact-submit-btn">Get Started</button>
+                </form>
+              </div>
+
+              {/* Column 2: Stats Box */}
+              <div className="contact-stats-column">
+                <div className="stat-item">
+                  <div className="stat-number">600+</div>
+                  <p className="stat-desc">Done Around World</p>
+                </div>
+                <div className="stat-item">
+                  <div className="stat-number">99%</div>
+                  <p className="stat-desc">Client Satisfaction</p>
+                </div>
+                <div className="stat-item">
+                  <div className="stat-number">15+</div>
+                  <p className="stat-desc">Field Experience</p>
+                </div>
+                <div className="stat-item">
+                  <div className="stat-number">2009</div>
+                  <p className="stat-desc">Establish Year</p>
+                </div>
+              </div>
+
+              {/* Column 3: Contact Info Card */}
+              <div className="contact-white-card info-column">
+                <div className="contact-info-header">
+                  <div className="contact-info-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 18v-6a9 9 0 0 1 18 0v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                      <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                    </svg>
+                  </div>
+                  <h3>Contact Info</h3>
+                </div>
+
+                <div className="contact-details">
+                  <p>+91 85301 72127</p>
+                  <p>+91 85301 72128</p>
+                  <p>info@sightinfusion.com</p>
+                  <p>hr@sightinfusion.com</p>
+                </div>
+
+                <div className="office-section">
+                  <h4><img src="https://flagcdn.com/w40/in.png" alt="India" className="flag-icon" /> India (HQ)</h4>
+                  <div className="office-details">
+                    <p>Silver Business Point,</p>
+                    <p>VIP Circle, Utran,</p>
+                    <p>Surat, Gujarat,</p>
+                    <p>India - 394105</p>
+                  </div>
+                </div>
+
+                <div className="social-links">
+                  <div className="social-link">
+                    <div className="social-icon">in</div>
+                    <span>LinkedIn</span>
+                  </div>
+                  <div className="social-link">
+                    <div className="social-icon">ig</div>
+                    <span>Instagram</span>
+                  </div>
+                  <div className="social-link">
+                    <div className="social-icon">yt</div>
+                    <span>YouTube</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
     </>
   )
 }
@@ -1308,99 +2398,130 @@ function PortfolioPage() {
 function ContactPage() {
   return (
     <>
-      <section className="page-hero-banner">
-        <div className="container reveal">
-          <p className="kicker">Contact</p>
-          <h1>Start the conversation for your next digital product.</h1>
-          <p className="page-hero-sub">
-            If you want a sharper digital presence backed by technical execution, let&apos;s talk.
-          </p>
-        </div>
-      </section>
+      <section className="contact-new-section">
+        <div className="container">
+          <div className="contact-new-header reveal">
+            <span className="contact-top-badge">Contact Us</span>
+            <h1 className="contact-main-title">We are always open to talk</h1>
+          </div>
 
-      <section className="section-pad">
-        <div className="container contact-layout">
-          <div className="contact-info reveal">
-            <h2>Get in touch</h2>
-            <p>
-              Have a project in mind? Send us a message and we will respond as soon as possible.
-            </p>
+          <div className="contact-new-grid reveal">
+            {/* Column 1: Form Card */}
+            <div className="contact-white-card form-column">
+              <span className="contact-kicker">CONTACT</span>
+              <h2 className="contact-inner-title">Lets get in touch</h2>
+              <p className="contact-top-desc">You can reach us anytime via <a href="mailto:info@sightinfusion.com">info@sightinfusion.com</a></p>
 
-            <div className="contact-methods">
-              <div className="contact-method-item">
-                <div className="icon-box">L</div>
-                <div>
-                  <span className="contact-label">Location</span>
-                  <p>Silver Business Point, VIP Circle, Utran, Surat, Gujarat, India</p>
+              <form className="contact-premium-form">
+                <div className="form-row">
+                  <div className="form-field">
+                    <label>First Name</label>
+                    <input type="text" placeholder="First Name" />
+                  </div>
+                  <div className="form-field">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Last Name" />
+                  </div>
+                </div>
+
+                <div className="form-field">
+                  <label>Email</label>
+                  <input type="email" placeholder="Your Email" />
+                </div>
+
+                <div className="form-row">
+                  <div className="form-field">
+                    <label>Phone Number</label>
+                    <input type="text" placeholder="Your Number" />
+                  </div>
+                  <div className="form-field">
+                    <label>Country</label>
+                    <input type="text" placeholder="Your Country" />
+                  </div>
+                </div>
+
+                <div className="form-field">
+                  <label>Message</label>
+                  <textarea placeholder="Leave us a message..."></textarea>
+                </div>
+
+                <div className="form-checkbox">
+                  <input type="checkbox" id="terms" />
+                  <label htmlFor="terms">You agree to our terms and conditions.</label>
+                </div>
+
+                <button type="submit" className="contact-submit-btn">Get Started</button>
+              </form>
+            </div>
+
+            {/* Column 2: Stats Box */}
+            <div className="contact-stats-column">
+              <div className="stat-item">
+                <div className="stat-number">600+</div>
+                <p className="stat-desc">Done Around World</p>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">99%</div>
+                <p className="stat-desc">Client Satisfaction</p>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">15+</div>
+                <p className="stat-desc">Field Experience</p>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">2009</div>
+                <p className="stat-desc">Establish Year</p>
+              </div>
+            </div>
+
+            {/* Column 3: Contact Info Card */}
+            <div className="contact-white-card info-column">
+              <div className="contact-info-header">
+                <div className="contact-info-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 18v-6a9 9 0 0 1 18 0v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                  </svg>
+                </div>
+                <h3>Contact Info</h3>
+              </div>
+
+              <div className="contact-details">
+                <p>+91 85301 72127</p>
+                <p>+91 85301 72128</p>
+                <p>info@sightinfusion.com</p>
+                <p>hr@sightinfusion.com</p>
+              </div>
+
+              <div className="office-section">
+                <h4><img src="https://flagcdn.com/w40/in.png" alt="India" className="flag-icon" /> India (HQ)</h4>
+                <div className="office-details">
+                  <p>Silver Business Point,</p>
+                  <p>VIP Circle, Utran,</p>
+                  <p>Surat, Gujarat,</p>
+                  <p>India - 394105</p>
                 </div>
               </div>
-              <div className="contact-method-item">
-                <div className="icon-box">P</div>
-                <div>
-                  <span className="contact-label">Phone</span>
-                  <a href="tel:+918530172127">+91 85301 72127</a>
+
+              <div className="social-links">
+                <div className="social-link">
+                  <div className="social-icon">in</div>
+                  <span>LinkedIn</span>
                 </div>
-              </div>
-              <div className="contact-method-item">
-                <div className="icon-box">M</div>
-                <div>
-                  <span className="contact-label">Email</span>
-                  <a href="mailto:info@sightinfusion.com">info@sightinfusion.com</a>
+                <div className="social-link">
+                  <div className="social-icon">ig</div>
+                  <span>Instagram</span>
+                </div>
+                <div className="social-link">
+                  <div className="social-icon">yt</div>
+                  <span>YouTube</span>
                 </div>
               </div>
             </div>
           </div>
-
-          <div className="contact-form-side reveal reveal-delay">
-            <ContactForm />
-          </div>
         </div>
       </section>
     </>
-  )
-}
-
-function ContactForm() {
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    window.alert('Thank you! We will get back to you within 24 hours.')
-  }
-
-  return (
-    <form className="premium-form" onSubmit={handleSubmit}>
-      <div className="form-row">
-        <div className="form-group">
-          <label htmlFor="name">Full Name</label>
-          <input id="name" type="text" placeholder="John Doe" required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email Address</label>
-          <input id="email" type="email" placeholder="john@example.com" required />
-        </div>
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="phone">Phone Number</label>
-        <input id="phone" type="tel" placeholder="+1 (555) 000-0000" />
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="service">Service Interested In</label>
-        <select id="service" defaultValue="">
-          <option value="" disabled>Select a service...</option>
-          {services.map((service) => (
-            <option key={service.id} value={service.id}>{service.title}</option>
-          ))}
-        </select>
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="message">Your Message</label>
-        <textarea id="message" rows="5" placeholder="Tell us about your project..." required />
-      </div>
-
-      <button type="submit" className="form-submit">Send Message</button>
-    </form>
   )
 }
 
