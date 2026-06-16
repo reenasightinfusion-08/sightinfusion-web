@@ -426,6 +426,70 @@ const services = [
     heroButtonLabel: 'Hire 3D Designer',
     heroImage: '/src/assets/hero-visual.png',
   },
+  {
+    id: 'app',
+    icon: 'AP',
+    title: 'App Development',
+    desc: 'Cross-platform mobile apps with native performance, real-time backends, and AI-powered features — built to ship and scale.',
+    summary:
+      'We build iOS and Android apps using Flutter and Firebase, delivering polished, production-ready products with real-time data, complex state, and integrated services.',
+    features: ['Flutter cross-platform apps', 'Firebase real-time backend', 'AI & subscription integrations'],
+    deliverables: ['iOS & Android apps', 'Firebase backend setup', 'CI/CD & App Store deployment'],
+    stack: ['Flutter', 'Dart', 'Firebase', 'Riverpod'],
+    spotlight: 'Production-grade mobile apps that feel native, scale confidently, and integrate seamlessly with AI and third-party services.',
+    outcomes: ['Faster app delivery', 'Consistent iOS & Android experience', 'Lower backend maintenance burden'],
+    pageDescription: 'End-to-end mobile app development using Flutter and Firebase — from architecture and UI to App Store deployment and real-time backend integration.',
+    benefits: ['Single codebase for iOS and Android', 'Real-time Firestore data sync', 'AI and subscription-ready architecture'],
+    industries: ['Consumer apps', 'Faith & wellness', 'Sports & lifestyle'],
+    heroTitle: 'Cross-platform mobile apps.<br />Shipped faster, built to last.',
+    heroDescription: 'Full-cycle iOS and Android development using Flutter and Firebase — pixel-perfect UI, real-time backends, AI integrations, and App Store delivery.',
+    heroButtonLabel: 'Hire App Developer',
+    heroImage: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&q=80&auto=format&fit=crop',
+    detailedFeatures: [
+      { title: 'Flutter Cross-Platform Development', desc: 'One codebase, two stores. We build fully native-feeling iOS and Android apps with Flutter, delivering consistent performance and pixel-accurate UI across devices.' },
+      { title: 'Firebase Real-Time Backend', desc: 'Firestore, Authentication, Cloud Functions, Storage, and FCM push notifications — a complete managed backend that scales with your user base without DevOps overhead.' },
+      { title: 'AI-Powered Feature Integration', desc: 'We connect your app to ChatGPT, Gemini, or custom AI services through secure Cloud Functions, adding intelligent personalization and content generation to mobile workflows.' },
+      { title: 'Subscription & Monetization', desc: 'RevenueCat integration for in-app subscriptions, paywall flows, and purchase analytics — across iOS and Android with a single API and webhook support.' },
+      { title: 'Complex State & Architecture', desc: 'Production apps built with Riverpod or Provider, Freezed immutable models, GoRouter navigation, and feature-based modular structure for long-term maintainability.' },
+      { title: 'Push Notifications & Deep Linking', desc: 'Firebase Cloud Messaging for targeted push delivery, combined with GoRouter deep-link routing so every notification lands on exactly the right in-app screen.' },
+      { title: 'App Store Deployment & CI/CD', desc: 'End-to-end delivery: code signing, App Store Connect and Google Play submission, Fastlane automation, and Firebase App Distribution for beta testing.' },
+    ],
+    whyChooseItems: [
+      { title: 'Single codebase, both platforms', desc: 'Flutter gives us one codebase that deploys to iOS and Android with native performance — no compromises, no duplicate effort.' },
+      { title: 'Firebase-native architecture', desc: 'We design around Firestore real-time streams, Cloud Functions, and FCM from day one so your backend scales without a separate server team.' },
+      { title: 'Proven AI integration patterns', desc: 'We have shipped apps with ChatGPT-powered features — prompt engineering, Cloud Function middleware, rate limiting, and cost control all handled.' },
+      { title: 'Full-cycle ownership', desc: 'From Figma handoff to App Store approval, we own the entire delivery — architecture, UI, backend, testing, and submission.' },
+    ],
+    processSteps: [
+      { num: '01', title: 'Architecture & stack decision', desc: 'We audit your requirements and choose the right state management, navigation, and backend structure before writing a line of feature code.' },
+      { num: '02', title: 'Design system & component build', desc: 'Custom Flutter theme with your brand tokens, responsive ScreenUtil sizing, and a reusable component library that speeds up every screen.' },
+      { num: '03', title: 'Feature development & Firebase wiring', desc: 'Features built module by module — Firestore collections, Auth flows, Cloud Functions, and UI all developed and tested in parallel.' },
+      { num: '04', title: 'QA, performance & App Store submission', desc: 'Device testing across iOS and Android, Firebase Crashlytics integration, App Store and Play Store submission with full signing setup.' },
+    ],
+    testimonials: [
+      { quote: 'The team delivered a fully working Flutter app with Firebase backend in 10 weeks. The code quality and architecture exceeded what our internal team could have produced in 6 months.', author: 'CTO, Faith Tech Startup', role: 'App Development client' },
+      { quote: 'They handled everything — from the Riverpod architecture to RevenueCat subscriptions and App Store submission. One team, no handoffs, no gaps.', author: 'Founder, Sports Lifestyle App', role: 'App Development client' },
+      { quote: 'The AI prayer generation feature works flawlessly at scale. Their Cloud Functions approach handles cost control and rate limiting so we never had a surprise bill.', author: 'Product Lead, PTB AI', role: 'App Development client' },
+    ],
+    caseStudies: [
+      {
+        id: 'app-fourth',
+        tag: 'Sports Marketplace',
+        title: 'fourth. — Golf Tee Time Marketplace App',
+        desc: 'A real-time Flutter marketplace where golfers post and fill open tee time spots. Built with Riverpod, atomic Firestore transactions, FCM push notifications, and deep-link routing.',
+        img: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80&auto=format&fit=crop',
+        tech: ['flutter', 'firebase', 'riverpod'],
+      },
+      {
+        id: 'app-ptb',
+        tag: 'Faith & Wellness',
+        title: 'Pray the Bible — AI Prayer & Community App',
+        desc: 'A cross-platform spiritual wellness app with ChatGPT-powered prayer generation, full NET Bible, mood-based recommendations, prayer groups, and RevenueCat subscriptions across iOS, Android, and web.',
+        img: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80&auto=format&fit=crop',
+        tech: ['flutter', 'firebase', 'openai'],
+      },
+    ],
+  },
 ]
 
 const featuredServices = services.slice(0, 8)
@@ -443,6 +507,7 @@ const homeServices = [
   { id: 'enterprise', title: 'Enterprise Software Development', desc: 'Scalable Solutions Designed to Drive Business Growth and Innovation.' },
   { id: 'dataviz', title: 'Data Visualization', desc: 'Transforming Complex Data into Clear, Actionable Business Insights.' },
   { id: '3d', title: '3D Design', desc: 'Innovative 3D Visuals and High-Precision Modeling for Digital Excellence.' },
+  { id: 'app', title: 'App Development', desc: 'Native and cross-platform mobile apps built with Flutter — shipped to iOS and Android.' },
 ]
 
 const caseStudiesDetail = {
@@ -912,6 +977,86 @@ const caseStudiesDetail = {
     ],
     heroImg: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80&auto=format&fit=crop',
     testimonial: { quote: 'Our customer success team can now provision a new enterprise tenant in 4 minutes without touching DevOps. The Kubernetes platform completely unblocked our growth.', author: 'CTO, HealthNode' }
+  },
+  'app-fourth': {
+    id: 'app-fourth',
+    service: 'app',
+    serviceTitle: 'App Development',
+    tag: 'Sports Marketplace',
+    title: 'fourth. — Golf Tee Time Marketplace',
+    subtitle: 'A real-time Flutter marketplace where golfers post open tee time spots and others join — preventing overbooking with atomic Firestore transactions.',
+    overview: 'fourth. solves a universal golf frustration: showing up to play with an incomplete group. We built a real-time mobile marketplace where golfers can post upcoming tee times with open spots, and other players in their area can discover and join them. The app uses atomic Firestore batch writes to prevent double-booking, Riverpod for fully reactive state, and FCM push notifications to keep players coordinated.',
+    client: 'fourth. (Golf Tech Startup)',
+    industry: 'Sports & Leisure / Consumer Marketplace',
+    timeline: '4 months',
+    teamSize: '3 Flutter engineers, 1 designer',
+    challenge: 'Golf is inherently social but coordinating foursomes is fragmented — texts, group chats, and last-minute cancellations. The client needed a marketplace with real-time availability, race-condition-safe join logic, and a native mobile feel that golfers would actually use on the course.',
+    challengePoints: [
+      'No reliable way for golfers to find open spots in real time without manual coordination',
+      'Double-booking risk when multiple players attempt to join the last open spot simultaneously',
+      'Need for deep-link routing so push notification taps open the exact tee time card',
+      'Complex multi-tab navigation with independent state that had to persist across tab switches',
+      'App had to feel native and fast — no web-view compromises acceptable for core flows',
+    ],
+    solution: 'We built a Flutter app with a Firestore real-time feed, atomic batch writes for the join transaction, Riverpod 3 with code-generated providers for every async stream, and a GoRouter shell with indexedStack for independent tab state persistence.',
+    solutionPoints: [
+      'Riverpod 3 + Riverpod Annotation: all state in generated providers, screens stay thin and testable',
+      'Atomic Firestore batch writes on join — decrement spots and add participant in one transaction, impossible to double-book',
+      'GoRouter 17 with StatefulShellRoute.indexedStack for independent per-tab navigation state',
+      'Firebase Cloud Messaging + App Links for deep-linked push notifications routing to specific tee times',
+      'Firebase AppCheck + Play Integrity API for production request security',
+      'Shimmer loading states and empty-state views for every async screen — zero raw spinners',
+    ],
+    tech: ['Flutter', 'Dart', 'Firebase Firestore', 'Firebase Auth', 'Riverpod 3', 'GoRouter', 'FCM', 'Firebase Storage', 'AppCheck'],
+    results: [
+      { metric: '0', label: 'Double-booking incidents (atomic transactions)' },
+      { metric: '120+', label: 'Dart files — fully modular feature structure' },
+      { metric: '<200ms', label: 'Firestore real-time stream latency' },
+      { metric: '2 stores', label: 'iOS + Android from one Flutter codebase' },
+    ],
+    heroImg: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80&auto=format&fit=crop',
+    testimonial: { quote: 'The architecture is exactly what we needed — Riverpod keeps everything reactive, the join transaction has never failed, and the deep-link routing works perfectly from push notifications.', author: 'Founder, fourth. Golf App' }
+  },
+  'app-ptb': {
+    id: 'app-ptb',
+    service: 'app',
+    serviceTitle: 'App Development',
+    tag: 'Faith & Wellness',
+    title: 'Pray the Bible — AI Prayer & Community App',
+    subtitle: 'A cross-platform spiritual wellness app with ChatGPT-powered prayer generation, the full NET Bible, mood-based AI recommendations, prayer groups, and RevenueCat subscriptions.',
+    overview: 'Pray the Bible (PTB AI) helps Christians build a consistent, AI-assisted prayer life. Users can generate personalized prayers from Bible verses, topics, or moods using ChatGPT — integrated via Firebase Cloud Functions. The app bundles the full 66-book NET Bible, a community prayer wall, private prayer groups, mood-based verse recommendations, and a Spiritual Growth dashboard. It runs on iOS, Android, and web — with a separate Flutter admin panel for content management.',
+    client: 'PTB AI (Faith Tech Startup)',
+    industry: 'Faith & Spiritual Wellness / Consumer SaaS',
+    timeline: '8 months',
+    teamSize: '4 Flutter engineers, 1 backend engineer, 1 designer',
+    challenge: 'Christians seeking a structured prayer life had no tool that combined scripture, AI personalization, and community. The product required multiple AI prayer generation flows, a bundled offline Bible, community moderation, cross-platform (iOS/Android/web) delivery, and a sustainable subscription monetization model — all in one coherent app.',
+    challengePoints: [
+      'Four distinct AI prayer generation flows (verse-based, book chapter, topic, mood) each needing different prompt engineering and response formatting',
+      'Full 66-book NET Bible had to be bundled as offline JSON assets with cross-reference viewer and chapter progress tracking',
+      'Community prayer wall required AI moderation via Cloud Functions before any user-generated prayer went public',
+      'RevenueCat subscription paywall had to gate premium features across iOS and Android with shared entitlement logic',
+      'Hive-based theme system with multiple predefined themes switchable at runtime without app restart',
+      'Separate Flutter web admin panel for non-dev content managers to manage Discover content without code deployments',
+    ],
+    solution: 'We architected PTB AI with Provider + GoRouter, 13+ Firebase Cloud Functions for AI orchestration and content pipelines, RevenueCat for subscription management, and Hive for local persistence. The full Bible was bundled as JSON assets split for performance. The web admin panel was built as a separate Flutter web target sharing Firebase credentials.',
+    solutionPoints: [
+      '13+ Firebase Cloud Functions: ChatGPT prayer generation, AI moderation, news parsing, content curation, FCM dispatch, and email automation',
+      'Full NET Bible (66 books) bundled as JSON assets — offline-first, split into parts for parse performance',
+      'RevenueCat integration for iOS/Android subscriptions: paywalls, entitlement checks, cancellation webhooks',
+      'Hive local persistence for theme switching, user preferences, and cached content — zero Firestore reads on hot paths',
+      'Provider + GoRouter architecture with ChangeNotifier state across 230+ Dart files in a clean feature-based module structure',
+      'AI moderation Cloud Function gates every community prayer before it appears on the public wall',
+      'Separate Flutter web admin panel sharing Firebase project for content and user management without developer involvement',
+    ],
+    tech: ['Flutter', 'Dart', 'Firebase', 'Cloud Functions', 'ChatGPT API', 'RevenueCat', 'Provider', 'GoRouter', 'Hive', 'Firebase Auth', 'FCM', 'Google Ads'],
+    results: [
+      { metric: '13+', label: 'Firebase Cloud Functions (AI, content, push)' },
+      { metric: '66 books', label: 'Full NET Bible bundled offline' },
+      { metric: '4 flows', label: 'Distinct AI prayer generation modes' },
+      { metric: '3 platforms', label: 'iOS, Android, and web from one codebase' },
+    ],
+    heroImg: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80&auto=format&fit=crop',
+    testimonial: { quote: 'The AI prayer generation feels personal and theologically sound — the Cloud Functions architecture handles rate limiting and cost control so we scale confidently. The team delivered a complex, multi-platform product on time.', author: 'Founder, Pray the Bible AI' }
   },
   'fe-spa': {
     id: 'fe-spa',
@@ -1461,6 +1606,40 @@ function TechIcon({ type }) {
       </svg>
     )
   }
+  if (type === 'flutter') {
+    return (
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 50L50 20H80L50 50L80 80H50L20 50Z" fill="#54C5F8" />
+        <path d="M50 50L80 80H50L35 65L50 50Z" fill="#01579B" />
+      </svg>
+    )
+  }
+  if (type === 'firebase') {
+    return (
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 75L35 30L50 50L65 15L80 75L50 90L20 75Z" fill="#FFA000" />
+        <path d="M50 50L65 15L80 75L50 90L50 50Z" fill="#F57C00" />
+        <path d="M20 75L38 45L50 50L20 75Z" fill="#FFCA28" />
+      </svg>
+    )
+  }
+  if (type === 'riverpod') {
+    return (
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="35" stroke="#00BCD4" strokeWidth="6" fill="none" />
+        <circle cx="50" cy="50" r="18" fill="#00BCD4" />
+        <path d="M50 15V25M50 75V85M15 50H25M75 50H85" stroke="#00BCD4" strokeWidth="5" strokeLinecap="round" />
+      </svg>
+    )
+  }
+  if (type === 'openai') {
+    return (
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 15C35 15 23 27 23 42C23 49 26 55 31 60L28 75L43 68C45 69 47 69 50 69C65 69 77 57 77 42C77 27 65 15 50 15Z" fill="#10A37F" />
+        <path d="M38 42H62M44 33L50 42L56 33M44 51L50 42L56 51" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    )
+  }
   return null
 }
 
@@ -1697,6 +1876,25 @@ function Header() {
                   </div>
                   <div className="drop-light-text">
                     <div className="drop-light-title">Cloud Services</div>
+                  </div>
+                </NavLink>
+
+                <NavLink
+                  to={serviceHref('app')}
+                  className="drop-light-item"
+                  onClick={() => {
+                    setServicesOpen(false)
+                    setMenuOpen(false)
+                  }}
+                >
+                  <div className="drop-light-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="5" y="2" width="14" height="20" rx="2" ry="2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M12 18h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <div className="drop-light-text">
+                    <div className="drop-light-title">App Development</div>
                   </div>
                 </NavLink>
               </div>
@@ -2749,7 +2947,7 @@ function ServicesPage() {
         </div>
       </section>
 
-      {['backend', 'uiux', 'frontend', 'ai-ml', 'cloud'].includes(activeService.id) && (
+      {['backend', 'uiux', 'frontend', 'ai-ml', 'cloud', 'app'].includes(activeService.id) && (
         <section className="section-pad home-consulting-section">
           <div className="container consulting-grid">
             <div className="consulting-left reveal">
@@ -2758,6 +2956,7 @@ function ServicesPage() {
                 {activeService.id === 'ai-ml' ? 'Practical, Iterative, Intelligence-First' :
                  activeService.id === 'cloud' ? 'Resilient, Automated, Always Observable' :
                  activeService.id === 'frontend' ? 'Discover, Design, Deliver — Front-End at Full Speed' :
+                 activeService.id === 'app' ? 'Architect, Build, Ship — Mobile Done Right' :
                  'Innovative, Collaborative, Seamless Designs'}
               </h2>
               <p className="consulting-lead">
@@ -2767,6 +2966,8 @@ function ServicesPage() {
                   ? 'SightInfusion engineers cloud infrastructure for reliability, speed, and growth. Our process covers architecture planning, automated provisioning, and ongoing observability from day one.'
                   : activeService.id === 'frontend'
                   ? 'SightInfusion front-end teams move fast without breaking things. From component architecture to final delivery, our structured process keeps every sprint on time and every pixel on spec.'
+                  : activeService.id === 'app'
+                  ? 'SightInfusion delivers production-ready Flutter apps from architecture to App Store. Our structured process eliminates ambiguity at every phase — so you get a polished, scalable app without surprises.'
                   : 'SightInfusion focuses on delivering back-end systems that are secure, scalable, and future-ready. From consultation to deployment, our streamlined process ensures effective collaboration, seamless integration, and high-quality results that align with your business goals.'}
               </p>
               <NavLink to="/contact" className="backend-process-btn">
@@ -2861,7 +3062,7 @@ function ServicesPage() {
         </section>
       )}
 
-      {['backend', 'uiux', 'frontend', 'ai-ml', 'cloud'].includes(activeService.id) && (
+      {['backend', 'uiux', 'frontend', 'ai-ml', 'cloud', 'app'].includes(activeService.id) && (
         <section className="section-pad backend-why-choose-section">
           <div className="container">
             <div className="backend-why-choose-wrapper reveal">
@@ -3011,7 +3212,7 @@ function ServicesPage() {
         </section>
       )}
 
-      {['backend', 'uiux', 'frontend', 'ai-ml', 'cloud'].includes(activeService.id) && (() => {
+      {['backend', 'uiux', 'frontend', 'ai-ml', 'cloud', 'app'].includes(activeService.id) && (() => {
         const backendTestimonials = [
           {
             tag: 'LinkedIn',
@@ -3209,7 +3410,7 @@ function ServicesPage() {
         )
       })()}
 
-      {['backend', 'uiux', 'frontend', 'ai-ml', 'cloud'].includes(activeService.id) && (
+      {['backend', 'uiux', 'frontend', 'ai-ml', 'cloud', 'app'].includes(activeService.id) && (
         <section className="contact-new-section">
           <div className="container">
             <div className="contact-new-grid reveal">
@@ -3537,13 +3738,14 @@ function CaseStudyPage() {
   )
 }
 
-const portfolioFilters = ['All', 'Backend', 'Frontend', 'UI/UX', 'AI/ML', 'Cloud']
+const portfolioFilters = ['All', 'Backend', 'Frontend', 'UI/UX', 'AI/ML', 'Cloud', 'App']
 const portfolioServiceMap = {
   backend: 'Backend',
   frontend: 'Frontend',
   uiux: 'UI/UX',
   'ai-ml': 'AI/ML',
   cloud: 'Cloud',
+  app: 'App',
 }
 
 function PortfolioPage() {

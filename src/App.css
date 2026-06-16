@@ -686,6 +686,26 @@ select {
   border: 1px solid #41B88388;
 }
 
+.cs-tech-icon.icon-flutter {
+  background: #54C5F833;
+  border: 1px solid #54C5F888;
+}
+
+.cs-tech-icon.icon-firebase {
+  background: #FFA00033;
+  border: 1px solid #FFA00088;
+}
+
+.cs-tech-icon.icon-riverpod {
+  background: #00BCD433;
+  border: 1px solid #00BCD488;
+}
+
+.cs-tech-icon.icon-openai {
+  background: #10A37F33;
+  border: 1px solid #10A37F88;
+}
+
 .cs-tech-icon svg {
   width: 100%;
   height: 100%;
