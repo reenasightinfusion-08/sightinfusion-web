@@ -4627,7 +4627,6 @@ select {
   width: 80px;
   height: 80px;
   margin: 0 auto 24px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4638,23 +4637,22 @@ select {
   transform: rotate(10deg) scale(1.1);
 }
 
-.value-icon svg {
-  width: 36px;
-  height: 36px;
+.value-icon svg,
+.value-icon img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
 }
 
 .value-icon-history {
-  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
   color: #1976d2;
 }
 
 .value-icon-mission {
-  background: linear-gradient(135deg, #ffe0e0 0%, #ffcccb 100%);
   color: #d32f2f;
 }
 
 .value-icon-vision {
-  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
   color: #7b1fa2;
 }
 
@@ -4743,34 +4741,31 @@ select {
   width: 56px;
   height: 56px;
   margin: 0 auto 16px;
-  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.stat-icon svg {
-  width: 28px;
-  height: 28px;
+.stat-icon svg,
+.stat-icon img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
 }
 
 .stat-icon-blue {
-  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
   color: #2563eb;
 }
 
 .stat-icon-green {
-  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
   color: #059669;
 }
 
 .stat-icon-purple {
-  background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 100%);
   color: #9333ea;
 }
 
 .stat-icon-orange {
-  background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
   color: #ea580c;
 }
 
@@ -5234,6 +5229,7 @@ select {
 .why-service-horizontal-icon {
   width: 44px;
   height: 44px;
+  background-color: #e0e7ff; /* Light blue background */
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -5241,40 +5237,15 @@ select {
   flex-shrink: 0;
 }
 
-.why-service-horizontal-icon svg {
-  width: 22px;
-  height: 22px;
-  stroke-width: 2;
+.why-service-horizontal-icon svg,
+.why-service-horizontal-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
-.why-icon-quality {
-  background: #eff6ff;
-  color: #1d4ed8;
-}
-
-.why-icon-flexible {
-  background: #f0fdf4;
-  color: #15803d;
-}
-
-.why-icon-delivery {
-  background: #fff7ed;
-  color: #c2410c;
-}
-
-.why-icon-transparent {
-  background: #fdf2f8;
-  color: #be185d;
-}
-
-.why-icon-developers {
-  background: #f5f3ff;
-  color: #6d28d9;
-}
-
-.why-icon-scale {
-  background: #ecfeff;
-  color: #0891b2;
+.why-service-horizontal-icon {
+  color: #4c7ef3; /* Professional blue icon color */
 }
 
 .why-service-horizontal-item h3 {
@@ -5320,9 +5291,10 @@ select {
     height: 40px;
   }
 
-  .why-service-horizontal-icon svg {
-    width: 20px;
-    height: 20px;
+  .why-service-horizontal-icon svg,
+  .why-service-horizontal-icon img {
+    width: 22px;
+    height: 22px;
   }
 
   .why-service-horizontal-item h3 {

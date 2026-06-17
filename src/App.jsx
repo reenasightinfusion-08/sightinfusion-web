@@ -22,6 +22,26 @@ import enterpriseIcon from './assets/icons/enterprise-software-services-icon.svg
 import datavizIcon from './assets/icons/data-visualization-services-icon.svg'
 import appDevelopmentIcon from './assets/icons/app-development-icon.svg'
 
+// Import About Page Icons
+import ourHistoryIcon from './assets/svg_image/our-history.svg'
+import ourMissionIcon from './assets/svg_image/our-mission.svg'
+import ourVisionIcon from './assets/svg_image/our-vision.svg'
+
+// Import Stat Icons
+import estaTrustedIcon from './assets/svg_image/esta-trusted.svg'
+import estaSuccessIcon from './assets/svg_image/esta-suceess.svg'
+import estaYearsIcon from './assets/svg_image/esta-years.svg'
+import estaClientIcon from './assets/svg_image/esta-client.svg'
+import isoLogoIcon from './assets/svg_image/iso-abut-img-1.svg'
+
+// Import Why Services Icons
+import serviQualityIcon from './assets/svg_image/servi-quality.svg'
+import serviFlexibleIcon from './assets/svg_image/servi-flexible.svg'
+import serviDeliveryIcon from './assets/svg_image/servi-delivery.svg'
+import serviTransparentIcon from './assets/svg_image/servi-transparant.svg'
+import serviQualifiedIcon from './assets/svg_image/servi-qualified.svg'
+import serviQuickIcon from './assets/svg_image/servi-quick.svg'
+
 const services = [
   {
     id: 'frontend',
@@ -2262,11 +2282,7 @@ function AboutPage() {
           <div className="values-grid">
             <div className="value-card">
               <div className="value-icon value-icon-history">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M12 6v6l4 2M12 2v2M12 20v2M2 12h2M20 12h2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none" />
-                </svg>
+                <img src={ourHistoryIcon} alt="Our History" style={{ width: '100%', height: '100%' }} />
               </div>
               <h3 className="value-title">Our History</h3>
               <p className="value-description">
@@ -2277,12 +2293,7 @@ function AboutPage() {
 
             <div className="value-card">
               <div className="value-icon value-icon-mission">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 22l-10-5 10-5 10 5-10 5z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M2.22 12L12 17l9.78-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M2.22 7L12 12l9.78-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.4" />
-                </svg>
+                <img src={ourMissionIcon} alt="Our Mission" style={{ width: '100%', height: '100%' }} />
               </div>
               <h3 className="value-title">Our Mission</h3>
               <p className="value-description">
@@ -2293,12 +2304,7 @@ function AboutPage() {
 
             <div className="value-card">
               <div className="value-icon value-icon-vision">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M12 12l2-2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="1 1" />
-                  <path d="M18 12a6 6 0 0 0-12 0" stroke="currentColor" strokeWidth="1" opacity="0.3" />
-                </svg>
+                <img src={ourVisionIcon} alt="Our Vision" style={{ width: '100%', height: '100%' }} />
               </div>
               <h3 className="value-title">Our Vision</h3>
               <p className="value-description">
@@ -2316,11 +2322,7 @@ function AboutPage() {
             <div className="stats-left">
               <div className="stat-box">
                 <div className="stat-icon stat-icon-blue">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <circle cx="8.5" cy="7" r="4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87M17 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.4" />
-                  </svg>
+                  <img src={estaTrustedIcon} alt="Trusted Companies" style={{ width: '100%', height: '100%' }} />
                 </div>
                 <h3 className="stat-number">600+</h3>
                 <p className="stat-label">Companies Trust Us</p>
@@ -2328,11 +2330,7 @@ function AboutPage() {
 
               <div className="stat-box">
                 <div className="stat-icon stat-icon-green">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-10.6 8.38 8.38 0 0 1 3.8.9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M22 4L12 14.01l-3-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1" opacity="0.2" />
-                  </svg>
+                  <img src={estaSuccessIcon} alt="Success Stories" style={{ width: '100%', height: '100%' }} />
                 </div>
                 <h3 className="stat-number">280+</h3>
                 <p className="stat-label">Success Stories</p>
@@ -2340,11 +2338,7 @@ function AboutPage() {
 
               <div className="stat-box">
                 <div className="stat-icon stat-icon-purple">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <rect x="4" y="2" width="16" height="20" rx="2" stroke="currentColor" strokeWidth="1" opacity="0.1" />
-                  </svg>
+                  <img src={estaYearsIcon} alt="Years of Experience" style={{ width: '100%', height: '100%' }} />
                 </div>
                 <h3 className="stat-number">15+</h3>
                 <p className="stat-label">Years of experience</p>
@@ -2352,10 +2346,7 @@ function AboutPage() {
 
               <div className="stat-box">
                 <div className="stat-icon stat-icon-orange">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1" opacity="0.2" />
-                  </svg>
+                  <img src={estaClientIcon} alt="Client Satisfaction" style={{ width: '100%', height: '100%' }} />
                 </div>
                 <h3 className="stat-number">99+</h3>
                 <p className="stat-label">Client Satisfaction</p>
@@ -2382,12 +2373,7 @@ function AboutPage() {
               <div className="cert-item">
                 <div className="iso-badge modern-seal">
                   <div className="seal-icon-wrapper">
-                    <svg className="iso-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="24" cy="24" r="22" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2" />
-                      <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2.5" />
-                      <path d="M16 24l5.5 5.5L32 16" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M24 6v2M24 40v2M6 24h2M40 24h2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                    </svg>
+                    <img src={isoLogoIcon} alt="ISO 9001 Certification" className="iso-icon" style={{ objectFit: 'contain' }} />
                   </div>
                   <div className="iso-seal-text">
                     <strong>ISO</strong>
@@ -2398,12 +2384,7 @@ function AboutPage() {
               <div className="cert-item">
                 <div className="iso-badge modern-seal">
                   <div className="seal-icon-wrapper">
-                    <svg className="iso-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="24" cy="24" r="22" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2" />
-                      <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2.5" />
-                      <path d="M24 12v12m0 0l-6-6m6 6l6-6" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M36 24a12 12 0 11-24 0 12 12 0 0124 0z" stroke="currentColor" strokeWidth="1" opacity="0.3" />
-                    </svg>
+                    <img src={isoLogoIcon} alt="ISO 27001 Certification" className="iso-icon" style={{ objectFit: 'contain' }} />
                   </div>
                   <div className="iso-seal-text">
                     <strong>ISO</strong>
@@ -2579,61 +2560,42 @@ function AboutPage() {
               <div className="why-services-horizontal-grid">
                 <div className="why-service-horizontal-item">
                   <div className="why-service-horizontal-icon why-icon-quality">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
+                    <img src={serviQualityIcon} alt="Quality Comes First" />
                   </div>
                   <h3>Quality Comes First</h3>
                 </div>
 
                 <div className="why-service-horizontal-item">
                   <div className="why-service-horizontal-icon why-icon-flexible">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1" strokeDasharray="2 2" />
-                    </svg>
+                    <img src={serviFlexibleIcon} alt="Flexible Cooperation" />
                   </div>
                   <h3>Flexible Cooperation</h3>
                 </div>
 
                 <div className="why-service-horizontal-item">
                   <div className="why-service-horizontal-icon why-icon-delivery">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M8 21h8M12 17v4M7 8l3 3 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
+                    <img src={serviDeliveryIcon} alt="On-time Delivery" />
                   </div>
                   <h3>On-time Delivery</h3>
                 </div>
 
                 <div className="why-service-horizontal-item">
                   <div className="why-service-horizontal-icon why-icon-transparent">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 1v22M5 12h14M12 1l4 4M12 1L8 5M12 23l4-4M12 23l-4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" opacity="0.3" />
-                    </svg>
+                    <img src={serviTransparentIcon} alt="Transparent Costs" />
                   </div>
                   <h3>Transparent Costs</h3>
                 </div>
 
                 <div className="why-service-horizontal-item">
                   <div className="why-service-horizontal-icon why-icon-developers">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
+                    <img src={serviQualifiedIcon} alt="Qualified Developers" />
                   </div>
                   <h3>Qualified Developers</h3>
                 </div>
 
                 <div className="why-service-horizontal-item">
                   <div className="why-service-horizontal-icon why-icon-scale">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 22v-5M9 7l3-3 3 3M12 4v12M17 10l5 5-5 5M22 15h-8M7 10l-5 5 5 5M2 15h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
+                    <img src={serviQuickIcon} alt="Quick Scale-up" />
                   </div>
                   <h3>Quick Scale-up</h3>
                 </div>
