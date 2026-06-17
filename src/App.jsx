@@ -10,6 +10,18 @@ import {
   useParams,
 } from 'react-router-dom'
 
+// Import Service Icons
+import frontEndIcon from './assets/icons/front-end-serices-icon.svg'
+import backendIcon from './assets/icons/service-back_end.svg'
+import arvrIcon from './assets/icons/ar-vr-icon.svg'
+import uiuxIcon from './assets/icons/ui-ux-icon-2.svg'
+import aimlIcon from './assets/icons/ai-ml-logo.svg'
+import cloudIcon from './assets/icons/cloud-icon-4.svg'
+import qaIcon from './assets/icons/QA-services-icon.svg'
+import enterpriseIcon from './assets/icons/enterprise-software-services-icon.svg'
+import datavizIcon from './assets/icons/data-visualization-services-icon.svg'
+import appDevelopmentIcon from './assets/icons/app-development-icon.svg'
+
 const services = [
   {
     id: 'frontend',
@@ -1321,6 +1333,47 @@ function ArrowIcon() {
 }
 
 function HomeServiceIcon({ id }) {
+  if (id === 'app') {
+    return <img src={appDevelopmentIcon} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+  }
+
+  if (id === 'frontend') {
+    return <img src={frontEndIcon} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+  }
+
+  if (id === 'backend') {
+    return <img src={backendIcon} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+  }
+
+  if (id === 'arvr') {
+    return <img src={arvrIcon} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+  }
+
+  if (id === 'uiux') {
+    return <img src={uiuxIcon} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+  }
+
+  if (id === 'ai-ml') {
+    return <img src={aimlIcon} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+  }
+
+  if (id === 'cloud') {
+    return <img src={cloudIcon} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+  }
+
+  if (id === 'qa') {
+    return <img src={qaIcon} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+  }
+
+  if (id === 'enterprise') {
+    return <img src={enterpriseIcon} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+  }
+
+  if (id === 'dataviz') {
+    return <img src={datavizIcon} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+  }
+
+  // Fallback for 'app' and others (using the original box icon)
   const common = {
     fill: 'none',
     stroke: 'currentColor',
@@ -1329,120 +1382,8 @@ function HomeServiceIcon({ id }) {
     strokeLinejoin: 'round',
   }
 
-  if (id === 'frontend') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="2" y="3" width="20" height="15" rx="2" {...common} />
-        <path d="M2 13h20" {...common} />
-        <circle cx="5" cy="15.5" r="0.5" stroke="none" fill="currentColor" />
-        <circle cx="7.5" cy="15.5" r="0.5" stroke="none" fill="currentColor" />
-        <path d="M8 8l-2 2 2 2M16 8l2 2-2 2M13 7l-2 6" {...common} />
-      </svg>
-    )
-  }
-
-  if (id === 'backend') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="4" y="4" width="16" height="6" rx="1" {...common} />
-        <rect x="4" y="14" width="16" height="6" rx="1" {...common} />
-        <path d="M6 7h2M6 17h2M18 7v10M16 7h2M16 17h2" {...common} />
-        <path d="M12 10v4" {...common} />
-      </svg>
-    )
-  }
-
-  if (id === 'arvr') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M3 10a9 9 0 0 1 18 0v4a9 9 0 0 1-18 0v-4z" {...common} />
-        <circle cx="8" cy="12" r="2" {...common} />
-        <circle cx="16" cy="12" r="2" {...common} />
-        <path d="M12 12v2M8 17h8" {...common} />
-      </svg>
-    )
-  }
-
-  if (id === 'uiux') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="9" {...common} strokeDasharray="2 2" />
-        <rect x="7" y="7" width="10" height="10" rx="1" {...common} />
-        <path d="M12 7v10M7 12h10" {...common} />
-        <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none" />
-      </svg>
-    )
-  }
-
-  if (id === 'ai-ml') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" {...common} />
-        <path d="M12 6v12M6 12h12" {...common} />
-        <circle cx="12" cy="12" r="3" {...common} />
-        <path d="M8 8l8 8M16 8l-8 8" {...common} />
-      </svg>
-    )
-  }
-
-  if (id === 'cloud') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M17.5 19a5.5 5.5 0 0 0 0-11 5.5 5.5 0 0 0-10.5 2 4.5 4.5 0 0 0 0 9h10.5z" {...common} />
-        <path d="M12 13v4M10 15l2 2 2-2" {...common} />
-      </svg>
-    )
-  }
-
-  if (id === 'game') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="2" y="6" width="20" height="12" rx="2" {...common} />
-        <path d="M6 12h4M8 10v4M15 11h2M16 10v2" {...common} />
-        <path d="M18 14h-2.5" {...common} />
-      </svg>
-    )
-  }
-
-  if (id === 'staff') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="7" r="4" {...common} />
-        <path d="M5 21v-2a7 7 0 0 1 14 0v2M12 11v4M10 13h4" {...common} />
-      </svg>
-    )
-  }
-
-  if (id === 'qa') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="11" cy="11" r="8" {...common} />
-        <path d="m21 21-4.35-4.35" {...common} />
-        <path d="m8 11 2 2 4-4" {...common} />
-      </svg>
-    )
-  }
-
-  if (id === 'enterprise') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M3 21h18M5 21V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v14M9 5V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M9 10h6M9 14h6M9 18h6" {...common} />
-      </svg>
-    )
-  }
-
-  if (id === 'dataviz') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M3 3v18h18" {...common} />
-        <path d="M7 16V9M12 16V12M17 16V7" {...common} />
-        <path d="M7 9l5 3 5-5" {...common} strokeWidth="1" />
-      </svg>
-    )
-  }
-
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
+    <svg viewBox="0 0 24 24" aria-hidden="true" style={{ width: '100%', height: '100%' }}>
       <path d="M12 2l10 5v10l-10 5-10-5V7l10-5z" {...common} />
       <path d="M12 22V12M12 12l10-5M12 12L2 7" {...common} />
     </svg>
@@ -1901,12 +1842,12 @@ function Header() {
 }
 
 const PROCESS_STEPS = [
-  { id: 'brain',    title: 'Brainstorming', sub: 'Ideas' },
-  { id: 'design',   title: 'Product',       sub: 'Design' },
-  { id: 'frontend', title: 'Front-End',     sub: 'Development' },
-  { id: 'backend',  title: 'Back-End',      sub: 'Development' },
-  { id: 'seo',      title: 'SEO',           sub: 'Optimization' },
-  { id: 'marketing',title: 'Digital',       sub: 'Marketing' },
+  { id: 'brain', title: 'Brainstorming', sub: 'Ideas' },
+  { id: 'design', title: 'Product', sub: 'Design' },
+  { id: 'frontend', title: 'Front-End', sub: 'Development' },
+  { id: 'backend', title: 'Back-End', sub: 'Development' },
+  { id: 'seo', title: 'SEO', sub: 'Optimization' },
+  { id: 'marketing', title: 'Digital', sub: 'Marketing' },
 ]
 
 function ProcessMap() {
@@ -1922,8 +1863,8 @@ function ProcessMap() {
         if (!el) return null
         const r = el.getBoundingClientRect()
         return {
-          l:  r.left   - map.left,
-          r:  r.right  - map.left,
+          l: r.left - map.left,
+          r: r.right - map.left,
           my: (r.top + r.bottom) / 2 - map.top,
         }
       })
@@ -1932,11 +1873,11 @@ function ProcessMap() {
       // card order: 0=Brainstorm 1=Product 2=Frontend 3=Backend(18%) 4=SEO(53%) 5=Digital
       // visual snake: row1 L→R (0,1,2), row2 R→L (4=SEO first, 3=Backend), row3 (5)
       const [c0, c1, c2, c3, c4, c5] = cards
-      const y1  = c0.my
-      const y2  = c4.my
-      const y3  = c5.my
-      const xR  = c2.r + 30   // right-turn column (past Frontend)
-      const xL  = c3.l - 30   // left-turn column  (past Backend)
+      const y1 = c0.my
+      const y2 = c4.my
+      const y3 = c5.my
+      const xR = c2.r + 30   // right-turn column (past Frontend)
+      const xL = c3.l - 30   // left-turn column  (past Backend)
       const rad = 18
 
       const d = [
@@ -1965,7 +1906,7 @@ function ProcessMap() {
 
   return (
     <div className="process-map" ref={mapRef}>
-      <svg fill="none" style={{ position:'absolute', inset:0, width:'100%', height:'100%', pointerEvents:'none', zIndex:1, overflow:'visible' }}>
+      <svg fill="none" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 1, overflow: 'visible' }}>
         {pathD && (
           <path d={pathD} stroke="#4c7ef3" strokeWidth="1.5" strokeDasharray="7 5" strokeLinecap="round" opacity="0.65" />
         )}
@@ -2918,21 +2859,21 @@ function ServicesPage() {
               <p className="consulting-kicker">OUR PROCESS</p>
               <h2>
                 {activeService.id === 'ai-ml' ? 'Practical, Iterative, Intelligence-First' :
-                 activeService.id === 'cloud' ? 'Resilient, Automated, Always Observable' :
-                 activeService.id === 'frontend' ? 'Discover, Design, Deliver — Front-End at Full Speed' :
-                 activeService.id === 'app' ? 'Architect, Build, Ship — Mobile Done Right' :
-                 'Innovative, Collaborative, Seamless Designs'}
+                  activeService.id === 'cloud' ? 'Resilient, Automated, Always Observable' :
+                    activeService.id === 'frontend' ? 'Discover, Design, Deliver — Front-End at Full Speed' :
+                      activeService.id === 'app' ? 'Architect, Build, Ship — Mobile Done Right' :
+                        'Innovative, Collaborative, Seamless Designs'}
               </h2>
               <p className="consulting-lead">
                 {activeService.id === 'ai-ml'
                   ? 'SightInfusion builds AI solutions anchored in real business problems. From use-case discovery to model deployment, our process ensures your AI investment delivers measurable, production-ready results.'
                   : activeService.id === 'cloud'
-                  ? 'SightInfusion engineers cloud infrastructure for reliability, speed, and growth. Our process covers architecture planning, automated provisioning, and ongoing observability from day one.'
-                  : activeService.id === 'frontend'
-                  ? 'SightInfusion front-end teams move fast without breaking things. From component architecture to final delivery, our structured process keeps every sprint on time and every pixel on spec.'
-                  : activeService.id === 'app'
-                  ? 'SightInfusion delivers production-ready Flutter apps from architecture to App Store. Our structured process eliminates ambiguity at every phase — so you get a polished, scalable app without surprises.'
-                  : 'SightInfusion focuses on delivering back-end systems that are secure, scalable, and future-ready. From consultation to deployment, our streamlined process ensures effective collaboration, seamless integration, and high-quality results that align with your business goals.'}
+                    ? 'SightInfusion engineers cloud infrastructure for reliability, speed, and growth. Our process covers architecture planning, automated provisioning, and ongoing observability from day one.'
+                    : activeService.id === 'frontend'
+                      ? 'SightInfusion front-end teams move fast without breaking things. From component architecture to final delivery, our structured process keeps every sprint on time and every pixel on spec.'
+                      : activeService.id === 'app'
+                        ? 'SightInfusion delivers production-ready Flutter apps from architecture to App Store. Our structured process eliminates ambiguity at every phase — so you get a polished, scalable app without surprises.'
+                        : 'SightInfusion focuses on delivering back-end systems that are secure, scalable, and future-ready. From consultation to deployment, our streamlined process ensures effective collaboration, seamless integration, and high-quality results that align with your business goals.'}
               </p>
               <NavLink to="/contact" className="backend-process-btn">
                 Schedule a Call
@@ -2954,18 +2895,18 @@ function ServicesPage() {
                   <div className="czz-card">
                     <h3>
                       {activeService.id === 'ai-ml' ? 'Define the problem and data landscape' :
-                       activeService.id === 'cloud' ? 'Audit your current infrastructure' :
-                       activeService.id === 'frontend' ? 'Discover and align' :
-                       'Discuss your requirements'}
+                        activeService.id === 'cloud' ? 'Audit your current infrastructure' :
+                          activeService.id === 'frontend' ? 'Discover and align' :
+                            'Discuss your requirements'}
                     </h3>
                     <p>
                       {activeService.id === 'ai-ml'
                         ? 'We map out your business challenge, identify the right AI approach, and assess the data available — building a clear scope before any model work begins.'
                         : activeService.id === 'cloud'
-                        ? 'We review your existing stack, workloads, and pain points — identifying the gaps in reliability, security, and scalability before recommending a path forward.'
-                        : activeService.id === 'frontend'
-                        ? 'We audit your existing codebase, align on your brand and audience, and map out component architecture, design tokens, and breakpoints before writing a line of code.'
-                        : 'We begin by understanding your vision, goals, and audience, ensuring the design aligns with your business needs.'}
+                          ? 'We review your existing stack, workloads, and pain points — identifying the gaps in reliability, security, and scalability before recommending a path forward.'
+                          : activeService.id === 'frontend'
+                            ? 'We audit your existing codebase, align on your brand and audience, and map out component architecture, design tokens, and breakpoints before writing a line of code.'
+                            : 'We begin by understanding your vision, goals, and audience, ensuring the design aligns with your business needs.'}
                     </p>
                   </div>
                 </div>
@@ -2974,18 +2915,18 @@ function ServicesPage() {
                   <div className="czz-card czz-card-left">
                     <h3>
                       {activeService.id === 'ai-ml' ? 'Prototype and validate the approach' :
-                       activeService.id === 'cloud' ? 'Design and provision the architecture' :
-                       activeService.id === 'frontend' ? 'Design and prototype' :
-                       'Create a plan and assemble a team'}
+                        activeService.id === 'cloud' ? 'Design and provision the architecture' :
+                          activeService.id === 'frontend' ? 'Design and prototype' :
+                            'Create a plan and assemble a team'}
                     </h3>
                     <p>
                       {activeService.id === 'ai-ml'
                         ? 'We build a focused proof-of-concept, validate model accuracy, and iterate on the pipeline with real data before committing to full production build-out.'
                         : activeService.id === 'cloud'
-                        ? 'Our engineers define the target architecture in IaC, provision environments through automated pipelines, and document every component for your team.'
-                        : activeService.id === 'frontend'
-                        ? 'Our designers produce high-fidelity Figma prototypes with motion specs and responsive variants, validated before the build sprint starts.'
-                        : 'We develop a design plan with wireframes and prototypes, ensuring an intuitive, functional design.'}
+                          ? 'Our engineers define the target architecture in IaC, provision environments through automated pipelines, and document every component for your team.'
+                          : activeService.id === 'frontend'
+                            ? 'Our designers produce high-fidelity Figma prototypes with motion specs and responsive variants, validated before the build sprint starts.'
+                            : 'We develop a design plan with wireframes and prototypes, ensuring an intuitive, functional design.'}
                     </p>
                   </div>
                   <div className="czz-node">
@@ -3002,21 +2943,21 @@ function ServicesPage() {
                   <div className="czz-card">
                     <h3>
                       {activeService.id === 'ai-ml' ? 'Deploy, monitor, and improve' :
-                       activeService.id === 'cloud' ? 'Ship, monitor, and optimize' :
-                       activeService.id === 'uiux' ? 'Design, test, and hand off' :
-                       activeService.id === 'frontend' ? 'Build, test, and deliver' :
-                       'Get to work'}
+                        activeService.id === 'cloud' ? 'Ship, monitor, and optimize' :
+                          activeService.id === 'uiux' ? 'Design, test, and hand off' :
+                            activeService.id === 'frontend' ? 'Build, test, and deliver' :
+                              'Get to work'}
                     </h3>
                     <p>
                       {activeService.id === 'ai-ml'
                         ? 'We deploy models to production with monitoring, alerting, and retraining pipelines so your AI stays accurate and reliable as your data evolves.'
                         : activeService.id === 'cloud'
-                        ? 'We deploy your infrastructure, wire up monitoring and alerting, and run load and failover tests — then hand off runbooks and on-call guides so your team owns it.'
-                        : activeService.id === 'uiux'
-                        ? 'Our designers deliver high-fidelity screens, design systems, and interactive prototypes, refined through testing and feedback.'
-                        : activeService.id === 'frontend'
-                        ? 'Developers implement designs with accessibility audits, cross-browser testing, and Lighthouse performance checks — delivering clean, documented component code.'
-                        : 'Our developers build and optimize your back-end with secure APIs and thorough testing for seamless operation.'}
+                          ? 'We deploy your infrastructure, wire up monitoring and alerting, and run load and failover tests — then hand off runbooks and on-call guides so your team owns it.'
+                          : activeService.id === 'uiux'
+                            ? 'Our designers deliver high-fidelity screens, design systems, and interactive prototypes, refined through testing and feedback.'
+                            : activeService.id === 'frontend'
+                              ? 'Developers implement designs with accessibility audits, cross-browser testing, and Lighthouse performance checks — delivering clean, documented component code.'
+                              : 'Our developers build and optimize your back-end with secure APIs and thorough testing for seamless operation.'}
                     </p>
                   </div>
                 </div>
@@ -3033,21 +2974,21 @@ function ServicesPage() {
               <div className="backend-why-choose-left">
                 <h2 className="backend-why-choose-title">
                   {activeService.id === 'uiux' ? 'Why Choose us for UI/UX Design?' :
-                   activeService.id === 'frontend' ? 'Why Choose us for Front-End Development?' :
-                   activeService.id === 'ai-ml' ? 'Why Choose us for AI/ML Development?' :
-                   activeService.id === 'cloud' ? 'Why Choose us for Cloud Services?' :
-                   'Why Choose us for Backend Development Service?'}
+                    activeService.id === 'frontend' ? 'Why Choose us for Front-End Development?' :
+                      activeService.id === 'ai-ml' ? 'Why Choose us for AI/ML Development?' :
+                        activeService.id === 'cloud' ? 'Why Choose us for Cloud Services?' :
+                          'Why Choose us for Backend Development Service?'}
                 </h2>
                 <p className="backend-why-choose-subtitle">
                   {activeService.id === 'uiux'
                     ? 'A great design is not just how it looks — it is how it works. Our design process ensures:'
                     : activeService.id === 'frontend'
-                    ? 'A great front-end is more than visual — it is performant, maintainable, and user-tested. We deliver:'
-                    : activeService.id === 'ai-ml'
-                    ? 'AI that delivers real business value requires more than a model — it requires the right process:'
-                    : activeService.id === 'cloud'
-                    ? 'Reliable cloud infrastructure is the foundation your product scales on. We make sure it is built right:'
-                    : 'A well-structured backend not only ensures seamless functionality but also:'}
+                      ? 'A great front-end is more than visual — it is performant, maintainable, and user-tested. We deliver:'
+                      : activeService.id === 'ai-ml'
+                        ? 'AI that delivers real business value requires more than a model — it requires the right process:'
+                        : activeService.id === 'cloud'
+                          ? 'Reliable cloud infrastructure is the foundation your product scales on. We make sure it is built right:'
+                          : 'A well-structured backend not only ensures seamless functionality but also:'}
                 </p>
               </div>
 
@@ -3324,10 +3265,10 @@ function ServicesPage() {
         ]
         const testimonials =
           activeService.id === 'uiux' ? uiuxTestimonials :
-          activeService.id === 'frontend' ? frontendTestimonials :
-          activeService.id === 'ai-ml' ? aimlTestimonials :
-          activeService.id === 'cloud' ? cloudTestimonials :
-          backendTestimonials
+            activeService.id === 'frontend' ? frontendTestimonials :
+              activeService.id === 'ai-ml' ? aimlTestimonials :
+                activeService.id === 'cloud' ? cloudTestimonials :
+                  backendTestimonials
 
         const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % testimonials.length)
         const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length)
@@ -3509,7 +3450,7 @@ function CaseStudyPage() {
           <h2>Case study not found</h2>
           <NavLink to="/services" className="service-hero-btn" style={{ marginTop: '2rem', display: 'inline-flex' }}>
             Back to Services
-            <svg viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
           </NavLink>
         </div>
       </section>
@@ -3517,12 +3458,12 @@ function CaseStudyPage() {
   }
 
   const featIcons = [
-    <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>,
-    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6l8-4z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>,
-    <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.8"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.8"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.8"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.8"/></svg>,
-    <svg viewBox="0 0 24 24" fill="none"><path d="M3 12h4l3 8 4-16 3 8h4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>,
-    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>,
-    <svg viewBox="0 0 24 24" fill="none"><path d="M4 7l8-4 8 4-8 4-8-4z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/><path d="M4 12l8 4 8-4M4 17l8 4 8-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+    <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>,
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6l8-4z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" /><path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>,
+    <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.8" /><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.8" /><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.8" /><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.8" /></svg>,
+    <svg viewBox="0 0 24 24" fill="none"><path d="M3 12h4l3 8 4-16 3 8h4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>,
+    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" /><path d="M12 7v5l3 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>,
+    <svg viewBox="0 0 24 24" fill="none"><path d="M4 7l8-4 8 4-8 4-8-4z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" /><path d="M4 12l8 4 8-4M4 17l8 4 8-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>,
   ]
   const related = Object.values(caseStudiesDetail)
     .filter(c => c.id !== cs.id)
@@ -3598,7 +3539,7 @@ function CaseStudyPage() {
               <ul className="cs-card-list">
                 {cs.solutionPoints.slice(0, 4).map((pt, i) => (
                   <li key={i}>
-                    <svg className="cs-li-check" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    <svg className="cs-li-check" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                     {pt}
                   </li>
                 ))}
@@ -3672,7 +3613,7 @@ function CaseStudyPage() {
                     <span className="cs-related-tag">{c.tag}</span>
                     <h3>{c.title}</h3>
                     <span className="cs-related-link">View case study
-                      <svg viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      <svg viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                     </span>
                   </div>
                 </NavLink>
@@ -3693,7 +3634,7 @@ function CaseStudyPage() {
             </div>
             <NavLink to="/contact" className="service-hero-btn cs-cta-btn">
               Get in Touch
-              <svg viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </NavLink>
           </div>
         </div>
@@ -3792,7 +3733,7 @@ function PortfolioPage() {
                   <div className="pf-card-footer">
                     <span className="pf-card-link">
                       View case study
-                      <svg viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      <svg viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                     </span>
                     <div className="pf-card-tech">
                       {project.tech.slice(0, 3).map((t, i) => (
@@ -3817,7 +3758,7 @@ function PortfolioPage() {
             </div>
             <NavLink to="/contact" className="service-hero-btn">
               Start a conversation
-              <svg viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </NavLink>
           </div>
         </div>
