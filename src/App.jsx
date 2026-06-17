@@ -23,6 +23,7 @@ import datavizIcon from './assets/icons/data-visualization-services-icon.svg'
 import appDevelopmentIcon from './assets/icons/app-development-icon.svg'
 
 // Import About Page Icons
+import siLogo from './assets/svg_image/si_logo.svg'
 import ourHistoryIcon from './assets/svg_image/our-history.svg'
 import ourMissionIcon from './assets/svg_image/our-mission.svg'
 import ourVisionIcon from './assets/svg_image/our-vision.svg'
@@ -41,6 +42,13 @@ import serviDeliveryIcon from './assets/svg_image/servi-delivery.svg'
 import serviTransparentIcon from './assets/svg_image/servi-transparant.svg'
 import serviQualifiedIcon from './assets/svg_image/servi-qualified.svg'
 import serviQuickIcon from './assets/svg_image/servi-quick.svg'
+
+// Import Large Visuals
+import aboutVisual from './assets/about-visual.png'
+import servicesVisual from './assets/services-visual.png'
+import manHero from './assets/man2.webp'
+import backendHeroImg from './assets/backend-hero.png'
+import arvrHeroImg from './assets/hero-visual.png'
 
 const services = [
   {
@@ -61,7 +69,7 @@ const services = [
     heroTitle: 'Pixel-perfect front-end.<br />Designed to impress, built to perform.',
     heroDescription: 'Get high-performance, visually stunning, responsive web interfaces, built by top-tier front-end developers using React, Angular, and Vue.js. Delivered on time, optimized for engagement.',
     heroButtonLabel: 'Hire Front-End Developer',
-    heroImage: '/src/assets/man2.webp',
+    heroImage: manHero,
     detailedFeatures: [
       { title: 'Custom Web Front-End Development', desc: 'Delivery of high-quality, interactive, and feature-rich web applications with a front-end that captivates end-users.' },
       { title: 'Single Page Applications (SPA) Development', desc: 'Using novel frameworks like React.js, Angular, and Vue.js, we develop ultra-fast SPAs that provide unified user experiences.' },
@@ -108,7 +116,7 @@ const services = [
     heroTitle: 'Rock-solid backend<br />solutions for your growing business.',
     heroDescription: "Design a backend infrastructure that's as scalable as your ambitions. Collaborate with elite backend developers, ready to join your team and start delivering results in a matter of weeks.",
     heroButtonLabel: 'Hire Back-End Developer',
-    heroImage: '/src/assets/backend-hero.png',
+    heroImage: backendHeroImg,
     detailedFeatures: [
       { title: 'Custom API Development', desc: 'Building secure, robust, and scalable APIs that connect your front-end with your data seamlessly.' },
       { title: 'Database Architecture & Modeling', desc: 'Designing optimized database schemas for performance, reliability, and long-term data integrity.' },
@@ -163,7 +171,7 @@ const services = [
     heroTitle: 'Immersive AR/VR.<br />Experiences that bridge worlds.',
     heroDescription: 'Create vibrant, intuitive, and immersive experiences for next-generation digital platforms using Unity and WebXR.',
     heroButtonLabel: 'Hire AR/VR Developer',
-    heroImage: '/src/assets/hero-visual.png',
+    heroImage: arvrHeroImg,
   },
   {
     id: 'uiux',
@@ -1663,6 +1671,8 @@ function App() {
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/case-study/:caseStudyId" element={<CaseStudyPage />} />
+          <Route path="/blogs" element={<BlogPage />} />
+          <Route path="/ai-expertise" element={<AiExpertisePage />} />
         </Routes>
         <Footer />
       </div>
@@ -1688,19 +1698,20 @@ function Header() {
 
   return (
     <header className="topbar">
-      <NavLink className="brand" to="/" onClick={() => setMenuOpen(false)}>
-        <img className="brand-logo" src="/sightinfusion-logo.svg" alt="SightInfusion" />
-        <span className="brand-text">
-          <strong>SightInfusion</strong>
-          <span>Software Solution Pvt. Ltd.</span>
-        </span>
-      </NavLink>
+      <div className="topbar-inner">
+        <NavLink className="brand" to="/" onClick={() => setMenuOpen(false)}>
+          <img className="brand-logo" src={siLogo} alt="SightInfusion" />
+          <span className="brand-text">
+            <strong>SightInfusion</strong>
+            <span>Software Solution Pvt. Ltd.</span>
+          </span>
+        </NavLink>
 
-      <nav className={`nav ${menuOpen ? 'nav-open' : ''}`} aria-label="Primary">
-        <NavLink to="/" onClick={() => setMenuOpen(false)}>Home</NavLink>
-        <NavLink to="/about" onClick={() => setMenuOpen(false)}>About Us</NavLink>
+        <nav className={`nav ${menuOpen ? 'nav-open' : ''}`} aria-label="Primary">
+          <NavLink to="/" onClick={() => setMenuOpen(false)}>Home</NavLink>
+          <NavLink to="/about" onClick={() => setMenuOpen(false)}>About Us</NavLink>
 
-        <div className="nav-dropdown" ref={dropRef}>
+          <div className="nav-dropdown" ref={dropRef}>
           <button
             type="button"
             className="nav-drop-btn"
@@ -1841,22 +1852,28 @@ function Header() {
         </div>
 
         <NavLink to="/portfolio" onClick={() => setMenuOpen(false)}>Portfolio</NavLink>
-      </nav>
+        <NavLink to="/blogs" onClick={() => setMenuOpen(false)}>Blogs</NavLink>
+        <NavLink className="nav-ai-link" to="/ai-expertise" onClick={() => setMenuOpen(false)}>
+          <span className="ai-star">✦</span>
+          AI Expertise
+        </NavLink>
+        </nav>
 
-      <NavLink className="contact-link" to="/contact" onClick={() => setMenuOpen(false)}>
-        Contact Us
-      </NavLink>
+        <NavLink className="contact-link" to="/contact" onClick={() => setMenuOpen(false)}>
+          Contact Us
+        </NavLink>
 
-      <button
-        type="button"
-        className={`hamburger ${menuOpen ? 'active' : ''}`}
-        onClick={() => setMenuOpen((open) => !open)}
-        aria-label="Toggle menu"
-      >
-        <span />
-        <span />
-        <span />
-      </button>
+        <button
+          type="button"
+          className={`hamburger ${menuOpen ? 'active' : ''}`}
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-label="Toggle menu"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </div>
     </header>
   )
 }
@@ -2243,15 +2260,15 @@ function TestiCard({ data }) {
 
 function AboutPage() {
   return (
-    <>
+    <div className="about-page">
       <section className="about-hero-section">
         <div className="container">
           <div className="about-hero-content reveal">
-            <span className="about-badge">We Are Guilty!</span>
+            <span className="about-badge">We are guilty!</span>
             <h1 className="about-hero-title">We are responsible for your bug-free digital product</h1>
             <p className="about-hero-description">
               Almost every company needs software to run their business smoothly, even yours. We don't just develop
-              products, we build experiences that make the users stay.
+              products we build experiences that make the users stay.
             </p>
           </div>
         </div>
@@ -2266,11 +2283,10 @@ function AboutPage() {
             </div>
             <div className="about-right">
               <p className="about-section-text">
-                SightInfusion Technical Authority Pvt. Ltd. is an emerging tech-based company specializing
-                in AI product design and high-performance development. With years of experience, we are known for
-                providing innovative solutions for all kinds of software development needs. We
-                are committed to delivering cost-effective and scalable solutions to our clients
-                across the globe, helping businesses transform with cutting-edge technology.
+                SightInfusion Technical Authority Pvt. Ltd. is an emerging IT based company dealing in web design
+                and development. With years of experience, we are known for providing tailor made solutions for
+                all kinds of software development needs. We are committed to deliver cost effective and scalable
+                solutions to our clients across the globe.
               </p>
             </div>
           </div>
@@ -2309,7 +2325,7 @@ function AboutPage() {
               <h3 className="value-title">Our Vision</h3>
               <p className="value-description">
                 We strive to shape a future where technology feels human, ideas become legacies, and
-                businesses redefine their horizons. We're not just building solutions; we're designing tomorrow.
+                businesses redefine their horizons. We&apos;re not just building solutions; we&apos;re designing tomorrow.
               </p>
             </div>
           </div>
@@ -2356,7 +2372,7 @@ function AboutPage() {
             <div className="stats-right">
               <div className="company-image-card">
                 <div className="building-realistic-image">
-                  <img src="/src/assets/about-building.png" alt="SightInfusion Headquarters" className="hq-building-img" />
+                  <img src={aboutVisual} alt="SightInfusion Headquarters" className="hq-building-img" />
                   <div className="hq-image-overlay" />
                 </div>
                 <div className="company-overlay">
@@ -2550,7 +2566,7 @@ function AboutPage() {
         <div className="container">
           <div className="why-services-horizontal-layout">
             <div className="why-services-image-left">
-              <img src="/src/assets/services-visual.png" alt="Professional Services Team" className="why-services-img-horizontal" />
+              <img src={servicesVisual} alt="Professional Services Team" className="why-services-img-horizontal" />
             </div>
 
             <div className="why-services-content-right">
@@ -2604,7 +2620,21 @@ function AboutPage() {
           </div>
         </div>
       </section>
-    </>
+
+      <section className="about-cta-section">
+        <div className="container">
+          <div className="about-cta-inner">
+            <h2 className="about-cta-title">Need any further Assistance?</h2>
+            <p className="about-cta-description">
+              Feel free to reach out for any inquiries or assistance.
+            </p>
+            <NavLink to="/contact" className="about-cta-btn-primary">
+              Book an appointment now
+            </NavLink>
+          </div>
+        </div>
+      </section>
+    </div>
   )
 }
 
@@ -3869,10 +3899,7 @@ function Footer() {
           <div className="footer-hero-left">
             <div className="footer-logo-wrap">
               <div className="footer-logo-mark">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 14L8 10L12 14L16 10L20 14" stroke="#2a68ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M4 10L8 6L12 10L16 6L20 10" stroke="#2a68ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.5" />
-                </svg>
+                <img src={siLogo} alt="SightInfusion" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
               </div>
               <div className="footer-logo-text">
                 <strong>SightInfusion</strong>
@@ -3973,6 +4000,486 @@ function Footer() {
         </div>
       </div>
     </footer>
+  )
+}
+
+const AI_FLOAT_CARDS = [
+  { label: 'Machine Learning', emoji: '🧠', depth: 1.2, px: 12, py: 42 },
+  { label: 'Computer Vision', emoji: '👁️', depth: 0.8, px: 65, py: 22 },
+  { label: 'NLP', emoji: '💬', depth: 1.5, px: 83, py: 38 },
+  { label: 'Predictive Analytics', emoji: '📈', depth: 1.0, px: 38, py: 58 },
+  { label: 'Data Science', emoji: '🗄️', depth: 0.9, px: 72, py: 56 },
+  { label: 'Ethical AI', emoji: '🛡️', depth: 1.3, px: 52, py: 70 },
+  { label: 'AI Automation', emoji: '🤖', depth: 1.1, px: 8, py: 68 },
+]
+
+const AI_PATH_STEPS = [
+  { num: '01', title: 'Discovery', side: 'left', desc: 'We work closely with you to understand your business challenges, data landscape, and strategic goals.' },
+  { num: '02', title: 'Strategy', side: 'right', desc: 'Our experts design a tailored AI roadmap identifying the best models and technologies to achieve your objectives.' },
+  { num: '03', title: 'Development', side: 'left', desc: 'We build and train custom AI models using state-of-the-art frameworks, ensuring they are robust and accurate.' },
+  { num: '04', title: 'Deployment', side: 'right', desc: 'Our team ensures seamless integration of the AI solution into your existing systems and infrastructure.' },
+  { num: '05', title: 'Support', side: 'left', desc: 'We provide ongoing support, monitoring, and optimization to ensure your AI solution continues to deliver results.' },
+]
+
+const AI_WHY_ITEMS = [
+  { emoji: '🏆', title: 'Proven Expertise', desc: 'Our team of experienced AI specialists delivers innovative, high-impact solutions across diverse industries.' },
+  { emoji: '🎯', title: 'Tailored Solutions', desc: "We don't believe in one-size-fits-all. Our approach is custom-built to align perfectly with your unique business goals." },
+  { emoji: '❤️', title: 'Ethical & Responsible AI', desc: 'We are committed to developing AI solutions that are not only powerful but also transparent, fair, and secure.' },
+]
+
+function AiExpertisePage() {
+  const universeRef = useRef(null)
+  const targetRef = useRef({ x: 0, y: 0 })
+  const currentRef = useRef({ x: 0, y: 0 })
+  const rafLerpRef = useRef(null)
+  const [mouse, setMouse] = useState({ x: 0, y: 0 })
+
+  // Always-running smooth lerp — triggers re-render only when delta is meaningful
+  useEffect(() => {
+    const tick = () => {
+      const cx = currentRef.current.x
+      const cy = currentRef.current.y
+      const tx = targetRef.current.x
+      const ty = targetRef.current.y
+      const nx = cx + (tx - cx) * 0.045
+      const ny = cy + (ty - cy) * 0.045
+      currentRef.current = { x: nx, y: ny }
+      if (Math.abs(nx - cx) > 0.00008 || Math.abs(ny - cy) > 0.00008) {
+        setMouse({ x: nx, y: ny })
+      }
+      rafLerpRef.current = requestAnimationFrame(tick)
+    }
+    rafLerpRef.current = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(rafLerpRef.current)
+  }, [])
+
+  const onMouseMove = (e) => {
+    const rect = universeRef.current?.getBoundingClientRect()
+    if (!rect) return
+    targetRef.current = {
+      x: (e.clientX - rect.left - rect.width / 2) / rect.width,
+      y: (e.clientY - rect.top - rect.height / 2) / rect.height,
+    }
+  }
+
+
+  return (
+    <>
+      {/* ── Section 1: Universe of AI Services ── */}
+      <section className="aie-universe" ref={universeRef} onMouseMove={onMouseMove}>
+        <div className="container aie-universe-header">
+          <div className="aie-univ-left">
+            <span className="aie-pill">Our Capabilities</span>
+            <h2 className="aie-univ-title">
+              A Universe of <span className="aie-blue">AI Services</span>
+            </h2>
+          </div>
+          <div className="aie-univ-right">
+            <p>
+              Harness the power of machine learning, predictive analytics, and computer vision
+              to transform your data into a strategic asset. Our bespoke AI solutions provide
+              the actionable insights and automation you need to drive efficiency and gain a
+              competitive edge.
+            </p>
+          </div>
+        </div>
+
+        <div className="aie-float-stage">
+          <div className="aie-watermark">SightInfusion AI</div>
+          {AI_FLOAT_CARDS.map((card) => (
+            <div
+              key={card.label}
+              className="aie-chip"
+              style={{
+                left: `${card.px}%`,
+                top: `${card.py}%`,
+                transform: `translate(${mouse.x * card.depth * 30}px, ${mouse.y * card.depth * 20}px)`,
+              }}
+            >
+              <span className="aie-chip-icon">{card.emoji}</span>
+              <span className="aie-chip-label">{card.label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Section 2: Clear Path ── */}
+      <section className="aie-path">
+        <div className="aie-path-bg" aria-hidden="true">
+          <div className="aie-orb aie-orb-1" />
+          <div className="aie-orb aie-orb-2" />
+          <div className="aie-orb aie-orb-3" />
+          <div className="aie-orb aie-orb-4" />
+        </div>
+        <div className="container aie-path-inner">
+          <div className="aie-path-head">
+            <span className="aie-pill aie-pill-blue">AI Integration</span>
+            <h2 className="aie-path-title">
+              A Clear Path to <span className="aie-blue">AI Integration</span>
+            </h2>
+          </div>
+
+          <div className="aie-timeline">
+            <div className="aie-tl-line" />
+            {AI_PATH_STEPS.map((step, i) => (
+              <div key={step.title} className={`aie-tl-row aie-tl-${step.side}`}>
+                {step.side === 'left' && (
+                  <div className="aie-tl-card">
+                    <span className="aie-tl-num">{step.num}</span>
+                    <h3>{step.title}</h3>
+                    <p>{step.desc}</p>
+                  </div>
+                )}
+                <div className={`aie-tl-dot ${i % 2 === 0 ? 'dot-blue' : 'dot-pink'}`} />
+                {step.side === 'right' && (
+                  <div className="aie-tl-card aie-tl-card-right">
+                    <span className="aie-tl-num">{step.num}</span>
+                    <h3>{step.title}</h3>
+                    <p>{step.desc}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 3: Why Choose Us ── */}
+      <section className="aie-why">
+        <div className="container">
+          <div className="aie-why-header">
+            <div>
+              <span className="aie-pill">✦ Why Choose Us</span>
+              <h2>
+                Why Choose <span className="aie-blue">SightInfusion</span> for Your AI Journey?
+              </h2>
+            </div>
+            <p className="aie-why-sub">
+              From intelligent data analysis to cutting-edge computer vision, our suite of AI
+              services is designed to solve your most complex business challenges and unlock
+              new opportunities.
+            </p>
+          </div>
+          <div className="aie-why-grid">
+            {AI_WHY_ITEMS.map(item => (
+              <div key={item.title} className="aie-why-card">
+                <div className="aie-why-icon">{item.emoji}</div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
+
+const BLOG_CATEGORIES = [
+  { id: 'all', label: 'All' },
+  { id: 'ai-ml', label: 'AI/ML', emoji: '🤖' },
+  { id: 'ar-vr', label: 'AR/VR', emoji: '🥽' },
+  { id: 'ecommerce', label: 'Ecommerce', emoji: '🛒' },
+  { id: 'fintech', label: 'Fintech', emoji: '💳' },
+  { id: 'healthcare', label: 'Healthcare', emoji: '🏥' },
+  { id: 'real-estate', label: 'Real Estate', emoji: '🏠' },
+  { id: 'startup', label: 'Startup', emoji: '🚀' },
+  { id: 'technology', label: 'Technology', emoji: '💻' },
+  { id: 'other', label: 'Other', emoji: '✨' },
+]
+
+const BLOG_POSTS = [
+  {
+    id: 1,
+    category: 'ai-ml',
+    categoryLabel: 'AI/ML',
+    date: 'May 20, 2026',
+    title: '4 Keys to Success for Building an Effective AI Strategy',
+    desc: 'Discover the foundational pillars of a successful AI strategy — from data readiness and model selection to deployment and ROI measurement.',
+    img: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80&auto=format&fit=crop',
+    readTime: '6 Min Read',
+    featured: true,
+  },
+  {
+    id: 2,
+    category: 'ar-vr',
+    categoryLabel: 'AR/VR',
+    date: 'May 16, 2026',
+    title: 'AR & VR Technology: Uses, Benefits, and Future Scope',
+    desc: 'Discover AR and VR technology applications, benefits, innovations, and future opportunities to transform digital experiences globally.',
+    img: 'https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=800&q=80&auto=format&fit=crop',
+    readTime: '5 Min Read',
+    featured: true,
+  },
+  {
+    id: 3,
+    category: 'fintech',
+    categoryLabel: 'Fintech',
+    date: 'May 12, 2026',
+    title: 'How AI is Revolutionizing Fintech Virtual Cards in 2026',
+    desc: 'Discover how fintech virtual cards improve business spending, security, automation, expense tracking, and financial efficiency.',
+    img: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800&q=80&auto=format&fit=crop',
+    readTime: '4 Min Read',
+    featured: false,
+  },
+  {
+    id: 4,
+    category: 'ecommerce',
+    categoryLabel: 'Ecommerce',
+    date: 'May 7, 2026',
+    title: 'Best Practices for Optimizing eCommerce for Mobile Users in 2026',
+    desc: 'Optimize mobile eCommerce experiences with faster performance, responsive design, seamless navigation, and personalized customer engagement.',
+    img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop',
+    readTime: '5 Min Read',
+    featured: false,
+  },
+  {
+    id: 5,
+    category: 'healthcare',
+    categoryLabel: 'Healthcare',
+    date: 'April 28, 2026',
+    title: 'AI in Healthcare: Transforming Patient Care Through Technology',
+    desc: 'Explore how artificial intelligence is revolutionizing diagnostics, treatment planning, and patient outcomes in modern healthcare systems.',
+    img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80&auto=format&fit=crop',
+    readTime: '7 Min Read',
+    featured: false,
+  },
+  {
+    id: 6,
+    category: 'healthcare',
+    categoryLabel: 'Healthcare',
+    date: 'April 20, 2026',
+    title: 'Common Liver Problems: Symptoms, Causes and Treatments',
+    desc: 'A comprehensive guide to understanding liver health, recognizing early warning signs, and the latest treatment approaches available in 2026.',
+    img: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=800&q=80&auto=format&fit=crop',
+    readTime: '6 Min Read',
+    featured: false,
+  },
+  {
+    id: 7,
+    category: 'technology',
+    categoryLabel: 'Technology',
+    date: 'April 10, 2026',
+    title: 'Cloud Architecture: Building Scalable Systems for Modern Businesses',
+    desc: 'Explore cloud architecture patterns, microservices, and infrastructure-as-code strategies that enable businesses to scale confidently.',
+    img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80&auto=format&fit=crop',
+    readTime: '5 Min Read',
+    featured: false,
+  },
+  {
+    id: 8,
+    category: 'startup',
+    categoryLabel: 'Startup',
+    date: 'April 2, 2026',
+    title: 'From Idea to MVP: How AI Accelerates Startup Development',
+    desc: 'Learn how startups are leveraging AI tools, automation, and rapid prototyping to cut development time and reach market faster than ever.',
+    img: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80&auto=format&fit=crop',
+    readTime: '5 Min Read',
+    featured: false,
+  },
+  {
+    id: 9,
+    category: 'fintech',
+    categoryLabel: 'Fintech',
+    date: 'March 20, 2026',
+    title: 'A Complete Guide to Digital Finance for Fintech Solutions',
+    desc: 'Explore digital finance strategies, fintech solutions, secure transactions, automation, innovation, and modern financial technologies efficiently.',
+    img: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80&auto=format&fit=crop',
+    readTime: '6 Min Read',
+    featured: false,
+  },
+  {
+    id: 10,
+    category: 'ar-vr',
+    categoryLabel: 'AR/VR',
+    date: 'March 16, 2026',
+    title: 'The Future of AR/VR Trends to Watch in the Next 5 Years',
+    desc: 'Explore emerging AR/VR trends shaping immersive experiences, innovation, healthcare, education, and business transformation.',
+    img: 'https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&q=80&auto=format&fit=crop',
+    readTime: '7 Min Read',
+    featured: false,
+  },
+]
+
+const BLOG_ARCHIVES = [
+  'May 2026', 'April 2026', 'March 2026', 'February 2026',
+  'January 2026', 'December 2025', 'November 2025',
+  'August 2025', 'July 2025', 'June 2025', 'May 2025',
+]
+
+const POSTS_PER_PAGE = 6
+
+function BlogPage() {
+  const [activeCategory, setActiveCategory] = useState('all')
+  const [searchQuery, setSearchQuery] = useState('')
+  const [searchInput, setSearchInput] = useState('')
+  const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE)
+  const [featuredIdx, setFeaturedIdx] = useState(0)
+
+  const featuredPosts = BLOG_POSTS.filter(p => p.featured)
+
+  useEffect(() => {
+    if (featuredPosts.length < 2) return
+    const timer = setInterval(() => {
+      setFeaturedIdx(i => (i + 1) % featuredPosts.length)
+    }, 4000)
+    return () => clearInterval(timer)
+  }, [featuredPosts.length])
+
+  const filtered = BLOG_POSTS.filter(post => {
+    const matchCat = activeCategory === 'all' || post.category === activeCategory
+    const matchSearch = searchQuery === '' ||
+      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      post.desc.toLowerCase().includes(searchQuery.toLowerCase())
+    return matchCat && matchSearch
+  })
+
+  const visible = filtered.slice(0, visibleCount)
+
+  const handleCategoryClick = (id) => {
+    setActiveCategory(id)
+    setVisibleCount(POSTS_PER_PAGE)
+  }
+
+  return (
+    <div className="blog-page">
+      {/* Topics Section */}
+      <section className="blog-topics-section">
+        <p className="blog-topics-label">EXPLORE TRENDING TOPICS</p>
+        <div className="blog-topics-grid">
+          {BLOG_CATEGORIES.filter(c => c.id !== 'all').map(cat => (
+            <button
+              key={cat.id}
+              className={`blog-topic-pill ${activeCategory === cat.id ? 'active' : ''}`}
+              onClick={() => handleCategoryClick(cat.id)}
+            >
+              <span className="pill-emoji">{cat.emoji}</span>
+              {cat.label}
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <div className="blog-main container">
+        {/* Posts Grid */}
+        <div className="blog-posts-area">
+          <div className="blog-posts-grid">
+            {visible.map(post => (
+              <div key={post.id} className="blog-card">
+                <div className="blog-card-img-wrap">
+                  <img src={post.img} alt={post.title} />
+                  <span className="blog-card-tag">{post.categoryLabel.toUpperCase()}</span>
+                  {post.readTime && (
+                    <span className="blog-card-read-time">📖 {post.readTime}</span>
+                  )}
+                </div>
+                <div className="blog-card-body">
+                  <p className="blog-card-date">on {post.date}</p>
+                  <h3 className="blog-card-title">{post.title}</h3>
+                  <p className="blog-card-desc">{post.desc}</p>
+                  <button className="blog-discover-btn">Discover More</button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {visibleCount < filtered.length && (
+            <div className="blog-load-more-wrap">
+              <button
+                className="blog-load-more-btn"
+                onClick={() => setVisibleCount(c => c + POSTS_PER_PAGE)}
+              >
+                Load More
+              </button>
+            </div>
+          )}
+
+          {filtered.length === 0 && (
+            <div className="blog-no-results">
+              <p>No posts found. Try a different category or search term.</p>
+            </div>
+          )}
+        </div>
+
+        {/* Sidebar */}
+        <aside className="blog-sidebar">
+          {/* Search */}
+          <div className="blog-sidebar-widget">
+            <h4 className="blog-widget-title">SEARCH</h4>
+            <div className="blog-search-row">
+              <input
+                type="text"
+                className="blog-search-input"
+                placeholder="Search posts..."
+                value={searchInput}
+                onChange={e => setSearchInput(e.target.value)}
+                onKeyDown={e => { if (e.key === 'Enter') setSearchQuery(searchInput) }}
+              />
+              <button
+                className="blog-search-btn"
+                onClick={() => setSearchQuery(searchInput)}
+              >
+                Search
+              </button>
+            </div>
+          </div>
+
+          {/* Featured Posts */}
+          <div className="blog-sidebar-widget">
+            <h4 className="blog-widget-title">FEATURED POSTS</h4>
+            <div className="blog-featured-carousel">
+              <div className="blog-featured-slide">
+                <img src={featuredPosts[featuredIdx]?.img} alt={featuredPosts[featuredIdx]?.title} />
+                <div className="blog-featured-overlay">
+                  <span className="blog-featured-tag">{featuredPosts[featuredIdx]?.categoryLabel.toUpperCase()}</span>
+                  <p className="blog-featured-date">on {featuredPosts[featuredIdx]?.date}</p>
+                  <p className="blog-featured-title">{featuredPosts[featuredIdx]?.title}</p>
+                </div>
+              </div>
+              <div className="blog-featured-dots">
+                {featuredPosts.map((_, i) => (
+                  <button
+                    key={i}
+                    className={`blog-featured-dot ${i === featuredIdx ? 'active' : ''}`}
+                    onClick={() => setFeaturedIdx(i)}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Categories */}
+          <div className="blog-sidebar-widget">
+            <h4 className="blog-widget-title">CATEGORIES</h4>
+            <ul className="blog-sidebar-list">
+              {BLOG_CATEGORIES.filter(c => c.id !== 'all').map(cat => (
+                <li key={cat.id}>
+                  <button
+                    className={`blog-sidebar-cat ${activeCategory === cat.id ? 'active' : ''}`}
+                    onClick={() => handleCategoryClick(cat.id)}
+                  >
+                    {cat.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Archives */}
+          <div className="blog-sidebar-widget">
+            <h4 className="blog-widget-title">ARCHIVES</h4>
+            <ul className="blog-sidebar-list">
+              {BLOG_ARCHIVES.map(month => (
+                <li key={month}>
+                  <button className="blog-sidebar-cat">{month}</button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
   )
 }
 
