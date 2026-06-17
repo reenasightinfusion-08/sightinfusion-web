@@ -7029,75 +7029,13 @@ select {
   background: #040d14;
 }
 
-.aie-path-bg {
+.aie-canvas {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
   pointer-events: none;
-  z-index: 0;
-}
-
-.aie-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(55px);
-  will-change: transform;
-}
-
-.aie-orb-1 {
-  width: 50%;
-  height: 60%;
-  background: radial-gradient(circle, rgba(20, 200, 150, 0.55) 0%, rgba(20, 200, 150, 0.15) 50%, transparent 75%);
-  top: -10%;
-  left: -8%;
-  animation: aie-orb1 8s ease-in-out infinite;
-}
-
-.aie-orb-2 {
-  width: 55%;
-  height: 65%;
-  background: radial-gradient(circle, rgba(42, 104, 255, 0.5) 0%, rgba(42, 104, 255, 0.12) 50%, transparent 75%);
-  bottom: -15%;
-  right: -10%;
-  animation: aie-orb2 11s ease-in-out infinite;
-}
-
-.aie-orb-3 {
-  width: 40%;
-  height: 50%;
-  background: radial-gradient(circle, rgba(140, 60, 240, 0.45) 0%, rgba(140, 60, 240, 0.10) 50%, transparent 75%);
-  top: 30%;
-  left: 30%;
-  animation: aie-orb3 9s ease-in-out infinite;
-}
-
-.aie-orb-4 {
-  width: 35%;
-  height: 42%;
-  background: radial-gradient(circle, rgba(0, 210, 220, 0.4) 0%, rgba(0, 210, 220, 0.08) 50%, transparent 75%);
-  top: 55%;
-  left: 5%;
-  animation: aie-orb4 10s ease-in-out infinite;
-}
-
-@keyframes aie-orb1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50%       { transform: translate(22%, 18%) scale(1.18); }
-}
-
-@keyframes aie-orb2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50%       { transform: translate(-18%, -20%) scale(1.2); }
-}
-
-@keyframes aie-orb3 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33%       { transform: translate(14%, -18%) scale(1.28); }
-  66%       { transform: translate(-12%, 16%) scale(0.85); }
-}
-
-@keyframes aie-orb4 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50%       { transform: translate(25%, -15%) scale(1.22); }
 }
 
 

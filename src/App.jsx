@@ -4029,6 +4029,8 @@ const AI_WHY_ITEMS = [
 
 function AiExpertisePage() {
   const universeRef = useRef(null)
+  const canvasRef = useRef(null)
+  const pathSectionRef = useRef(null)
   const targetRef = useRef({ x: 0, y: 0 })
   const currentRef = useRef({ x: 0, y: 0 })
   const rafLerpRef = useRef(null)
@@ -4061,6 +4063,104 @@ function AiExpertisePage() {
       y: (e.clientY - rect.top - rect.height / 2) / rect.height,
     }
   }
+
+  // Particle network canvas
+  useEffect(() => {
+    const canvas = canvasRef.current
+    const section = pathSectionRef.current
+    if (!canvas || !section) return
+
+    const ctx = canvas.getContext('2d')
+    let animId = null
+    let w = 0, h = 0
+    const particles = []
+    const COUNT = 90
+    const MAX_DIST = 140
+
+    const resize = () => {
+      w = canvas.offsetWidth
+      h = canvas.offsetHeight
+      canvas.width = w
+      canvas.height = h
+    }
+
+    const init = () => {
+      particles.length = 0
+      for (let i = 0; i < COUNT; i++) {
+        particles.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.55,
+          vy: (Math.random() - 0.5) * 0.55,
+          r: Math.random() * 1.8 + 0.8,
+          teal: Math.random() > 0.6,
+        })
+      }
+    }
+
+    resize()
+    init()
+
+    const onResize = () => { resize(); init() }
+    window.addEventListener('resize', onResize)
+
+    const draw = () => {
+      ctx.clearRect(0, 0, w, h)
+      ctx.fillStyle = '#040d14'
+      ctx.fillRect(0, 0, w, h)
+
+      // Lines between nearby particles
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x
+          const dy = particles[i].y - particles[j].y
+          const dist = Math.sqrt(dx * dx + dy * dy)
+          if (dist < MAX_DIST) {
+            const alpha = (1 - dist / MAX_DIST) * 0.35
+            ctx.beginPath()
+            ctx.moveTo(particles[i].x, particles[i].y)
+            ctx.lineTo(particles[j].x, particles[j].y)
+            ctx.strokeStyle = `rgba(42,104,255,${alpha})`
+            ctx.lineWidth = 0.7
+            ctx.stroke()
+          }
+        }
+      }
+
+      // Particles
+      particles.forEach(p => {
+        p.x += p.vx
+        p.y += p.vy
+        if (p.x < 0 || p.x > w) p.vx *= -1
+        if (p.y < 0 || p.y > h) p.vy *= -1
+
+        ctx.beginPath()
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
+        ctx.fillStyle = p.teal ? 'rgba(29,200,160,0.85)' : 'rgba(42,104,255,0.85)'
+        ctx.fill()
+      })
+
+      animId = requestAnimationFrame(draw)
+    }
+
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          if (!animId) animId = requestAnimationFrame(draw)
+        } else {
+          if (animId) { cancelAnimationFrame(animId); animId = null }
+        }
+      },
+      { threshold: 0.05 }
+    )
+    obs.observe(section)
+
+    return () => {
+      if (animId) cancelAnimationFrame(animId)
+      obs.disconnect()
+      window.removeEventListener('resize', onResize)
+    }
+  }, [])
 
 
   return (
@@ -4104,13 +4204,8 @@ function AiExpertisePage() {
       </section>
 
       {/* ── Section 2: Clear Path ── */}
-      <section className="aie-path">
-        <div className="aie-path-bg" aria-hidden="true">
-          <div className="aie-orb aie-orb-1" />
-          <div className="aie-orb aie-orb-2" />
-          <div className="aie-orb aie-orb-3" />
-          <div className="aie-orb aie-orb-4" />
-        </div>
+      <section className="aie-path" ref={pathSectionRef}>
+        <canvas ref={canvasRef} className="aie-canvas" />
         <div className="container aie-path-inner">
           <div className="aie-path-head">
             <span className="aie-pill aie-pill-blue">AI Integration</span>
