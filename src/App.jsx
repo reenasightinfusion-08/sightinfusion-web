@@ -1672,6 +1672,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/case-study/:caseStudyId" element={<CaseStudyPage />} />
           <Route path="/blogs" element={<BlogPage />} />
+          <Route path="/blogs/:postId" element={<BlogPostPage />} />
           <Route path="/ai-expertise" element={<AiExpertisePage />} />
         </Routes>
         <Footer />
@@ -2298,7 +2299,7 @@ function AboutPage() {
           <div className="values-grid">
             <div className="value-card">
               <div className="value-icon value-icon-history">
-                <img src={ourHistoryIcon} alt="Our History" style={{ width: '100%', height: '100%' }} />
+                <img src={ourHistoryIcon} alt="Our History" />
               </div>
               <h3 className="value-title">Our History</h3>
               <p className="value-description">
@@ -2309,7 +2310,7 @@ function AboutPage() {
 
             <div className="value-card">
               <div className="value-icon value-icon-mission">
-                <img src={ourMissionIcon} alt="Our Mission" style={{ width: '100%', height: '100%' }} />
+                <img src={ourMissionIcon} alt="Our Mission" />
               </div>
               <h3 className="value-title">Our Mission</h3>
               <p className="value-description">
@@ -2320,7 +2321,7 @@ function AboutPage() {
 
             <div className="value-card">
               <div className="value-icon value-icon-vision">
-                <img src={ourVisionIcon} alt="Our Vision" style={{ width: '100%', height: '100%' }} />
+                <img src={ourVisionIcon} alt="Our Vision" />
               </div>
               <h3 className="value-title">Our Vision</h3>
               <p className="value-description">
@@ -2391,20 +2392,12 @@ function AboutPage() {
                   <div className="seal-icon-wrapper">
                     <img src={isoLogoIcon} alt="ISO 9001 Certification" className="iso-icon" style={{ objectFit: 'contain' }} />
                   </div>
-                  <div className="iso-seal-text">
-                    <strong>ISO</strong>
-                    <span>9001 : 2015</span>
-                  </div>
                 </div>
               </div>
               <div className="cert-item">
                 <div className="iso-badge modern-seal">
                   <div className="seal-icon-wrapper">
                     <img src={isoLogoIcon} alt="ISO 27001 Certification" className="iso-icon" style={{ objectFit: 'contain' }} />
-                  </div>
-                  <div className="iso-seal-text">
-                    <strong>ISO</strong>
-                    <span>27001 : 2022</span>
                   </div>
                 </div>
               </div>
@@ -4294,6 +4287,14 @@ const BLOG_POSTS = [
     img: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80&auto=format&fit=crop',
     readTime: '6 Min Read',
     featured: true,
+    content: [
+      { heading: 'Why AI Strategy Matters', body: 'In an era where data is the new currency, organisations that fail to define a clear AI strategy risk falling behind. A well-crafted strategy aligns AI initiatives with business objectives, ensuring that every machine learning model and automation pipeline delivers tangible value rather than becoming a costly experiment.' },
+      { heading: '1. Data Readiness', body: 'The foundation of any effective AI strategy is high-quality, accessible data. Before selecting models or tools, audit your existing data pipelines. Identify gaps, inconsistencies, and silos. Without clean, labelled, and well-governed data, even the most sophisticated algorithms will underperform. Invest in data engineering as a first-class citizen of your AI programme.' },
+      { heading: '2. Model Selection & Experimentation', body: 'Not every problem requires a large language model. Match the complexity of the solution to the complexity of the problem. Start with simple baselines, validate them rigorously, and escalate to more powerful architectures only when justified. Use experiment tracking tools like MLflow or Weights & Biases to maintain reproducibility and visibility across your team.' },
+      { heading: '3. Scalable Deployment', body: 'A model that only works on a data scientist\'s laptop is not a product. Design for deployment from day one — containerise models with Docker, serve them through stable APIs, and instrument them with monitoring from the start. Define SLAs for latency and availability just as you would for any other production service.' },
+      { heading: '4. Measuring ROI', body: 'Tie every AI initiative to a measurable business outcome. Whether that\'s a reduction in customer churn, a faster fraud detection rate, or a lower cost-per-lead, define the metric before you build. Review it regularly and be willing to pivot or retire models that no longer deliver value. AI is not a one-time investment — it requires ongoing iteration.' },
+      { heading: 'Conclusion', body: 'Building an effective AI strategy requires discipline, collaboration between technical and business teams, and a culture of experimentation. At SightInfusion, we help companies move from AI experimentation to production-grade intelligence. Reach out to learn how we can accelerate your journey.' },
+    ],
   },
   {
     id: 2,
@@ -4305,6 +4306,13 @@ const BLOG_POSTS = [
     img: 'https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=800&q=80&auto=format&fit=crop',
     readTime: '5 Min Read',
     featured: true,
+    content: [
+      { heading: 'The Rise of Immersive Technology', body: 'Augmented reality and virtual reality have moved well beyond gaming novelty. Enterprise adoption is accelerating across industries including real estate, healthcare, training, and retail. The global AR/VR market is projected to exceed $450 billion by 2030, driven by more affordable hardware and more mature development platforms.' },
+      { heading: 'Key Applications Today', body: 'In real estate, virtual walkthroughs allow buyers to tour properties from any location, dramatically reducing the sales cycle. In healthcare, surgeons use AR overlays to guide complex procedures with greater precision. In manufacturing, AR headsets provide workers with step-by-step assembly instructions overlaid on the physical product, reducing errors and training time by up to 40%.' },
+      { heading: 'Benefits for Businesses', body: 'Beyond the obvious "wow factor," immersive technology delivers concrete business benefits: reduced travel costs for training, faster onboarding, lower product return rates through better pre-purchase visualisation, and stronger customer engagement. Companies that have deployed AR product configurators report conversion rate increases of 25–35%.' },
+      { heading: 'Challenges to Adoption', body: 'Hardware cost, content creation complexity, and user comfort remain the primary barriers. However, WebXR is lowering the entry bar significantly — browser-based AR experiences require no app download, broadening the addressable audience to anyone with a modern smartphone.' },
+      { heading: 'The Road Ahead', body: 'Over the next five years, expect spatial computing to become a standard layer of the digital product stack. Platforms like Apple Vision Pro and Meta Quest are pushing developers and enterprises to think beyond screens. SightInfusion is building the AR/VR experiences that will define how businesses connect with customers and train their teams in this new spatial era.' },
+    ],
   },
   {
     id: 3,
@@ -4316,6 +4324,13 @@ const BLOG_POSTS = [
     img: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800&q=80&auto=format&fit=crop',
     readTime: '4 Min Read',
     featured: false,
+    content: [
+      { heading: 'What Are Virtual Cards?', body: 'Virtual cards are digitally generated card numbers linked to a real funding source but designed for single-use or restricted-use transactions. Unlike physical cards, they can be created instantly, assigned specific spending limits, locked to particular merchants, and cancelled without impacting the underlying account.' },
+      { heading: 'AI-Powered Spend Controls', body: 'Modern fintech platforms are embedding AI models directly into virtual card issuance workflows. These models analyse historical spending patterns to automatically suggest appropriate limits, flag anomalous transactions in real time, and even predict when a subscription charge is likely to renew — giving finance teams proactive control over cash flow.' },
+      { heading: 'Fraud Prevention', body: 'Because each virtual card can be scoped to a single merchant or transaction, the blast radius of any compromise is minimal. AI-driven anomaly detection adds another layer, comparing each transaction against baseline behaviour and triggering step-up authentication when risk scores exceed a threshold.' },
+      { heading: 'Integration with ERP Systems', body: 'Leading platforms now offer direct API integration with ERP and accounting tools, meaning that every virtual card transaction is automatically categorised, matched to a purchase order, and posted to the general ledger — eliminating manual reconciliation and dramatically reducing the monthly financial close cycle.' },
+      { heading: 'The Future of Business Spending', body: 'Virtual cards are becoming the default payment method for B2B transactions. As AI capabilities deepen, expect cards that self-optimise spend policies, negotiate better vendor rates, and provide CFOs with real-time treasury visibility across the entire organisation.' },
+    ],
   },
   {
     id: 4,
@@ -4327,6 +4342,13 @@ const BLOG_POSTS = [
     img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop',
     readTime: '5 Min Read',
     featured: false,
+    content: [
+      { heading: 'Mobile is the Default', body: 'More than 70% of eCommerce traffic now originates from mobile devices, yet mobile conversion rates still lag desktop by nearly 30%. Closing this gap is the single highest-ROI optimisation available to most retailers in 2026. The gap exists not because customers don\'t want to buy on mobile — they do — but because most mobile experiences still have too much friction.' },
+      { heading: 'Performance First', body: 'Every 100ms of page load delay costs approximately 1% in conversion rate. Compress images aggressively, use next-generation formats like WebP and AVIF, implement lazy loading, and serve assets from edge CDNs. Target a Largest Contentful Paint below 2.5 seconds on a mid-range device on a 4G connection.' },
+      { heading: 'Simplify Navigation', body: 'Mobile navigation should be thumb-friendly. Replace complex mega-menus with a clear hierarchy of no more than three levels. Sticky bottom navigation bars significantly outperform hamburger menus for key actions like cart, search, and account. Use faceted filtering with chips rather than dropdowns for product discovery.' },
+      { heading: 'Streamline Checkout', body: 'Remove every optional field from the checkout flow. Implement Apple Pay, Google Pay, and UPI from day one — one-tap payment options can reduce checkout abandonment by over 40%. Auto-fill address fields using the device\'s location API and save payment details for returning customers with explicit consent.' },
+      { heading: 'Personalisation at Scale', body: 'Use on-device signals — browsing history, wishlist behaviour, cart abandonment — to surface personalised product recommendations that feel helpful rather than intrusive. AI-driven personalisation consistently lifts average order value by 15–25% when implemented correctly.' },
+    ],
   },
   {
     id: 5,
@@ -4338,6 +4360,14 @@ const BLOG_POSTS = [
     img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80&auto=format&fit=crop',
     readTime: '7 Min Read',
     featured: false,
+    content: [
+      { heading: 'A Paradigm Shift in Medicine', body: 'Healthcare has historically been slow to adopt new technology at scale. That is changing rapidly. AI is not replacing clinicians — it is giving them superpowers. From reading radiology scans to predicting sepsis 12 hours before onset, machine learning is expanding what\'s possible in both diagnosis and treatment.' },
+      { heading: 'Diagnostic Imaging', body: 'AI models trained on millions of labelled scans now match or exceed radiologist performance on specific tasks such as detecting early-stage lung cancer, diabetic retinopathy, and skin lesions. These tools don\'t get tired, don\'t miss the fourth scan in a busy shift, and can flag high-priority cases for immediate human review — improving both accuracy and workflow efficiency.' },
+      { heading: 'Predictive Patient Monitoring', body: 'In ICUs, AI systems continuously analyse vital signs, lab results, and nursing notes to predict deterioration before it becomes critical. Early warning systems powered by gradient boosting and LSTM models are reducing preventable ICU deaths by flagging at-risk patients hours earlier than traditional scoring systems.' },
+      { heading: 'Drug Discovery', body: 'Traditional drug discovery takes 10–15 years and costs billions. AI is compressing this timeline by identifying promising molecular candidates, predicting protein folding structures, and simulating drug interactions in silico. Several AI-discovered compounds are already in Phase II clinical trials, a development that would have seemed implausible five years ago.' },
+      { heading: 'Challenges and Ethics', body: 'AI in healthcare raises important questions around data privacy, algorithmic bias, and regulatory approval. Models trained predominantly on data from certain demographics may perform poorly on underrepresented groups. Rigorous validation across diverse populations and transparent model documentation are essential before any clinical deployment.' },
+      { heading: 'The Path Forward', body: 'The most impactful healthcare AI will be that which augments clinical judgment rather than attempting to replace it. The human elements of medicine — empathy, contextual reasoning, ethical decision-making — are irreplaceable. Technology built with this understanding will earn clinical trust and ultimately improve patient outcomes at scale.' },
+    ],
   },
   {
     id: 6,
@@ -4349,6 +4379,14 @@ const BLOG_POSTS = [
     img: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=800&q=80&auto=format&fit=crop',
     readTime: '6 Min Read',
     featured: false,
+    content: [
+      { heading: 'Why Liver Health Matters', body: 'The liver performs over 500 vital functions — from filtering toxins and metabolising medications to producing bile for digestion and synthesising proteins critical for blood clotting. Because the liver has significant regenerative capacity, damage often goes unnoticed until it reaches an advanced stage, making awareness of early symptoms essential.' },
+      { heading: 'Common Liver Conditions', body: 'The most prevalent liver conditions include non-alcoholic fatty liver disease (NAFLD), alcoholic liver disease, hepatitis B and C, autoimmune hepatitis, and cirrhosis. NAFLD now affects an estimated 25% of the global adult population, driven by rising rates of obesity and metabolic syndrome.' },
+      { heading: 'Recognising the Symptoms', body: 'Early liver disease is often asymptomatic. As damage progresses, symptoms may include persistent fatigue, abdominal discomfort or swelling in the upper right quadrant, jaundice (yellowing of the skin and eyes), dark urine, pale stools, and unexplained weight loss. Any combination of these symptoms warrants prompt medical evaluation.' },
+      { heading: 'Diagnostic Approaches', body: 'Liver function is assessed through blood tests measuring enzymes such as ALT, AST, and ALP, alongside bilirubin and albumin levels. Imaging — ultrasound, CT, or MRI — evaluates structural changes. FibroScan uses transient elastography to measure liver stiffness non-invasively, and biopsy remains the gold standard for staging fibrosis when imaging is inconclusive.' },
+      { heading: 'Treatment Options in 2026', body: 'Treatment depends entirely on the underlying cause. For NAFLD, lifestyle modification — weight loss of 7–10% of body weight, regular exercise, and dietary changes — remains the most effective intervention. Direct-acting antivirals now cure hepatitis C in over 95% of cases. Emerging therapies for NASH (non-alcoholic steatohepatitis) are progressing through late-stage clinical trials. For end-stage liver disease, transplantation remains the definitive treatment.' },
+      { heading: 'Prevention', body: 'Most liver disease is preventable. Limit alcohol consumption, maintain a healthy weight, exercise regularly, get vaccinated against hepatitis A and B, avoid sharing needles, and use medications only as prescribed. Annual health checks including liver function tests are advisable for anyone with risk factors including obesity, diabetes, or a family history of liver disease.' },
+    ],
   },
   {
     id: 7,
@@ -4360,6 +4398,13 @@ const BLOG_POSTS = [
     img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80&auto=format&fit=crop',
     readTime: '5 Min Read',
     featured: false,
+    content: [
+      { heading: 'The Architecture-First Mindset', body: 'Cloud migration is not a lift-and-shift exercise. Organisations that simply move existing on-premise workloads to cloud VMs without rethinking their architecture will get cloud bills without cloud benefits. Truly cloud-native architecture is designed around elasticity, resilience, and operational simplicity from the ground up.' },
+      { heading: 'Microservices vs. Monolith', body: 'The microservices pattern — decomposing an application into small, independently deployable services — is powerful but not universally appropriate. Start with a well-structured monolith. Extract services only when you have clear team ownership boundaries and a genuine operational need for independent scaling. Premature decomposition introduces distributed systems complexity that can slow a small team significantly.' },
+      { heading: 'Infrastructure as Code', body: 'Manual cloud configuration is a liability. Tools like Terraform and AWS CDK allow you to define your entire infrastructure as version-controlled code. This means environments are reproducible, changes are auditable, and disaster recovery is a matter of running a pipeline rather than a multi-day manual rebuild.' },
+      { heading: 'Designing for Failure', body: 'In distributed systems, failure is not an edge case — it is a certainty. Design every service to handle the failure of its dependencies gracefully. Implement circuit breakers, retries with exponential backoff, and bulkhead patterns. Regularly test your failure modes with chaos engineering practices to discover weaknesses before your customers do.' },
+      { heading: 'Cost Optimisation', body: 'Cloud cost overruns are one of the most common complaints from engineering leadership. Right-size your instances, use Spot and Reserved capacity strategically, implement autoscaling policies, and tag every resource for cost attribution. A monthly FinOps review that correlates spend with business metrics will surface optimisation opportunities that automated tools miss.' },
+    ],
   },
   {
     id: 8,
@@ -4371,6 +4416,13 @@ const BLOG_POSTS = [
     img: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80&auto=format&fit=crop',
     readTime: '5 Min Read',
     featured: false,
+    content: [
+      { heading: 'The New Startup Speed', body: 'The time from idea to working product has compressed dramatically. Five years ago, an average startup took 6–9 months to build a credible MVP. Today, teams leveraging AI coding assistants, no-code platforms, and AI-generated design systems are shipping working products in 4–8 weeks. This compression is changing the economics of starting a company.' },
+      { heading: 'AI-Assisted Development', body: 'Tools like GitHub Copilot, Cursor, and Claude Code accelerate routine implementation tasks — boilerplate, test writing, documentation, and debugging — by 30–50%. This is not about replacing engineers; it is about removing the undifferentiated heavy lifting so founders and their small teams can focus on the decisions that actually create competitive advantage.' },
+      { heading: 'Rapid User Research', body: 'AI enables faster synthesis of user research. Automated interview transcription, sentiment analysis of user feedback, and AI-generated affinity mapping reduce the time between talking to users and drawing actionable conclusions from weeks to days. Startups that move quickly through the build-measure-learn loop compound their learning advantage over competitors.' },
+      { heading: 'Design Without a Designer', body: 'AI design tools have reached a level of quality where early-stage startups can create professional, coherent UI systems without a dedicated designer. This lowers the cost of testing multiple product directions simultaneously, allowing founders to validate visual and UX hypotheses with real users before committing to a direction.' },
+      { heading: 'Avoiding the AI Trap', body: 'Speed without judgment creates technical debt that compounds rapidly. AI tools are excellent at generating plausible-looking code that may have subtle bugs, security vulnerabilities, or architectural problems that are expensive to fix later. Maintain strong engineering fundamentals, review AI-generated output carefully, and invest in automated testing from the start.' },
+    ],
   },
   {
     id: 9,
@@ -4382,6 +4434,13 @@ const BLOG_POSTS = [
     img: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80&auto=format&fit=crop',
     readTime: '6 Min Read',
     featured: false,
+    content: [
+      { heading: 'Digital Finance Defined', body: 'Digital finance encompasses the full spectrum of financial services delivered through digital channels — from mobile banking and digital payments to robo-advisory and blockchain-based settlement. The defining characteristic is the removal of physical infrastructure and human intermediaries from routine financial transactions, reducing cost and friction dramatically.' },
+      { heading: 'The Building Blocks', body: 'Modern fintech solutions are built on a stack of enabling technologies: open banking APIs that allow secure data sharing between institutions, cloud-native core banking systems that replace decades-old mainframes, real-time payment rails, and AI-powered risk engines that make credit and fraud decisions in milliseconds.' },
+      { heading: 'Security and Compliance', body: 'Financial data is among the most sensitive and most targeted. PCI-DSS compliance governs card data. PSD2 in Europe mandates strong customer authentication. Encryption in transit and at rest, tokenisation of sensitive fields, and zero-trust network architecture are baseline requirements, not optional enhancements, for any serious fintech product.' },
+      { heading: 'Embedded Finance', body: 'Perhaps the most significant structural shift in financial services is the trend toward embedded finance — the integration of financial products directly into non-financial applications. Ride-hailing apps offering insurance, e-commerce platforms providing instant credit, HR software advancing earned wages: finance is becoming invisible infrastructure embedded everywhere.' },
+      { heading: 'What\'s Next', body: 'Central bank digital currencies (CBDCs), programmable money via smart contracts, and AI-driven personal financial management are the next frontier. The fintech companies that will win are those that build trust through transparency, invest in compliance as a product feature, and obsess over the user experience of financial transactions that have historically been painful.' },
+    ],
   },
   {
     id: 10,
@@ -4393,6 +4452,13 @@ const BLOG_POSTS = [
     img: 'https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&q=80&auto=format&fit=crop',
     readTime: '7 Min Read',
     featured: false,
+    content: [
+      { heading: 'Spatial Computing Goes Mainstream', body: 'The launch of standalone high-resolution headsets from Apple, Meta, and Sony marks the beginning of a mainstream spatial computing era. By 2030, analysts project that 30% of enterprise workers will regularly use some form of AR or VR in their daily work. The question is no longer whether immersive technology will reach scale — it is which applications will drive adoption.' },
+      { heading: 'The Convergence of AI and XR', body: 'The most transformative trend in the XR space is not hardware improvement — it is the integration of generative AI into immersive experiences. AI can now generate persistent 3D environments from text prompts, animate characters in real time based on conversational input, and personalise spatial experiences dynamically. This combination dramatically lowers content creation costs.' },
+      { heading: 'Passthrough and Mixed Reality', body: 'Pure VR headsets that block out the real world are giving way to mixed reality devices that blend digital content with a live view of physical surroundings. This makes the technology more practical for workplace use — a surgeon can see both a digital overlay and the actual patient simultaneously; a maintenance engineer can see digital instructions superimposed on real equipment.' },
+      { heading: 'Training and Education', body: 'Immersive training is proving to be one of the highest-ROI applications of XR technology. Studies consistently show that VR training produces better retention, faster skill acquisition, and the ability to practice high-stakes scenarios safely. Industries including aviation, surgery, military, and heavy equipment operation have adopted VR training at scale.' },
+      { heading: 'Challenges Remaining', body: 'Form factor, battery life, social acceptability, and content fragmentation remain significant challenges. No single platform has yet achieved the developer ecosystem density needed to sustain a broad consumer market. But hardware is improving faster than most predictions suggested — the next five years will likely see breakthroughs in display technology, battery density, and computational efficiency that make today\'s devices look primitive.' },
+    ],
   },
 ]
 
@@ -4403,6 +4469,142 @@ const BLOG_ARCHIVES = [
 ]
 
 const POSTS_PER_PAGE = 6
+
+function BlogPostPage() {
+  const { postId } = useParams()
+  const post = BLOG_POSTS.find(p => String(p.id) === String(postId))
+  const [activeIdx, setActiveIdx] = useState(0)
+  const articleRef = useRef(null)
+
+  useEffect(() => {
+    const onScroll = () => {
+      const el = articleRef.current
+      if (!el) return
+      const { top, height } = el.getBoundingClientRect()
+      const headings = el.querySelectorAll('.bpp-section-heading')
+      let cur = 0
+      headings.forEach((h, i) => {
+        if (h.getBoundingClientRect().top < 160) cur = i
+      })
+      setActiveIdx(cur)
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [post])
+
+  useEffect(() => { window.scrollTo(0, 0) }, [postId])
+
+  if (!post) {
+    return (
+      <div className="bpp-notfound">
+        <h2>Post not found.</h2>
+        <NavLink to="/blogs" className="bpp-back">← Back to Blogs</NavLink>
+      </div>
+    )
+  }
+
+  const related = BLOG_POSTS.filter(p => p.category === post.category && p.id !== post.id).slice(0, 3)
+  const allRelated = related.length ? related : BLOG_POSTS.filter(p => p.id !== post.id).slice(0, 3)
+
+  return (
+    <div className="bpp-root">
+
+      {/* Hero */}
+      <div className="bpp-hero">
+        <img src={post.img} alt={post.title} className="bpp-hero-img" />
+        <div className="bpp-hero-overlay">
+          <div className="bpp-hero-content">
+            <NavLink to="/blogs" className="bpp-breadcrumb">← All Articles</NavLink>
+            <span className="bpp-hero-cat">{post.categoryLabel}</span>
+            <h1 className="bpp-hero-title">{post.title}</h1>
+            <div className="bpp-hero-meta">
+              <span className="bpp-hero-date">{post.date}</span>
+              <span className="bpp-hero-sep" />
+              <span className="bpp-hero-read">{post.readTime}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Body: article + sidebar */}
+      <div className="bpp-body">
+        <article className="bpp-article" ref={articleRef}>
+          {/* Lead */}
+          <p className="bpp-lead">{post.desc}</p>
+
+          {/* Sections */}
+          {post.content.map((section, i) => (
+            <div key={i} className="bpp-section">
+              {section.heading && (
+                <h2 className="bpp-section-heading">{section.heading}</h2>
+              )}
+              <p className="bpp-section-body">{section.body}</p>
+            </div>
+          ))}
+
+          {/* Bottom tag row */}
+          <div className="bpp-tags-row">
+            <span className="bpp-tag">{post.categoryLabel}</span>
+            <span className="bpp-tag">SightInfusion</span>
+            <span className="bpp-tag">Insights</span>
+          </div>
+        </article>
+
+        {/* Sidebar */}
+        <aside className="bpp-sidebar">
+          {/* TOC */}
+          <div className="bpp-toc-card">
+            <p className="bpp-toc-label">In this article</p>
+            <ul className="bpp-toc-list">
+              {post.content.filter(s => s.heading).map((s, i) => (
+                <li
+                  key={i}
+                  className={`bpp-toc-item${activeIdx === i ? ' bpp-toc-active' : ''}`}
+                >
+                  {s.heading}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Promo card */}
+          <div className="bpp-promo-card">
+            <div className="bpp-promo-icon">✦</div>
+            <p className="bpp-promo-title">Ready to integrate AI?</p>
+            <p className="bpp-promo-body">SightInfusion helps businesses move from idea to production-grade AI — fast.</p>
+            <NavLink to="/contact" className="bpp-promo-btn">Talk to Us</NavLink>
+          </div>
+        </aside>
+      </div>
+
+      {/* Related */}
+      {allRelated.length > 0 && (
+        <div className="bpp-related-wrap">
+          <div className="bpp-related-inner">
+            <h3 className="bpp-related-heading">More to Read</h3>
+            <div className="bpp-related-grid">
+              {allRelated.map(r => (
+                <NavLink key={r.id} to={`/blogs/${r.id}`} className="bpp-related-card">
+                  <div className="bpp-related-img-wrap">
+                    <img src={r.img} alt={r.title} className="bpp-related-img" />
+                    <span className="bpp-related-cat">{r.categoryLabel}</span>
+                  </div>
+                  <div className="bpp-related-info">
+                    <p className="bpp-related-title-text">{r.title}</p>
+                    <div className="bpp-related-meta">
+                      <span>{r.date}</span>
+                      <span className="bpp-related-read">{r.readTime}</span>
+                    </div>
+                  </div>
+                </NavLink>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
 
 function BlogPage() {
   const [activeCategory, setActiveCategory] = useState('all')
@@ -4473,7 +4675,7 @@ function BlogPage() {
                   <p className="blog-card-date">on {post.date}</p>
                   <h3 className="blog-card-title">{post.title}</h3>
                   <p className="blog-card-desc">{post.desc}</p>
-                  <button className="blog-discover-btn">Discover More</button>
+                  <NavLink to={`/blogs/${post.id}`} className="blog-discover-btn">Discover More</NavLink>
                 </div>
               </div>
             ))}
