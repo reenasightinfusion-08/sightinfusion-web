@@ -53,7 +53,7 @@ const services = [
         tag: 'Spiritual Wellness App',
         title: 'Pray the Bible AI — Web Platform',
         desc: 'Delivered a Flutter web build featuring 11 feature areas, 7 custom UI themes, AI-assisted prayer flows, and a PWA-installable landing experience across iOS, Android, and web.',
-        img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80&auto=format&fit=crop',
+        img: 'https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&q=80&auto=format&fit=crop',
         tech: ['flutter', 'firebase']
       }
     ]
@@ -487,19 +487,16 @@ const services = [
 const featuredServices = services.slice(0, 8)
 
 const homeServices = [
+  { id: 'app', title: 'App Development', desc: 'Native and cross-platform mobile apps built with Flutter — shipped to iOS and Android.' },
   { id: 'frontend', title: 'Front-End Development', desc: 'Our development is pixel perfect in all ways.' },
   { id: 'backend', title: 'Back-End Development', desc: 'We enhance customer experiences for success.' },
   { id: 'arvr', title: 'AR - VR Development', desc: 'We create vibrant, intuitive and minimalist web' },
   { id: 'uiux', title: 'UI/UX Design', desc: 'We turn digital playgrounds (apps, sites, games) into user experiences that wow.' },
   { id: 'ai-ml', title: 'AI-ML Development', desc: 'From epic architecture to immersive props, we elevate your visuals.' },
   { id: 'cloud', title: 'Cloud Services', desc: 'We can provide all around the world.' },
-  { id: 'game', title: 'Game Development', desc: 'We don\'t just develop games, we build experiences.' },
-  { id: 'staff', title: 'Staff Augmentation', desc: 'Expert developers & IT management to build your perfect project team.' },
   { id: 'qa', title: 'QA Testing & Automation', desc: 'Seamless Testing, Flawless Performance with Automated Efficiency.' },
   { id: 'enterprise', title: 'Enterprise Software Development', desc: 'Scalable Solutions Designed to Drive Business Growth and Innovation.' },
   { id: 'dataviz', title: 'Data Visualization', desc: 'Transforming Complex Data into Clear, Actionable Business Insights.' },
-  { id: '3d', title: '3D Design', desc: 'Innovative 3D Visuals and High-Precision Modeling for Digital Excellence.' },
-  { id: 'app', title: 'App Development', desc: 'Native and cross-platform mobile apps built with Flutter — shipped to iOS and Android.' },
 ]
 
 const caseStudiesDetail = {
@@ -1130,7 +1127,7 @@ const caseStudiesDetail = {
       { metric: '66', label: 'Bible books available offline' },
       { metric: '3 platforms', label: 'iOS, Android & Web from single build' }
     ],
-    heroImg: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80&auto=format&fit=crop',
+    heroImg: 'https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&q=80&auto=format&fit=crop',
     testimonial: { quote: 'The team nailed the reverence we needed — every screen feels intentional. The fact that it runs on iOS, Android, and web from one codebase without any platform hacks is exactly what we asked for.', author: 'Founder, Pray the Bible AI' }
   },
   'directory': {
@@ -1216,9 +1213,7 @@ const caseStudiesDetail = {
 const techStack = [
   'React',
   'Angular',
-  'D3',
-  '.NET (MVC, C#)',
-  'Unity',
+  'Flutter',
   'Node/Express',
   'GraphQL',
   'MySQL',
@@ -1229,9 +1224,7 @@ const techStack = [
 const homeTechStack = [
   { id: 'react', name: 'React' },
   { id: 'angular', name: 'Angular' },
-  { id: 'd3', name: 'D3' },
-  { id: 'dotnet', name: '.Net (MVC, C#)' },
-  { id: 'unity', name: 'Unity' },
+  { id: 'flutter', name: 'Flutter' },
   { id: 'jquery', name: 'Jquery' },
 ]
 
