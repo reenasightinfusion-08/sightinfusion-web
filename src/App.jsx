@@ -1518,6 +1518,19 @@ function HomeTechLogo({ id }) {
     )
   }
 
+  if (id === 'flutter') {
+    return (
+      <svg viewBox="0 0 200 200" fill="none" aria-hidden="true" style={{ height: '70px' }}>
+        {/* Top chevron wing */}
+        <polygon points="38,100 100,38 162,38 100,100" fill="#54C5F8" />
+        {/* Bottom chevron wing */}
+        <polygon points="100,100 162,162 100,162 69,131" fill="#54C5F8" />
+        {/* Dark shadow triangle on bottom wing */}
+        <polygon points="100,100 69,131 100,162 131,131" fill="#01579B" />
+      </svg>
+    )
+  }
+
   return null
 }
 
