@@ -128,7 +128,7 @@ select {
 }
 
 .topbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -5935,7 +5935,7 @@ select {
 /* Hero — dark, editorial two-column */
 .cs-hero {
   background: #0a0e17;
-  padding: 4.5rem 0 4rem;
+  padding: calc(100px + 1.5rem) 0 4rem;
 }
 
 .cs-hero-glow {
@@ -6069,6 +6069,7 @@ select {
   padding: 2.5rem 2rem;
   border-right: 1px solid #f0f2f7;
   position: relative;
+  text-align: center;
 }
 
 .cs-stat-card:last-child {
@@ -6598,6 +6599,8 @@ select {
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: .25rem;
   padding: 0 2rem;
 }
@@ -8022,4 +8025,14 @@ select {
   .blog-sidebar {
     grid-template-columns: 1fr;
   }
+}
+
+/* ── Pause all auto-scroll marquees on hover ─────────────────── */
+.tech-scroll-container:hover .tech-scroll-track,
+.home-tech-track-wrap:hover .home-tech-track,
+.tech-track-wrap:hover .tech-track,
+.uiux-tool-track-wrap:hover .uiux-tool-track,
+.testi-track-wrap:hover .testi-track,
+.brands-track-wrapper:hover .brands-track {
+  animation-play-state: paused;
 }

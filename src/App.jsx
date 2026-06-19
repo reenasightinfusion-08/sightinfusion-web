@@ -1418,162 +1418,64 @@ function HomeServiceIcon({ id }) {
   )
 }
 
+const TECH_LOGOS = {
+  react:    { src: 'https://cdn.simpleicons.org/react/61DAFB',       alt: 'React' },
+  angular:  { src: 'https://cdn.simpleicons.org/angular/DD0031',     alt: 'Angular' },
+  flutter:  { src: null, alt: 'Flutter' },
+  jquery:   { src: 'https://cdn.simpleicons.org/jquery/0769AD',      alt: 'jQuery' },
+  node:     { src: 'https://cdn.simpleicons.org/nodedotjs/339933',   alt: 'Node.js' },
+  js:       { src: 'https://cdn.simpleicons.org/javascript/F7DF1E',  alt: 'JavaScript' },
+  vue:      { src: 'https://cdn.simpleicons.org/vuedotjs/4FC08D',    alt: 'Vue.js' },
+  firebase: { src: 'https://cdn.simpleicons.org/firebase/FFCA28',    alt: 'Firebase' },
+  openai:   { src: 'https://cdn.simpleicons.org/openai/412991',      alt: 'OpenAI' },
+  riverpod: { src: 'https://cdn.simpleicons.org/dart/0175C2',        alt: 'Riverpod' },
+  d3:       { src: 'https://cdn.simpleicons.org/d3dotjs/F9A03C',     alt: 'D3.js' },
+  dotnet:   { src: 'https://cdn.simpleicons.org/dotnet/512BD4',      alt: '.NET' },
+  unity:    { src: 'https://cdn.simpleicons.org/unity/000000',       alt: 'Unity' },
+}
+
+function FlutterSVG({ style }) {
+  return (
+    <svg viewBox="-30.5 0 317 317" aria-hidden="true" style={style} xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient x1="3.9517088%" y1="26.9930287%" x2="75.8970734%" y2="52.9192657%" id="flutterGrad">
+          <stop stopColor="#000000" offset="0%" />
+          <stop stopColor="#000000" stopOpacity="0" offset="100%" />
+        </linearGradient>
+      </defs>
+      <polygon fill="#47C5FB" points="157.665785 0.000549356223 0.000549356223 157.665785 48.8009614 206.466197 255.267708 0.000549356223"/>
+      <polygon fill="#47C5FB" points="156.567183 145.396793 72.1487107 229.815265 121.132608 279.530905 169.842925 230.820587 255.267818 145.396793"/>
+      <polygon fill="#00569E" points="121.133047 279.531124 158.214592 316.61267 255.267159 316.61267 169.842266 230.820807"/>
+      <polygon fill="#00B5F8" points="71.5995742 230.364072 120.401085 181.562561 169.842046 230.821136 121.132827 279.531454"/>
+      <polygon fill="url(#flutterGrad)" fillOpacity="0.8" points="121.132827 279.531454 161.692896 266.072227 165.721875 234.941308"/>
+    </svg>
+  )
+}
+
 function HomeTechLogo({ id }) {
-  if (id === 'react') {
-    return (
-      <svg viewBox="0 0 200 200" fill="none" aria-hidden="true" style={{ height: '70px' }}>
-        <circle cx="100" cy="100" r="18" fill="#58C4DC" />
-        <g stroke="#58C4DC" strokeWidth="8">
-          <ellipse cx="100" cy="100" rx="80" ry="32" transform="rotate(0, 100, 100)" />
-          <ellipse cx="100" cy="100" rx="80" ry="32" transform="rotate(60, 100, 100)" />
-          <ellipse cx="100" cy="100" rx="80" ry="32" transform="rotate(120, 100, 100)" />
-        </g>
-      </svg>
-    )
-  }
-
-  if (id === 'angular') {
-    return (
-      <svg viewBox="0 0 250 250" fill="none" aria-hidden="true" style={{ height: '75px' }}>
-        <path d="M125 30l103.1 36.8-15.7 136.2L125 220 37.6 203l-15.7-136.2L125 30z" fill="#DD0031" />
-        <path d="M125 30v190l87.6-17L125 30z" fill="#C3002F" />
-        <path d="M18.8 66.8L125 30v21.5L51.3 198.5h24.2l12.4-33.1h74.2l12.4 33.1h24.2L125 51.5z" fill="none" />
-        <path d="M125 51.5l-65.7 147h24.2l12.4-33.1h58.2l12.4 33.1h24.2L125 51.5zm20.8 90.4H104.2L125 94.7l20.8 47.2z" fill="white" />
-      </svg>
-    )
-  }
-
-  if (id === 'd3') {
-    return (
-      <svg viewBox="0 0 100 100" aria-hidden="true" style={{ height: '75px' }}>
-        <rect x="5" y="5" width="90" height="90" rx="10" fill="none" stroke="#E1C1A5" strokeWidth="1.5" />
-        <path d="M25 30h22c15 0 28 8 28 20s-13 20-28 20H25V30z" fill="#F89D3C" opacity="0.3" />
-        <path d="M25 30h12c15 0 28 8 28 20s-13 20-28 20H25V30z" fill="#F89D3C" />
-        <path d="M38 45h8c8 0 14 4 14 10s-6 10-14 10h-8V45z" fill="white" />
-        <text x="35" y="65" fill="#F89D3C" fontSize="34" fontWeight="900" fontFamily="Arial, sans-serif">3</text>
-      </svg>
-    )
-  }
-
-  if (id === 'dotnet') {
-    return (
-      <svg viewBox="0 0 240 80" fill="none" aria-hidden="true" style={{ height: '54px' }}>
-        <path d="M20 50s15-35 40-35 30 20 45 45" stroke="#0078D4" strokeWidth="6" strokeLinecap="round" />
-        <text x="100" y="45" fill="#1a1a1a" fontSize="32" fontWeight="800" fontFamily="Arial, sans-serif">.NET</text>
-        <text x="100" y="65" fill="#555" fontSize="11" fontWeight="600" fontFamily="Arial, sans-serif">Microsoft .NET</text>
-      </svg>
-    )
-  }
-
-  if (id === 'unity') {
-    return (
-      <svg viewBox="0 0 200 80" fill="none" aria-hidden="true" style={{ height: '54px' }}>
-        <path d="M10 20l18 10v20l-18 10-18-10v-20l18-10z" fill="#000" />
-        <path d="M10 20v20l18-10M10 40l-18-10M10 40v20" stroke="#fff" strokeWidth="2.5" />
-        <text x="42" y="52" fill="#000" fontSize="36" fontWeight="700" fontFamily="Arial, sans-serif">unity</text>
-      </svg>
-    )
-  }
-
-  if (id === 'jquery') {
-    return (
-      <svg viewBox="0 0 240 80" fill="none" aria-hidden="true" style={{ height: '64px' }}>
-        <path d="M40 40c0 10.5-8.5 19-19 19s-19-8.5-19-19 8.5-19 19-19 19 8.5 19 19z" fill="#006699" opacity="0.1" />
-        <circle cx="21" cy="40" r="16" stroke="#08689B" strokeWidth="3" fill="none" />
-        <circle cx="21" cy="40" r="10" stroke="#08689B" strokeWidth="3" fill="none" />
-        <circle cx="21" cy="40" r="5" fill="#08689B" />
-        <text x="60" y="54" fill="#08689B" fontSize="42" fontWeight="700" fontFamily="Arial, sans-serif">Jquery</text>
-      </svg>
-    )
-  }
-
-  if (id === 'flutter') {
-    return (
-      <svg viewBox="0 0 200 200" fill="none" aria-hidden="true" style={{ height: '70px' }}>
-        {/* Top chevron wing */}
-        <polygon points="38,100 100,38 162,38 100,100" fill="#54C5F8" />
-        {/* Bottom chevron wing */}
-        <polygon points="100,100 162,162 100,162 69,131" fill="#54C5F8" />
-        {/* Dark shadow triangle on bottom wing */}
-        <polygon points="100,100 69,131 100,162 131,131" fill="#01579B" />
-      </svg>
-    )
-  }
-
-  return null
+  if (id === 'flutter') return <FlutterSVG style={{ height: '62px', width: '62px' }} />
+  const logo = TECH_LOGOS[id]
+  if (!logo) return null
+  return (
+    <img
+      src={logo.src}
+      alt={logo.alt}
+      style={{ height: '62px', width: '62px', objectFit: 'contain' }}
+    />
+  )
 }
 
 function TechIcon({ type }) {
-  if (type === 'react') {
-    return (
-      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="8" fill="#58C4DC" />
-        <ellipse cx="50" cy="50" rx="40" ry="16" stroke="#58C4DC" strokeWidth="2" fill="none" />
-        <ellipse cx="50" cy="50" rx="40" ry="16" stroke="#58C4DC" strokeWidth="2" fill="none" transform="rotate(60 50 50)" />
-        <ellipse cx="50" cy="50" rx="40" ry="16" stroke="#58C4DC" strokeWidth="2" fill="none" transform="rotate(120 50 50)" />
-      </svg>
-    )
-  }
-  if (type === 'node') {
-    return (
-      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 10L85 30V70L50 90L15 70V30L50 10Z" fill="#339933" />
-        <path d="M50 25V75M30 40L50 50L70 40" stroke="white" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    )
-  }
-  if (type === 'js') {
-    return (
-      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="100" height="100" fill="#F7DF1E" />
-        <path d="M75 75C75 80 70 85 62 85C54 85 50 80 50 75" stroke="black" strokeWidth="8" strokeLinecap="round" />
-        <path d="M30 55V85" stroke="black" strokeWidth="8" strokeLinecap="round" />
-      </svg>
-    )
-  }
-  if (type === 'vue') {
-    return (
-      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 85L15 25H30L50 60L70 25H85L50 85Z" fill="#41B883" />
-        <path d="M50 60L32 25H41L50 42L59 25H68L50 60Z" fill="#35495E" />
-      </svg>
-    )
-  }
-  if (type === 'flutter') {
-    return (
-      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 50L50 20H80L50 50L80 80H50L20 50Z" fill="#54C5F8" />
-        <path d="M50 50L80 80H50L35 65L50 50Z" fill="#01579B" />
-      </svg>
-    )
-  }
-  if (type === 'firebase') {
-    return (
-      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 75L35 30L50 50L65 15L80 75L50 90L20 75Z" fill="#FFA000" />
-        <path d="M50 50L65 15L80 75L50 90L50 50Z" fill="#F57C00" />
-        <path d="M20 75L38 45L50 50L20 75Z" fill="#FFCA28" />
-      </svg>
-    )
-  }
-  if (type === 'riverpod') {
-    return (
-      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="35" stroke="#00BCD4" strokeWidth="6" fill="none" />
-        <circle cx="50" cy="50" r="18" fill="#00BCD4" />
-        <path d="M50 15V25M50 75V85M15 50H25M75 50H85" stroke="#00BCD4" strokeWidth="5" strokeLinecap="round" />
-      </svg>
-    )
-  }
-  if (type === 'openai') {
-    return (
-      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 15C35 15 23 27 23 42C23 49 26 55 31 60L28 75L43 68C45 69 47 69 50 69C65 69 77 57 77 42C77 27 65 15 50 15Z" fill="#10A37F" />
-        <path d="M38 42H62M44 33L50 42L56 33M44 51L50 42L56 51" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    )
-  }
-  return null
+  if (type === 'flutter') return <FlutterSVG style={{ width: '100%', height: '100%' }} />
+  const logo = TECH_LOGOS[type]
+  if (!logo) return null
+  return (
+    <img
+      src={logo.src}
+      alt={logo.alt}
+      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+    />
+  )
 }
 
 function ProcessIcon({ id }) {
