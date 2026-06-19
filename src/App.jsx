@@ -1963,13 +1963,11 @@ function HomePage() {
               <p className="home-services-kicker">WHAT WE&apos;RE OFFERING</p>
               <h2>Dealing in all professional IT services.</h2>
             </div>
-            <div className="home-services-head-right">
-              <p>
-                One fundamental aspect of IT services is infrastructure management. This involves
-                the design, implementation, and maintenance of the hardware, software, networks,
-                and servers.
-              </p>
-            </div>
+            <p>
+              One fundamental aspect of IT services is infrastructure management. This involves
+              the design, implementation, and maintenance of the hardware, software, networks,
+              and servers.
+            </p>
           </div>
 
           <div className="home-services-grid" ref={servicesRef}>
